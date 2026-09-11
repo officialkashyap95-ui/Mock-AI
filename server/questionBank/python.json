@@ -1,0 +1,609 @@
+{
+    "technology": "Python",
+    "easy": [
+        {
+            "id": 1,
+            "question": "What is Python?"
+        },
+        {
+            "id": 2,
+            "question": "What are the key features of Python?"
+        },
+        {
+            "id": 3,
+            "question": "Is Python an interpreted or compiled language?"
+        },
+        {
+            "id": 4,
+            "question": "What is a variable in Python?"
+        },
+        {
+            "id": 5,
+            "question": "What are the basic data types in Python?"
+        },
+        {
+            "id": 6,
+            "question": "What is the difference between a list and a tuple?"
+        },
+        {
+            "id": 7,
+            "question": "What is a dictionary in Python?"
+        },
+        {
+            "id": 8,
+            "question": "What is a set in Python?"
+        },
+        {
+            "id": 9,
+            "question": "What is the difference between a list and a set?"
+        },
+        {
+            "id": 10,
+            "question": "What is indentation and why is it significant in Python?"
+        },
+        {
+            "id": 11,
+            "question": "What is a function in Python?"
+        },
+        {
+            "id": 12,
+            "question": "What is the purpose of the def keyword?"
+        },
+        {
+            "id": 13,
+            "question": "What is the difference between a parameter and an argument?"
+        },
+        {
+            "id": 14,
+            "question": "What is the return statement used for?"
+        },
+        {
+            "id": 15,
+            "question": "What is a for loop used for?"
+        },
+        {
+            "id": 16,
+            "question": "What is a while loop used for?"
+        },
+        {
+            "id": 17,
+            "question": "What is the difference between break and continue?"
+        },
+        {
+            "id": 18,
+            "question": "What is the range() function used for?"
+        },
+        {
+            "id": 19,
+            "question": "What is a conditional statement in Python?"
+        },
+        {
+            "id": 20,
+            "question": "What is the purpose of the if-elif-else statement?"
+        },
+        {
+            "id": 21,
+            "question": "What is a string in Python?"
+        },
+        {
+            "id": 22,
+            "question": "What is string slicing?"
+        },
+        {
+            "id": 23,
+            "question": "What is the difference between single and double quotes in Python strings?"
+        },
+        {
+            "id": 24,
+            "question": "What is an f-string?"
+        },
+        {
+            "id": 25,
+            "question": "What is the len() function used for?"
+        },
+        {
+            "id": 26,
+            "question": "What is the difference between append() and extend() for lists?"
+        },
+        {
+            "id": 27,
+            "question": "What is list comprehension?"
+        },
+        {
+            "id": 28,
+            "question": "What is the purpose of comments in Python?"
+        },
+        {
+            "id": 29,
+            "question": "What is the difference between a module and a package?"
+        },
+        {
+            "id": 30,
+            "question": "What is the purpose of the import statement?"
+        },
+        {
+            "id": 31,
+            "question": "What is the difference between None and False in Python?"
+        },
+        {
+            "id": 32,
+            "question": "What is type casting in Python?"
+        },
+        {
+            "id": 33,
+            "question": "What is the purpose of the input() function?"
+        },
+        {
+            "id": 34,
+            "question": "What is the purpose of the print() function?"
+        },
+        {
+            "id": 35,
+            "question": "What is a class in Python?"
+        },
+        {
+            "id": 36,
+            "question": "What is an object in Python?"
+        },
+        {
+            "id": 37,
+            "question": "What is the purpose of the init method?"
+        },
+        {
+            "id": 38,
+            "question": "What is the self parameter used for in a class method?"
+        },
+        {
+            "id": 39,
+            "question": "What is inheritance in Python?"
+        },
+        {
+            "id": 40,
+            "question": "What is the purpose of the pass statement?"
+        },
+        {
+            "id": 41,
+            "question": "What is an exception in Python?"
+        },
+        {
+            "id": 42,
+            "question": "What is the purpose of try-except blocks?"
+        },
+        {
+            "id": 43,
+            "question": "What is the purpose of the finally block?"
+        },
+        {
+            "id": 44,
+            "question": "What is a lambda function?"
+        },
+        {
+            "id": 45,
+            "question": "What is the difference between a lambda function and a regular function?"
+        },
+        {
+            "id": 46,
+            "question": "What is the purpose of the map() function?"
+        },
+        {
+            "id": 47,
+            "question": "What is the purpose of the filter() function?"
+        },
+        {
+            "id": 48,
+            "question": "What is a virtual environment in Python?"
+        },
+        {
+            "id": 49,
+            "question": "What is pip used for?"
+        },
+        {
+            "id": 50,
+            "question": "What is the purpose of the requirements.txt file?"
+        }
+    ],
+    "medium": [
+        {
+            "id": 1,
+            "question": "What is the difference between deep copy and shallow copy?"
+        },
+        {
+            "id": 2,
+            "question": "What is the Global Interpreter Lock (GIL) and how does it affect multithreading in Python?"
+        },
+        {
+            "id": 3,
+            "question": "What is the difference between multithreading and multiprocessing in Python?"
+        },
+        {
+            "id": 4,
+            "question": "What is a decorator in Python and how would you write one?"
+        },
+        {
+            "id": 5,
+            "question": "What is the purpose of the @staticmethod and @classmethod decorators?"
+        },
+        {
+            "id": 6,
+            "question": "What is the difference between a static method and a class method?"
+        },
+        {
+            "id": 7,
+            "question": "What is a generator in Python and how does it differ from a regular function?"
+        },
+        {
+            "id": 8,
+            "question": "What is the purpose of the yield keyword?"
+        },
+        {
+            "id": 9,
+            "question": "What is the difference between an iterator and an iterable?"
+        },
+        {
+            "id": 10,
+            "question": "How would you implement the iter and next methods for a custom iterator?"
+        },
+        {
+            "id": 11,
+            "question": "What is a context manager and how does the with statement use it?"
+        },
+        {
+            "id": 12,
+            "question": "How would you implement a custom context manager using enter and exit?"
+        },
+        {
+            "id": 13,
+            "question": "What is method resolution order (MRO) in Python?"
+        },
+        {
+            "id": 14,
+            "question": "What is multiple inheritance and how does Python resolve conflicts using MRO?"
+        },
+        {
+            "id": 15,
+            "question": "What is the difference between *args and **kwargs?"
+        },
+        {
+            "id": 16,
+            "question": "What is monkey patching in Python?"
+        },
+        {
+            "id": 17,
+            "question": "What is duck typing and how does it apply to Python?"
+        },
+        {
+            "id": 18,
+            "question": "What is the difference between an abstract base class and a regular class in Python?"
+        },
+        {
+            "id": 19,
+            "question": "What is the purpose of the abc module?"
+        },
+        {
+            "id": 20,
+            "question": "What are magic methods (dunder methods) and can you give examples of their use?"
+        },
+        {
+            "id": 21,
+            "question": "What is the difference between str and repr?"
+        },
+        {
+            "id": 22,
+            "question": "How does Python's garbage collection work, including reference counting?"
+        },
+        {
+            "id": 23,
+            "question": "What is a memory leak and how can it occur in Python despite garbage collection?"
+        },
+        {
+            "id": 24,
+            "question": "What is the purpose of the with statement when working with file handling?"
+        },
+        {
+            "id": 25,
+            "question": "What is the difference between JSON serialization and Python's pickle module?"
+        },
+        {
+            "id": 26,
+            "question": "What is the purpose of the collections module, and what are some useful classes it provides?"
+        },
+        {
+            "id": 27,
+            "question": "What is the difference between a defaultdict and a regular dictionary?"
+        },
+        {
+            "id": 28,
+            "question": "What is the purpose of the itertools module?"
+        },
+        {
+            "id": 29,
+            "question": "How would you handle multiple exceptions in a single try-except block?"
+        },
+        {
+            "id": 30,
+            "question": "What is exception chaining and how does the raise...from syntax work?"
+        },
+        {
+            "id": 31,
+            "question": "What is the purpose of custom exception classes and when would you create one?"
+        },
+        {
+            "id": 32,
+            "question": "What is asyncio and how does it enable asynchronous programming in Python?"
+        },
+        {
+            "id": 33,
+            "question": "What is the difference between async/await and traditional threading for I/O-bound tasks?"
+        },
+        {
+            "id": 34,
+            "question": "How would you make a concurrent HTTP request using asyncio and aiohttp?"
+        },
+        {
+            "id": 35,
+            "question": "What is the purpose of type hints in Python?"
+        },
+        {
+            "id": 36,
+            "question": "How would you use mypy to statically check type-annotated Python code?"
+        },
+        {
+            "id": 37,
+            "question": "What is the purpose of dataclasses introduced in Python 3.7?"
+        },
+        {
+            "id": 38,
+            "question": "How would you implement a singleton pattern in Python?"
+        },
+        {
+            "id": 39,
+            "question": "What is the difference between == and is in Python?"
+        },
+        {
+            "id": 40,
+            "question": "How would you optimize a Python function that processes a very large list?"
+        },
+        {
+            "id": 41,
+            "question": "What is the purpose of the functools module, particularly lru_cache?"
+        },
+        {
+            "id": 42,
+            "question": "How would you write unit tests for a Python module using pytest?"
+        },
+        {
+            "id": 43,
+            "question": "What is the purpose of mocking dependencies in Python unit tests?"
+        },
+        {
+            "id": 44,
+            "question": "How would you package a Python project for distribution using setuptools or a pyproject.toml?"
+        },
+        {
+            "id": 45,
+            "question": "What is the difference between a shallow module structure and a well-organized package structure in a large Python project?"
+        },
+        {
+            "id": 46,
+            "question": "How would you handle circular imports in a Python project?"
+        },
+        {
+            "id": 47,
+            "question": "What is the purpose of the name == 'main' idiom?"
+        },
+        {
+            "id": 48,
+            "question": "How would you profile a Python application to identify a performance bottleneck?"
+        },
+        {
+            "id": 49,
+            "question": "What is the difference between a list and a generator in terms of memory usage?"
+        },
+        {
+            "id": 50,
+            "question": "How would you implement rate limiting for a function using a decorator?"
+        }
+    ],
+    "hard": [
+        {
+            "id": 1,
+            "question": "Explain how the Global Interpreter Lock affects the design of CPU-bound versus I/O-bound Python applications at scale."
+        },
+        {
+            "id": 2,
+            "question": "How would you architect a Python application to bypass GIL limitations for CPU-intensive parallel processing?"
+        },
+        {
+            "id": 3,
+            "question": "Explain how Python's reference counting and cyclic garbage collector work together to manage memory."
+        },
+        {
+            "id": 4,
+            "question": "How would you diagnose and resolve a memory leak in a long-running Python service using tools like tracemalloc or objgraph?"
+        },
+        {
+            "id": 5,
+            "question": "Explain how you would design a high-throughput asynchronous service using asyncio that handles thousands of concurrent connections."
+        },
+        {
+            "id": 6,
+            "question": "How would you architect a Python microservices system with resilient inter-service communication and failure handling?"
+        },
+        {
+            "id": 7,
+            "question": "Explain the trade-offs between multiprocessing, threading, and asyncio for a workload with mixed CPU-bound and I/O-bound tasks."
+        },
+        {
+            "id": 8,
+            "question": "How would you design a distributed task queue system using Celery for processing millions of background jobs reliably?"
+        },
+        {
+            "id": 9,
+            "question": "Explain how you would implement a custom metaclass and describe a real-world use case for one."
+        },
+        {
+            "id": 10,
+            "question": "How would you design a plugin architecture in Python that allows dynamic loading of third-party modules at runtime?"
+        },
+        {
+            "id": 11,
+            "question": "Explain how you would optimize a CPU-bound Python function using Cython or a native extension for performance-critical code."
+        },
+        {
+            "id": 12,
+            "question": "How would you architect a caching strategy using Redis to reduce database load for a high-traffic Python web application?"
+        },
+        {
+            "id": 13,
+            "question": "Explain how you would implement a distributed rate limiter across multiple Python service instances behind a load balancer."
+        },
+        {
+            "id": 14,
+            "question": "How would you design a robust retry and circuit breaker pattern for a Python service calling unreliable external APIs?"
+        },
+        {
+            "id": 15,
+            "question": "Explain how you would implement idempotent request handling for critical operations like payment processing in a Python API."
+        },
+        {
+            "id": 16,
+            "question": "How would you architect distributed tracing across multiple Python microservices for observability?"
+        },
+        {
+            "id": 17,
+            "question": "Explain how you would design a Python application's logging strategy to avoid becoming a performance bottleneck under high load."
+        },
+        {
+            "id": 18,
+            "question": "How would you troubleshoot a Python application experiencing high memory usage that grows steadily over days of uptime?"
+        },
+        {
+            "id": 19,
+            "question": "Explain how you would implement a memory-efficient data pipeline for processing datasets larger than available RAM."
+        },
+        {
+            "id": 20,
+            "question": "How would you design a strategy for safely rolling out breaking API changes in a Python service used by multiple client teams?"
+        },
+        {
+            "id": 21,
+            "question": "Explain how you would implement fine-grained authorization for a complex Python API with many resource types and roles."
+        },
+        {
+            "id": 22,
+            "question": "How would you architect a Python application to process large CSV or file uploads without exhausting memory?"
+        },
+        {
+            "id": 23,
+            "question": "Explain how you would design a comprehensive testing strategy covering unit, integration, and load tests for a Python microservice."
+        },
+        {
+            "id": 24,
+            "question": "How would you implement a robust health check and readiness probe system for a Python service running in a container orchestrator?"
+        },
+        {
+            "id": 25,
+            "question": "Explain how you would profile and optimize a Python application's startup time for a serverless deployment."
+        },
+        {
+            "id": 26,
+            "question": "How would you architect a multi-region Python deployment to minimize latency for globally distributed users?"
+        },
+        {
+            "id": 27,
+            "question": "Explain how you would implement secure secrets management for a Python application across multiple deployment environments."
+        },
+        {
+            "id": 28,
+            "question": "How would you design a Python application to handle schema evolution in its API without breaking existing consumers?"
+        },
+        {
+            "id": 29,
+            "question": "Explain how you would implement a robust audit trail for sensitive operations performed through a Python API."
+        },
+        {
+            "id": 30,
+            "question": "How would you architect a Python backend to support both synchronous requests and asynchronous event-driven workflows?"
+        },
+        {
+            "id": 31,
+            "question": "Explain how you would design a strategy to handle race conditions when multiple processes attempt to modify the same shared resource concurrently."
+        },
+        {
+            "id": 32,
+            "question": "How would you implement a distributed lock in Python to coordinate work across multiple instances accessing a shared resource?"
+        },
+        {
+            "id": 33,
+            "question": "Explain how you would design a Python application's error response format to be consistent and machine-parseable across a large API surface."
+        },
+        {
+            "id": 34,
+            "question": "How would you architect a solution to detect and mitigate a slow memory leak that only manifests after days of continuous operation?"
+        },
+        {
+            "id": 35,
+            "question": "Explain how you would implement efficient garbage collection tuning for a memory-intensive Python application."
+        },
+        {
+            "id": 36,
+            "question": "How would you design a strategy for coordinating background job processing across multiple Python worker instances using a job queue?"
+        },
+        {
+            "id": 37,
+            "question": "Explain how you would architect a Python application to comply with strict data privacy regulations such as GDPR."
+        },
+        {
+            "id": 38,
+            "question": "How would you troubleshoot a scenario where a Python application's response times degrade gradually over several hours of uptime?"
+        },
+        {
+            "id": 39,
+            "question": "Explain how you would design a data pipeline architecture using Python for processing streaming data in near real time."
+        },
+        {
+            "id": 40,
+            "question": "How would you architect a Python-based ETL system to handle billions of records efficiently while ensuring fault tolerance?"
+        },
+        {
+            "id": 41,
+            "question": "Explain how you would implement a robust deployment strategy for a Python application to support blue-green or canary releases."
+        },
+        {
+            "id": 42,
+            "question": "How would you design a strategy to safely manage dependency versions across a large Python monorepo with many services?"
+        },
+        {
+            "id": 43,
+            "question": "Explain how you would implement a custom serialization protocol optimized for performance in a high-throughput Python service."
+        },
+        {
+            "id": 44,
+            "question": "How would you architect a solution to gracefully handle worker process crashes in a Python application without losing in-flight work?"
+        },
+        {
+            "id": 45,
+            "question": "Explain how you would design a Python application to support hot-reloading of business logic without downtime."
+        },
+        {
+            "id": 46,
+            "question": "How would you implement a lock-free or low-contention data structure in Python for a high-concurrency workload?"
+        },
+        {
+            "id": 47,
+            "question": "Explain how you would architect a Python service to support graceful degradation when a downstream dependency becomes slow or unavailable."
+        },
+        {
+            "id": 48,
+            "question": "How would you design a comprehensive observability strategy (metrics, logs, traces) for a large distributed Python system?"
+        },
+        {
+            "id": 49,
+            "question": "Explain how you would approach a full performance audit of a production Python application experiencing intermittent latency spikes."
+        },
+        {
+            "id": 50,
+            "question": "How would you evaluate and decide between Python and a compiled language for a new performance-critical system component?"
+        }
+    ]
+}

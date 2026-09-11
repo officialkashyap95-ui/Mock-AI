@@ -1,0 +1,609 @@
+{
+    "technology": "Next.js",
+    "easy": [
+        {
+            "id": 1,
+            "question": "What is Next.js?"
+        },
+        {
+            "id": 2,
+            "question": "What is the relationship between Next.js and React?"
+        },
+        {
+            "id": 3,
+            "question": "What problem does Next.js solve compared to plain React?"
+        },
+        {
+            "id": 4,
+            "question": "How do you create a new Next.js project?"
+        },
+        {
+            "id": 5,
+            "question": "What is the purpose of the pages directory in Next.js?"
+        },
+        {
+            "id": 6,
+            "question": "What is file-based routing in Next.js?"
+        },
+        {
+            "id": 7,
+            "question": "How do you create a dynamic route in Next.js?"
+        },
+        {
+            "id": 8,
+            "question": "What is the purpose of the public directory?"
+        },
+        {
+            "id": 9,
+            "question": "What is the purpose of the _app.js file?"
+        },
+        {
+            "id": 10,
+            "question": "What is the purpose of the document.js file?"
+        },
+        {
+            "id": 11,
+            "question": "What is server-side rendering (SSR)?"
+        },
+        {
+            "id": 12,
+            "question": "What is static site generation (SSG)?"
+        },
+        {
+            "id": 13,
+            "question": "What is the difference between SSR and SSG?"
+        },
+        {
+            "id": 14,
+            "question": "What is client-side rendering and how does it differ from SSR?"
+        },
+        {
+            "id": 15,
+            "question": "What is the purpose of the getStaticProps function?"
+        },
+        {
+            "id": 16,
+            "question": "What is the purpose of the getServerSideProps function?"
+        },
+        {
+            "id": 17,
+            "question": "What is the purpose of the getStaticPaths function?"
+        },
+        {
+            "id": 18,
+            "question": "What is the Link component used for in Next.js?"
+        },
+        {
+            "id": 19,
+            "question": "What is the difference between the Link component and a regular anchor tag?"
+        },
+        {
+            "id": 20,
+            "question": "What is the Image component used for in Next.js?"
+        },
+        {
+            "id": 21,
+            "question": "What are the benefits of using the built-in Image component?"
+        },
+        {
+            "id": 22,
+            "question": "What is an API route in Next.js?"
+        },
+        {
+            "id": 23,
+            "question": "How do you create an API route in Next.js?"
+        },
+        {
+            "id": 24,
+            "question": "What is the purpose of the next.config.js file?"
+        },
+        {
+            "id": 25,
+            "question": "What is the purpose of the npm run dev command in a Next.js project?"
+        },
+        {
+            "id": 26,
+            "question": "What is the purpose of the npm run build command?"
+        },
+        {
+            "id": 27,
+            "question": "What is hot reloading in Next.js development?"
+        },
+        {
+            "id": 28,
+            "question": "What is a layout in the context of a Next.js application?"
+        },
+        {
+            "id": 29,
+            "question": "What is the app directory introduced in newer versions of Next.js?"
+        },
+        {
+            "id": 30,
+            "question": "What is the difference between the pages directory and the app directory?"
+        },
+        {
+            "id31": 31,
+            "question": "What is a Server Component in Next.js?"
+        },
+        {
+            "id": 32,
+            "question": "What is a Client Component and how do you define one?"
+        },
+        {
+            "id": 33,
+            "question": "What is the purpose of the 'use client' directive?"
+        },
+        {
+            "id": 34,
+            "question": "How do you add global CSS styles in a Next.js project?"
+        },
+        {
+            "id": 35,
+            "question": "What is CSS Modules and how is it used in Next.js?"
+        },
+        {
+            "id": 36,
+            "question": "What is the purpose of environment variables in a Next.js project?"
+        },
+        {
+            "id": 37,
+            "question": "What is the difference between NEXT_PUBLIC prefixed environment variables and regular ones?"
+        },
+        {
+            "id": 38,
+            "question": "What is the purpose of the head element or Head component for setting page metadata?"
+        },
+        {
+            "id": 39,
+            "question": "What is a 404 page in Next.js and how do you customize it?"
+        },
+        {
+            "id": 40,
+            "question": "What is the purpose of nested routes in Next.js?"
+        },
+        {
+            "id": 41,
+            "question": "What is a catch-all route in Next.js?"
+        },
+        {
+            "id": 42,
+            "question": "What is the difference between a catch-all route and an optional catch-all route?"
+        },
+        {
+            "id": 43,
+            "question": "What is Vercel and how does it relate to Next.js?"
+        },
+        {
+            "id": 44,
+            "question": "What is the purpose of the router object in Next.js?"
+        },
+        {
+            "id": 45,
+            "question": "How would you programmatically navigate to a different page in Next.js?"
+        },
+        {
+            "id": 46,
+            "question": "What is the purpose of the useRouter hook?"
+        },
+        {
+            "id": 47,
+            "question": "What is prefetching in Next.js and how does the Link component use it?"
+        },
+        {
+            "id": 48,
+            "question": "What is a static asset in a Next.js project?"
+        },
+        {
+            "id": 49,
+            "question": "What is the purpose of TypeScript support in Next.js?"
+        },
+        {
+            "id": 50,
+            "question": "What is the purpose of the favicon.ico file in a Next.js project?"
+        }
+    ],
+    "medium": [
+        {
+            "id": 1,
+            "question": "What is Incremental Static Regeneration (ISR) and how does it work?"
+        },
+        {
+            "id": 2,
+            "question": "How would you configure the revalidate option to control ISR behavior?"
+        },
+        {
+            "id": 3,
+            "question": "What is the difference between ISR and traditional SSG in terms of data freshness?"
+        },
+        {
+            "id": 4,
+            "question": "How do you fetch data in a Server Component in the app router?"
+        },
+        {
+            "id": 5,
+            "question": "What is the purpose of the fetch cache behavior in Next.js's app router?"
+        },
+        {
+            "id": 6,
+            "question": "How would you implement a loading state using the loading.js convention?"
+        },
+        {
+            "id": 7,
+            "question": "What is the purpose of the error.js file convention for error boundaries?"
+        },
+        {
+            "id": 8,
+            "question": "How would you implement middleware in Next.js and what are common use cases for it?"
+        },
+        {
+            "id": 9,
+            "question": "What is the purpose of route groups in the app router?"
+        },
+        {
+            "id": 10,
+            "question": "How would you implement parallel routes in the app router?"
+        },
+        {
+            "id": 11,
+            "question": "What are intercepting routes and when would you use them?"
+        },
+        {
+            "id": 12,
+            "question": "How would you implement authentication in a Next.js application?"
+        },
+        {
+            "id": 13,
+            "question": "How would you protect specific routes based on authentication status using middleware?"
+        },
+        {
+            "id": 14,
+            "question": "What is the purpose of dynamic imports and code splitting in Next.js?"
+        },
+        {
+            "id": 15,
+            "question": "How would you lazy-load a heavy component using next/dynamic?"
+        },
+        {
+            "id": 16,
+            "question": "How would you optimize font loading using next/font?"
+        },
+        {
+            "id": 17,
+            "question": "What is the purpose of the metadata API for SEO in the app router?"
+        },
+        {
+            "id": 18,
+            "question": "How would you implement dynamic metadata for a page based on fetched data?"
+        },
+        {
+            "id": 19,
+            "question": "What is the difference between generateStaticParams and getStaticPaths?"
+        },
+        {
+            "id": 20,
+            "question": "How would you handle form submissions using Server Actions?"
+        },
+        {
+            "id": 21,
+            "question": "What is a Server Action and how does it differ from an API route?"
+        },
+        {
+            "id": 22,
+            "question": "How would you revalidate cached data after a mutation using revalidatePath or revalidateTag?"
+        },
+        {
+            "id": 23,
+            "question": "What is the purpose of the next/headers and next/cookies utilities in Server Components?"
+        },
+        {
+            "id24": 24,
+            "question": "How would you implement internationalization (i18n) in a Next.js application?"
+        },
+        {
+            "id": 25,
+            "question": "How would you set up a custom 500 error page in Next.js?"
+        },
+        {
+            "id": 26,
+            "question": "What is the purpose of the Next.js Image component's placeholder and blurDataURL props?"
+        },
+        {
+            "id": 27,
+            "question": "How would you implement infinite scrolling with data fetched from an API route?"
+        },
+        {
+            "id": 28,
+            "question": "How would you configure custom headers and redirects in next.config.js?"
+        },
+        {
+            "id": 29,
+            "question": "What is the purpose of rewrites in Next.js and how do they differ from redirects?"
+        },
+        {
+            "id": 30,
+            "question": "How would you deploy a Next.js application to a platform other than Vercel?"
+        },
+        {
+            "id": 31,
+            "question": "What is the purpose of the standalone output mode in next.config.js for containerized deployments?"
+        },
+        {
+            "id": 32,
+            "question": "How would you implement a shared layout that persists state across page navigations?"
+        },
+        {
+            "id": 33,
+            "question": "How would you handle environment-specific configuration for development, staging, and production in Next.js?"
+        },
+        {
+            "id": 34,
+            "question": "How would you integrate a state management library like Redux or Zustand into a Next.js application?"
+        },
+        {
+            "id": 35,
+            "question": "How would you implement optimistic UI updates when using Server Actions?"
+        },
+        {
+            "id": 36,
+            "question": "What is the purpose of the unstable_cache function (or the caching utilities) in the app router?"
+        },
+        {
+            "id": 37,
+            "question": "How would you test a Next.js application using Jest and React Testing Library?"
+        },
+        {
+            "id": 38,
+            "question": "How would you implement end-to-end tests for a Next.js application using Playwright or Cypress?"
+        },
+        {
+            "id": 39,
+            "question": "How would you handle CORS for API routes consumed by an external client?"
+        },
+        {
+            "id": 40,
+            "question": "What is the purpose of the generateMetadata function and how does it support dynamic OG images?"
+        },
+        {
+            "id": 41,
+            "question": "How would you implement a sitemap and robots.txt for SEO in a Next.js application?"
+        },
+        {
+            "id": 42,
+            "question": "How would you handle large file uploads through a Next.js API route or Server Action?"
+        },
+        {
+            "id": 43,
+            "question": "What is the purpose of the Next.js bundle analyzer and how would you use it?"
+        },
+        {
+            "id": 44,
+            "question": "How would you reduce the JavaScript bundle size of a large Next.js application?"
+        },
+        {
+            "id": 45,
+            "question": "How would you implement role-based access control across multiple routes in a Next.js application?"
+        },
+        {
+            "id": 46,
+            "question": "What is the purpose of the Suspense boundary in relation to streaming Server Components?"
+        },
+        {
+            "id": 47,
+            "question": "How would you debug a hydration mismatch error in a Next.js application?"
+        },
+        {
+            "id": 48,
+            "question": "What is the purpose of the output: 'export' configuration for fully static exports?"
+        },
+        {
+            "id": 49,
+            "question": "How would you implement a multi-step form with persisted state across steps in Next.js?"
+        },
+        {
+            "id": 50,
+            "question": "How would you set up a CI/CD pipeline to automatically build, test, and deploy a Next.js application?"
+        }
+    ],
+    "hard": [
+        {
+            "id": 1,
+            "question": "Explain how Next.js's app router streams Server Components to the client and how Suspense boundaries control that streaming."
+        },
+        {
+            "id": 2,
+            "question": "How does Next.js's request memoization and data cache interact to avoid redundant fetches across a single render?"
+        },
+        {
+            "id": 3,
+            "question": "Explain the architectural trade-offs between Server Components and Client Components for a large, data-heavy application."
+        },
+        {
+            "id": 4,
+            "question": "How would you architect a Next.js application to minimize the JavaScript shipped to the client while retaining rich interactivity?"
+        },
+        {
+            "id": 5,
+            "question": "Explain how Next.js's partial prerendering aims to combine static and dynamic rendering in a single route."
+        },
+        {
+            "id": 6,
+            "question": "How would you design a caching strategy across the Data Cache, Full Route Cache, and Router Cache to balance freshness and performance?"
+        },
+        {
+            "id": 7,
+            "question": "Explain how you would architect a multi-tenant Next.js application serving different domains or subdomains with tenant-specific data."
+        },
+        {
+            "id": 8,
+            "question": "How would you design a strategy for incrementally migrating a large legacy pages-router application to the app router without downtime?"
+        },
+        {
+            "id": 9,
+            "question": "Explain how you would implement a robust authentication and session strategy that works correctly across Server Components, Client Components, and middleware."
+        },
+        {
+            "id": 10,
+            "question": "How would you architect a Next.js application to support ISR at scale for millions of dynamically generated pages?"
+        },
+        {
+            "id": 11,
+            "question": "Explain the trade-offs between edge runtime and Node.js runtime for API routes and middleware in Next.js."
+        },
+        {
+            "id": 12,
+            "question": "How would you design a global content delivery strategy for a Next.js application serving users across multiple continents?"
+        },
+        {
+            "id": 13,
+            "question": "Explain how you would troubleshoot a production hydration mismatch that only occurs intermittently under specific user conditions."
+        },
+        {
+            "id": 14,
+            "question": "How would you architect data fetching for a complex dashboard with many independent, streaming data sources using Server Components?"
+        },
+        {
+            "id": 15,
+            "question": "Explain how you would implement fine-grained cache invalidation for a Next.js application backed by a frequently changing database."
+        },
+        {
+            "id": 16,
+            "question": "How would you design a Next.js application's architecture to support offline-first functionality using service workers?"
+        },
+        {
+            "id": 17,
+            "question": "Explain how you would optimize Time to First Byte (TTFB) for a Next.js application performing expensive server-side data fetching."
+        },
+        {
+            "id": 18,
+            "question": "How would you architect a Next.js application to support A/B testing at the edge without impacting cacheability?"
+        },
+        {
+            "id": 19,
+            "question": "Explain how you would design a secure Server Actions implementation to prevent common vulnerabilities like unauthorized data mutation."
+        },
+        {
+            "id": 20,
+            "question": "How would you implement rate limiting for Server Actions and API routes in a Next.js application deployed on the edge?"
+        },
+        {
+            "id": 21,
+            "question": "Explain how you would architect a monorepo containing multiple Next.js applications sharing a common component library."
+        },
+        {
+            "id": 22,
+            "question": "How would you design a strategy to progressively roll out a major Next.js version upgrade across a large production application?"
+        },
+        {
+            "id": 23,
+            "question": "Explain how you would implement comprehensive observability (tracing, metrics, error tracking) across Server Components, Client Components, and API routes."
+        },
+        {
+            "id": 24,
+            "question": "How would you architect a Next.js application to gracefully degrade when a critical third-party API dependency becomes slow or unavailable?"
+        },
+        {
+            "id": 25,
+            "question": "Explain how you would design a build pipeline to keep build times manageable for a Next.js application with tens of thousands of statically generated pages."
+        },
+        {
+            "id": 26,
+            "question": "How would you implement a robust image optimization pipeline for a Next.js application handling user-uploaded images at scale?"
+        },
+        {
+            "id": 27,
+            "question": "Explain how you would architect internationalized routing and content delivery for a Next.js application supporting dozens of locales."
+        },
+        {
+            "id": 28,
+            "question": "How would you design a strategy to safely handle secrets and environment configuration across a Next.js application deployed to multiple environments?"
+        },
+        {
+            "id": 29,
+            "question": "Explain how you would implement a robust webhook handler in a Next.js API route that must process high-throughput, bursty traffic reliably."
+        },
+        {
+            "id": 30,
+            "question": "How would you architect a Next.js application's state and data flow to support real-time collaborative features?"
+        },
+        {
+            "id": 31,
+            "question": "Explain how you would design a testing strategy that appropriately covers Server Components, Client Components, and Server Actions."
+        },
+        {
+            "id": 32,
+            "question": "How would you troubleshoot a scenario where a Next.js application's memory usage grows unbounded under a serverless deployment?"
+        },
+        {
+            "id": 33,
+            "question": "Explain how you would architect a Next.js application to support blue-green or canary deployments with cache consistency guarantees."
+        },
+        {
+            "id": 34,
+            "question": "How would you design a strategy to reduce cold start latency for a Next.js application deployed on serverless infrastructure?"
+        },
+        {
+            "id": 35,
+            "question": "Explain how you would implement fine-grained, role-based data fetching that avoids leaking unauthorized data through Server Components."
+        },
+        {
+            "id": 36,
+            "question": "How would you architect a large e-commerce Next.js application to handle both high-traffic static content and highly dynamic, personalized content efficiently?"
+        },
+        {
+            "id": 37,
+            "question": "Explain how you would design a strategy for safely coordinating cache revalidation across multiple regions in a globally distributed Next.js deployment."
+        },
+        {
+            "id": 38,
+            "question": "How would you implement a robust feature flagging system that works consistently across server-rendered and client-rendered parts of a Next.js application?"
+        },
+        {
+            "id": 39,
+            "question": "Explain how you would architect a Next.js application's build and deployment process to support preview environments for every pull request."
+        },
+        {
+            "id": 40,
+            "question": "How would you troubleshoot a scenario where certain routes are unexpectedly served from stale cache despite recent data changes?"
+        },
+        {
+            "id": 41,
+            "question": "Explain how you would design an approach to measure and optimize Core Web Vitals across a large, complex Next.js application."
+        },
+        {
+            "id": 42,
+            "question": "How would you architect data fetching to avoid request waterfalls in a deeply nested Server Component tree?"
+        },
+        {
+            "id": 43,
+            "question": "Explain how you would implement a robust error handling and fallback strategy across nested error boundaries in the app router."
+        },
+        {
+            "id": 44,
+            "question": "How would you design a strategy for safely sharing authentication state between a Next.js frontend and multiple backend microservices?"
+        },
+        {
+            "id": 45,
+            "question": "Explain how you would architect a Next.js application to support both server-rendered SEO-critical pages and a highly interactive authenticated dashboard within the same codebase."
+        },
+        {
+            "id": 46,
+            "question": "How would you troubleshoot degraded build performance in a Next.js monorepo as the number of pages and shared packages grows?"
+        },
+        {
+            "id": 47,
+            "question": "Explain how you would design a comprehensive rollback strategy for a Next.js deployment that introduced a critical production regression."
+        },
+        {
+            "id": 48,
+            "question": "How would you architect a Next.js application to comply with strict data residency requirements while still leveraging a global CDN?"
+        },
+        {
+            "id": 49,
+            "question": "Explain how you would approach a full performance audit of a production Next.js application experiencing degraded page load times."
+        },
+        {
+            "id": 50,
+            "question": "How would you evaluate and decide between Next.js and a different meta-framework or plain React with a custom setup for a new large-scale project?"
+        }
+    ]
+}

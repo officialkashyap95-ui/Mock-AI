@@ -1,0 +1,609 @@
+{
+    "technology": "PostgreSQL",
+    "easy": [
+        {
+            "id": 1,
+            "question": "What is PostgreSQL?"
+        },
+        {
+            "id": 2,
+            "question": "What is the difference between PostgreSQL and MySQL?"
+        },
+        {
+            "id": 3,
+            "question": "What is a relational database management system (RDBMS)?"
+        },
+        {
+            "id": 4,
+            "question": "What is a table in PostgreSQL?"
+        },
+        {
+            "id": 5,
+            "question": "What is a primary key in PostgreSQL?"
+        },
+        {
+            "id": 6,
+            "question": "What is a foreign key in PostgreSQL?"
+        },
+        {
+            "id": 7,
+            "question": "What is the purpose of the SELECT statement?"
+        },
+        {
+            "id": 8,
+            "question": "What is the purpose of the INSERT INTO statement?"
+        },
+        {
+            "id": 9,
+            "question": "What is the purpose of the UPDATE statement?"
+        },
+        {
+            "id": 10,
+            "question": "What is the purpose of the DELETE statement?"
+        },
+        {
+            "id": 11,
+            "question": "What is the purpose of the WHERE clause?"
+        },
+        {
+            "id": 12,
+            "question": "What is the purpose of the CREATE TABLE statement?"
+        },
+        {
+            "id": 13,
+            "question": "What is the purpose of the DROP TABLE statement?"
+        },
+        {
+            "id": 14,
+            "question": "What is the difference between DELETE and TRUNCATE?"
+        },
+        {
+            "id": 15,
+            "question": "What are common PostgreSQL data types?"
+        },
+        {
+            "id": 16,
+            "question": "What is the difference between VARCHAR and TEXT in PostgreSQL?"
+        },
+        {
+            "id": 17,
+            "question": "What is the SERIAL data type used for?"
+        },
+        {
+            "id": 18,
+            "question": "What is the purpose of the NOT NULL constraint?"
+        },
+        {
+            "id": 19,
+            "question": "What is the purpose of the UNIQUE constraint?"
+        },
+        {
+            "id": 20,
+            "question": "What is the purpose of the CHECK constraint?"
+        },
+        {
+            "id": 21,
+            "question": "What is the purpose of the ORDER BY clause?"
+        },
+        {
+            "id": 22,
+            "question": "What is the purpose of the GROUP BY clause?"
+        },
+        {
+            "id": 23,
+            "question": "What is the difference between WHERE and HAVING?"
+        },
+        {
+            "id": 24,
+            "question": "What is the purpose of the LIMIT clause?"
+        },
+        {
+            "id": 25,
+            "question": "What is a JOIN in PostgreSQL?"
+        },
+        {
+            "id": 26,
+            "question": "What is the difference between INNER JOIN and LEFT JOIN?"
+        },
+        {
+            "id": 27,
+            "question": "What is the purpose of the DISTINCT keyword?"
+        },
+        {
+            "id": 28,
+            "question": "What are aggregate functions like COUNT, SUM, and AVG used for?"
+        },
+        {
+            "id": 29,
+            "question": "What is a schema in PostgreSQL?"
+        },
+        {
+            "id": 30,
+            "question": "What is the default schema in PostgreSQL?"
+        },
+        {
+            "id": 31,
+            "question": "What is an index in PostgreSQL?"
+        },
+        {
+            "id": 32,
+            "question": "What is the purpose of the ALTER TABLE statement?"
+        },
+        {
+            "id": 33,
+            "question": "What is the psql command-line tool used for?"
+        },
+        {
+            "id": 34,
+            "question": "What is pgAdmin?"
+        },
+        {
+            "id": 35,
+            "question": "What is a NULL value in PostgreSQL?"
+        },
+        {
+            "id": 36,
+            "question": "What is the difference between IS NULL and = NULL?"
+        },
+        {
+            "id": 37,
+            "question": "What is the BETWEEN operator used for?"
+        },
+        {
+            "id": 38,
+            "question": "What is the IN operator used for?"
+        },
+        {
+            "id": 39,
+            "question": "What is a composite key?"
+        },
+        {
+            "id": 40,
+            "question": "What is a view in PostgreSQL?"
+        },
+        {
+            "id": 41,
+            "question": "What is a sequence in PostgreSQL?"
+        },
+        {
+            "id": 42,
+            "question": "What is the purpose of the DEFAULT clause on a column?"
+        },
+        {
+            "id": 43,
+            "question": "What is the purpose of comments in SQL queries?"
+        },
+        {
+            "id": 44,
+            "question": "What is a database in PostgreSQL and how is it different from a schema?"
+        },
+        {
+            "id": 45,
+            "question":"What is the purpose of the \\d command in psql?"
+        },
+        {
+            "id": 46,
+            "question": "What is the purpose of the CASCADE option when dropping objects?"
+        },
+        {
+            "id": 47,
+            "question": "What is the purpose of the COMMIT statement?"
+        },
+        {
+            "id": 48,
+            "question": "What is a transaction in PostgreSQL?"
+        },
+        {
+            "id": 49,
+            "question": "What is the purpose of the pg_dump utility?"
+        },
+        {
+            "id": 50,
+            "question": "What port does PostgreSQL run on by default?"
+        }
+    ],
+    "medium": [
+        {
+            "id": 1,
+            "question": "What is normalization and why is it important in PostgreSQL database design?"
+        },
+        {
+            "id": 2,
+            "question": "What is the difference between 1NF, 2NF, and 3NF?"
+        },
+        {
+            "id": 3,
+            "question": "What is denormalization and when would you use it in PostgreSQL?"
+        },
+        {
+            "id": 4,
+            "question": "What is the difference between INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL OUTER JOIN?"
+        },
+        {
+            "id": 5,
+            "question": "What is a self-join and when would you use one?"
+        },
+        {
+            "id": 6,
+            "question": "What is a subquery and how does it differ from a JOIN?"
+        },
+        {
+            "id": 7,
+            "question": "What is a correlated subquery?"
+        },
+        {
+            "id": 8,
+            "question": "What are the ACID properties and how does PostgreSQL guarantee them?"
+        },
+        {
+            "id": 9,
+            "question": "What is MVCC (Multi-Version Concurrency Control) and how does PostgreSQL implement it?"
+        },
+        {
+            "id": 10,
+            "question": "What is the purpose of the VACUUM command in PostgreSQL?"
+        },
+        {
+            "id": 11,
+            "question": "What is the difference between VACUUM and VACUUM FULL?"
+        },
+        {
+            "id": 12,
+            "question": "What is table bloat and how does it relate to MVCC?"
+        },
+        {
+            "id": 13,
+            "question": "What is a stored procedure or function in PostgreSQL, and how do you create one using PL/pgSQL?"
+        },
+        {
+            "id": 14,
+            "question": "What is a trigger in PostgreSQL?"
+        },
+        {
+            "id": 15,
+            "question": "What is the difference between a BEFORE trigger and an AFTER trigger?"
+        },
+        {
+            "id": 16,
+            "question": "What is the purpose of the EXPLAIN and EXPLAIN ANALYZE commands?"
+        },
+        {
+            "id": 17,
+            "question": "How would you use EXPLAIN ANALYZE to diagnose a slow query?"
+        },
+        {
+            "id": 18,
+            "question": "What is a B-tree index and when is it the appropriate index type?"
+        },
+        {
+            "id": 19,
+            "question": "What are the differences between B-tree, Hash, GIN, and GiST indexes in PostgreSQL?"
+        },
+        {
+            "id": 20,
+            "question": "What is a partial index and when would you use one?"
+        },
+        {
+            "id": 21,
+            "question": "What is a composite index and how does column order affect its usefulness?"
+        },
+        {
+            "id": 22,
+            "question": "What is the purpose of the JSONB data type and how does it differ from JSON?"
+        },
+        {
+            "id": 23,
+            "question": "How would you query nested fields inside a JSONB column?"
+        },
+        {
+            "id": 24,
+            "question": "What is table partitioning in PostgreSQL and when would you use it?"
+        },
+        {
+            "id": 25,
+            "question": "What is the difference between range partitioning and list partitioning?"
+        },
+        {
+            "id": 26,
+            "question": "What is a Common Table Expression (CTE) and when would you use one?"
+        },
+        {
+            "id": 27,
+            "question": "How would you write a recursive CTE to traverse a hierarchical data structure?"
+        },
+        {
+            "id": 28,
+            "question": "What is a window function and how does it differ from a GROUP BY aggregation?"
+        },
+        {
+            "id": 29,
+            "question": "How would you use the ROW_NUMBER() and RANK() window functions?"
+        },
+        {
+            "id": 30,
+            "question": "What is the difference between UNION and UNION ALL?"
+        },
+        {
+            "id": 31,
+            "question": "What are PostgreSQL's transaction isolation levels?"
+        },
+        {
+            "id": 32,
+            "question": "What is the difference between READ COMMITTED and SERIALIZABLE isolation levels?"
+        },
+        {
+            "id": 33,
+            "question": "What is a deadlock in PostgreSQL and how would you resolve one?"
+        },
+        {
+            "id": 34,
+            "question": "What is the difference between optimistic and pessimistic locking in PostgreSQL?"
+        },
+        {
+            "id": 35,
+            "question": "How would you implement pagination for a large result set efficiently?"
+        },
+        {
+            "id": 36,
+            "question": "What is the difference between OFFSET-based pagination and keyset (cursor-based) pagination?"
+        },
+        {
+            "id": 37,
+            "question": "What is a materialized view and how does it differ from a regular view?"
+        },
+        {
+            "id": 38,
+            "question": "How would you keep a materialized view up to date?"
+        },
+        {
+            "id": 39,
+            "question": "What is the purpose of foreign key constraints in maintaining referential integrity?"
+        },
+        {
+            "id": 40,
+            "question": "What is the ON DELETE CASCADE option and when would you use it?"
+        },
+        {
+            "id": 41,
+            "question": "How would you back up and restore a PostgreSQL database using pg_dump and pg_restore?"
+        },
+        {
+            "id": 42,
+            "question": "What is the purpose of PostgreSQL's connection pooling and why is it needed (e.g., PgBouncer)?"
+        },
+        {
+            "id": 43,
+            "question": "How would you prevent SQL injection when building queries in an application connected to PostgreSQL?"
+        },
+        {
+            "id": 44,
+            "question": "What is the purpose of prepared statements in PostgreSQL?"
+        },
+        {
+            "id": 45,
+            "question": "How would you optimize a query that is performing a sequential scan on a large table?"
+        },
+        {
+            "id": 46,
+            "question": "What is a covering index and how does it enable an index-only scan?"
+        },
+        {
+            "id": 47,
+            "question": "How would you handle schema migrations in a production PostgreSQL database without downtime?"
+        },
+        {
+            "id": 48,
+            "question": "What is the purpose of the SERIAL versus IDENTITY column types for auto-incrementing keys?"
+        },
+        {
+            "id": 49,
+            "question": "How would you implement full-text search in PostgreSQL?"
+        },
+        {
+            "id": 50,
+            "question": "How would you debug a PostgreSQL query that is running significantly slower than expected?"
+        }
+    ],
+    "hard": [
+        {
+            "id": 1,
+            "question": "Explain how PostgreSQL's MVCC implementation handles concurrent reads and writes without traditional locking."
+        },
+        {
+            "id": 2,
+            "question": "How does PostgreSQL's autovacuum process work, and how would you tune it for a high-write-throughput table?"
+        },
+        {
+            "id": 3,
+            "question": "Explain how transaction ID wraparound occurs in PostgreSQL and how you would prevent it in a long-running production database."
+        },
+        {
+            "id": 4,
+            "question": "How would you design a sharding strategy for a PostgreSQL database that has outgrown a single server's capacity?"
+        },
+        {
+            "id": 5,
+            "question": "Explain the trade-offs between logical replication and streaming (physical) replication in PostgreSQL."
+        },
+        {
+            "id": 6,
+            "question": "How would you architect a PostgreSQL high-availability setup with automatic failover using tools like Patroni?"
+        },
+        {
+            "id": 7,
+            "question": "Explain how you would diagnose and resolve replication lag in a PostgreSQL streaming replication setup under heavy write load."
+        },
+        {
+            "id": 8,
+            "question": "How would you design a disaster recovery strategy for a mission-critical PostgreSQL database with strict RPO and RTO requirements?"
+        },
+        {
+            "id": 9,
+            "question": "Explain how PostgreSQL's query planner chooses between a sequential scan, index scan, and bitmap index scan."
+        },
+        {
+            "id": 10,
+            "question": "How would you tune PostgreSQL configuration parameters like shared_buffers and work_mem for a high-concurrency production workload?"
+        },
+        {
+            "id": 11,
+            "question": "Explain how you would optimize a PostgreSQL schema and indexing strategy for a table with billions of rows."
+        },
+        {
+            "id": 12,
+            "question": "How would you design a zero-downtime schema migration strategy for a very large production PostgreSQL table?"
+        },
+        {
+            "id": 13,
+            "question": "Explain how you would troubleshoot severe lock contention affecting write throughput on a hot row in a high-traffic table."
+        },
+        {
+            "id": 14,
+            "question": "How would you architect a read-heavy PostgreSQL application to scale using read replicas while managing replication consistency?"
+        },
+        {
+            "id": 15,
+            "question": "Explain the trade-offs between native PostgreSQL partitioning and application-level sharding for a very large dataset."
+        },
+        {
+            "id": 16,
+            "question": "How would you design a connection pooling and query routing strategy for an application interacting with a sharded PostgreSQL cluster?"
+        },
+        {
+            "id": 17,
+            "question": "Explain how you would implement a robust strategy to prevent and detect data corruption in a large production PostgreSQL database."
+        },
+        {
+            "id": 18,
+            "question": "How would you architect a caching layer in front of PostgreSQL to significantly reduce read latency for a high-traffic application?"
+        },
+        {
+            "id": 19,
+            "question": "Explain how you would design an archival strategy to move historical data out of a large, performance-critical PostgreSQL table."
+        },
+        {
+            "id": 20,
+            "question": "How would you troubleshoot a scenario where index usage suddenly degrades after a PostgreSQL version upgrade?"
+        },
+        {
+            "id": 21,
+            "question": "Explain how you would implement idempotent, exactly-once write semantics for a PostgreSQL-backed financial transaction system."
+        },
+        {
+            "id": 22,
+            "question": "How would you design a strategy to safely perform a major version upgrade of a production PostgreSQL cluster with minimal downtime?"
+        },
+        {
+            "id": 23,
+            "question": "Explain how you would architect a multi-region PostgreSQL deployment to minimize latency while maintaining data consistency."
+        },
+        {
+            "id": 24,
+            "question": "How would you design a comprehensive monitoring and alerting strategy for a fleet of production PostgreSQL instances?"
+        },
+        {
+            "id": 25,
+            "question": "Explain how you would architect a change data capture pipeline streaming changes from PostgreSQL to downstream systems using logical decoding."
+        },
+        {
+            "id": 26,
+            "question": "How would you optimize a complex analytical query involving multiple large joins and aggregations on a transactional PostgreSQL database?"
+        },
+        {
+            "id": 27,
+            "question": "Explain how you would design a strategy to handle schema evolution across microservices that each own a portion of a shared PostgreSQL database."
+        },
+        {
+            "id": 28,
+            "question": "How would you implement field-level encryption for sensitive data in PostgreSQL while preserving the ability to query it efficiently?"
+        },
+        {
+            "id": 29,
+            "question": "Explain how you would architect a solution to enforce strict multi-tenant data isolation within a shared PostgreSQL database using row-level security."
+        },
+        {
+            "id": 30,
+            "question": "How would you design a backup strategy for a large PostgreSQL database that balances backup speed, storage cost, and restore time?"
+        },
+        {
+            "id": 31,
+            "question": "Explain how you would troubleshoot a case where query performance is inconsistent despite identical query plans across executions."
+        },
+        {
+            "id": 32,
+            "question": "How would you design an index strategy for a table that must efficiently support dozens of different query access patterns?"
+        },
+        {
+            "id": 33,
+            "question": "Explain how you would architect a solution to handle a sudden 10x increase in write throughput without degrading database performance."
+        },
+        {
+            "id": 34,
+            "question": "How would you implement a robust retry and circuit breaker strategy for an application experiencing intermittent PostgreSQL connectivity issues?"
+        },
+        {
+            "id": 35,
+            "question": "Explain how you would design a strategy for testing schema and index changes safely before applying them to a production PostgreSQL database."
+        },
+        {
+            "id": 36,
+            "question": "How would you architect a solution to support near-real-time analytics on top of a transactional PostgreSQL database without impacting production performance?"
+        },
+        {
+            "id": 37,
+            "question": "Explain how you would troubleshoot a scenario where a large ALTER TABLE operation is causing significant downtime on a production system."
+        },
+        {
+            "id": 38,
+            "question": "How would you design a capacity planning strategy for a PostgreSQL database expected to grow tenfold in data volume over the next year?"
+        },
+        {
+            "id": 39,
+            "question": "Explain how you would architect a solution to handle eventual consistency challenges when PostgreSQL is used alongside other datastores in a polyglot persistence architecture."
+        },
+        {
+            "id": 40,
+            "question": "How would you design a strategy to safely migrate a large production PostgreSQL database to a different cloud provider or managed service?"
+        },
+        {
+            "id": 41,
+            "question": "Explain how you would optimize PostgreSQL's autovacuum and checkpoint configuration for a workload with a very high ratio of writes to reads."
+        },
+        {
+            "id": 42,
+            "question": "How would you troubleshoot memory pressure and swapping issues on a PostgreSQL server caused by misconfigured memory parameters?"
+        },
+        {
+            "id": 43,
+            "question": "Explain how you would design a strategy to detect and remediate slow-growing data integrity issues caused by application bugs over time."
+        },
+        {
+            "id": 44,
+            "question": "How would you architect a solution to support blue-green deployments for a PostgreSQL schema migration involving breaking changes?"
+        },
+        {
+            "id": 45,
+            "question": "Explain how you would implement comprehensive audit logging for sensitive data changes in a production PostgreSQL database."
+        },
+        {
+            "id": 46,
+            "question": "How would you design a strategy for coordinating schema changes across multiple services that share a single PostgreSQL database?"
+        },
+        {
+            "id": 47,
+            "question": "Explain how you would implement and tune parallel query execution for a large analytical workload in PostgreSQL."
+        },
+        {
+            "id": 48,
+            "question": "How would you design a high-throughput bulk data loading strategy for PostgreSQL that minimizes locking and WAL overhead?"
+        },
+        {
+            "id": 49,
+            "question": "Explain how you would approach a full performance audit of a production PostgreSQL database experiencing intermittent query latency spikes."
+        },
+        {
+            "id": 50,
+            "question": "How would you evaluate and decide between PostgreSQL and another database system for a new application with evolving data and scaling requirements?"
+        }
+    ]
+}

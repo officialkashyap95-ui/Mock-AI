@@ -1,0 +1,609 @@
+{
+    "technology": "Express.js",
+    "easy": [
+        {
+            "id": 1,
+            "question": "What is Express.js?"
+        },
+        {
+            "id": 2,
+            "question": "What is the relationship between Node.js and Express.js?"
+        },
+        {
+            "id": 3,
+            "question": "How do you install Express in a Node.js project?"
+        },
+        {
+            "id": 4,
+            "question": "How do you create a basic Express application?"
+        },
+        {
+            "id": 5,
+            "question": "What is a route in Express?"
+        },
+        {
+            "id": 6,
+            "question": "What is the purpose of the app.get() method?"
+        },
+        {
+            "id": 7,
+            "question": "What is the purpose of the app.post() method?"
+        },
+        {
+            "id": 8,
+            "question": "What is the difference between app.get() and app.post()?"
+        },
+        {
+            "id": 9,
+            "question": "What is the purpose of the app.listen() method?"
+        },
+        {
+            "id": 10,
+            "question": "What is middleware in Express?"
+        },
+        {
+            "id": 11,
+            "question": "What is the purpose of the app.use() method?"
+        },
+        {
+            "id": 12,
+            "question": "What is the req object in Express?"
+        },
+        {
+            "id": 13,
+            "question": "What is the res object in Express?"
+        },
+        {
+            "id": 14,
+            "question": "What is the purpose of the next() function in middleware?"
+        },
+        {
+            "id": 15,
+            "question": "What is the purpose of res.send()?"
+        },
+        {
+            "id": 16,
+            "question": "What is the purpose of res.json()?"
+        },
+        {
+            "id": 17,
+            "question": "What is the difference between res.send() and res.json()?"
+        },
+        {
+            "id": 18,
+            "question": "What is the purpose of res.status()?"
+        },
+        {
+            "id": 19,
+            "question": "What is a route parameter in Express?"
+        },
+        {
+            "id": 20,
+            "question": "How do you access route parameters in a request?"
+        },
+        {
+            "id": 21,
+            "question": "What is a query parameter and how do you access it in Express?"
+        },
+        {
+            "id": 22,
+            "question": "What is the purpose of express.json() middleware?"
+        },
+        {
+            "id": 23,
+            "question": "What is the purpose of express.urlencoded() middleware?"
+        },
+        {
+            "id": 24,
+            "question": "What is express.static() used for?"
+        },
+        {
+            "id": 25,
+            "question": "What is the purpose of the package.json file in an Express project?"
+        },
+        {
+            "id": 26,
+            "question": "What is nodemon and why is it used during Express development?"
+        },
+        {
+            "id": 27,
+            "question": "What is the default port convention in Express applications?"
+        },
+        {
+            "id": 28,
+            "question": "What is the purpose of app.put()?"
+        },
+        {
+            "id": 29,
+            "question": "What is the purpose of app.delete()?"
+        },
+        {
+            "id": 30,
+            "question": "What are the common HTTP methods used in Express routing?"
+        },
+        {
+            "id": 31,
+            "question": "What is the purpose of the Express Router?"
+        },
+        {
+            "id": 32,
+            "question": "How do you create a modular route file using express.Router()?"
+        },
+        {
+            "id": 33,
+            "question": "What is the purpose of res.redirect()?"
+        },
+        {
+            "id": 34,
+            "question": "What is a 404 error and how do you handle it in Express?"
+        },
+        {
+            "id": 35,
+            "question": "What is the purpose of body-parser and is it still needed in modern Express?"
+        },
+        {
+            "id": 36,
+            "question": "What is the difference between a GET request and a POST request?"
+        },
+        {
+            "id": 37,
+            "question": "What is the purpose of req.params?"
+        },
+        {
+            "id": 38,
+            "question": "What is the purpose of req.query?"
+        },
+        {
+            "id": 39,
+            "question": "What is the purpose of req.body?"
+        },
+        {
+            "id": 40,
+            "question": "What is the purpose of the cors package in an Express application?"
+        },
+        {
+            "id": 41,
+            "question": "What is a template engine and how is it used with Express?"
+        },
+        {
+            "id": 42,
+            "question": "What is the purpose of app.set()?"
+        },
+        {
+            "id": 43,
+            "question": "What is the purpose of the view engine setting in Express?"
+        },
+        {
+            "id": 44,
+            "question": "What is a wildcard route in Express?"
+        },
+        {
+            "id": 45,
+            "question": "What is the purpose of environment variables in an Express application?"
+        },
+        {
+            "id": 46,
+            "question": "What is the purpose of the dotenv package?"
+        },
+        {
+            "id": 47,
+            "question": "What is a RESTful API?"
+        },
+        {
+            "id": 48,
+            "question": "What is the purpose of a controller in an Express application structure?"
+        },
+        {
+            "id": 49,
+            "question": "What is the difference between a route handler and a middleware function?"
+        },
+        {
+            "id": 50,
+            "question": "What is the purpose of the morgan package in Express?"
+        }
+    ],
+    "medium": [
+        {
+            "id": 1,
+            "question": "What is the difference between application-level middleware and router-level middleware?"
+        },
+        {
+            "id": 2,
+            "question": "What is the purpose of error-handling middleware and how do you define it?"
+        },
+        {
+            "id": 3,
+            "question": "How does Express identify an error-handling middleware function compared to a regular one?"
+        },
+        {
+            "id": 4,
+            "question": "How would you implement centralized error handling in an Express application?"
+        },
+        {
+            "id": 5,
+            "question": "What is the order of execution significance for middleware in Express?"
+        },
+        {
+            "id": 6,
+            "question": "How would you implement custom logging middleware for incoming requests?"
+        },
+        {
+            "id": 7,
+            "question": "What is the purpose of the express.Router() chaining pattern using route()?"
+        },
+        {
+            "id": 8,
+            "question": "How would you structure an Express project for a large-scale application (MVC pattern)?"
+        },
+        {
+            "id": 9,
+            "question": "What is the purpose of connecting Express with MongoDB using Mongoose?"
+        },
+        {
+            "id": 10,
+            "question": "How would you handle asynchronous errors in an Express route handler?"
+        },
+        {
+            "id": 11,
+            "question": "What is the purpose of a try-catch wrapper utility for async route handlers?"
+        },
+        {
+            "id": 12,
+            "question": "How would you implement JWT-based authentication in an Express application?"
+        },
+        {
+            "id": 13,
+            "question": "What is the purpose of authentication middleware and how would you apply it to protected routes?"
+        },
+        {
+            "id": 14,
+            "question": "How would you implement role-based access control in an Express API?"
+        },
+        {
+            "id": 15,
+            "question": "What is the purpose of the helmet package and how does it improve security?"
+        },
+        {
+            "id": 16,
+            "question": "How would you prevent CORS errors when building an API consumed by a separate frontend?"
+        },
+        {
+            "id": 17,
+            "question": "What is the purpose of rate limiting in an Express API and how would you implement it?"
+        },
+        {
+            "id": 18,
+            "question": "How would you validate incoming request data in an Express application?"
+        },
+        {
+            "id": 19,
+            "question": "What is the purpose of the express-validator package?"
+        },
+        {
+            "id": 20,
+            "question": "How would you handle file uploads in Express using multer?"
+        },
+        {
+            "id": 21,
+            "question": "What is the purpose of session management in Express and how does express-session work?"
+        },
+        {
+            "id": 22,
+            "question": "What is the difference between session-based authentication and token-based authentication?"
+        },
+        {
+            "id": 23,
+            "question": "How would you implement pagination for a large dataset in an Express API?"
+        },
+        {
+            "id": 24,
+            "question": "How would you implement filtering and sorting for a REST API endpoint in Express?"
+        },
+        {
+            "id": 25,
+            "question": "What is the purpose of compression middleware in Express?"
+        },
+        {
+            "id": 26,
+            "question": "How would you structure environment-specific configuration for development, staging, and production?"
+        },
+        {
+            "id": 27,
+            "question": "What is the significance of the order in which middleware and routes are registered?"
+        },
+        {
+            "id": 28,
+            "question": "How would you implement a global 404 handler for undefined routes?"
+        },
+        {
+            "id": 29,
+            "question": "What is the purpose of chaining multiple middleware functions on a single route?"
+        },
+        {
+            "id": 30,
+            "question": "How would you implement request logging that writes to a file instead of the console?"
+        },
+        {
+            "id": 31,
+            "question": "What is the purpose of the express.static() middleware options like maxAge for caching?"
+        },
+        {
+            "id": 32,
+            "question": "How would you secure an Express API against common vulnerabilities like NoSQL injection?"
+        },
+        {
+            "id": 33,
+            "question": "What is the purpose of input sanitization and how would you implement it in Express?"
+        },
+        {
+            "id": 34,
+            "question": "How would you implement a health check endpoint for an Express service?"
+        },
+        {
+            "id": 35,
+            "question": "What is the purpose of graceful shutdown handling in an Express application?"
+        },
+        {
+            "id": 36,
+            "question": "How would you test an Express API using a tool like Supertest?"
+        },
+        {
+            "id": 37,
+            "question": "What is the purpose of mocking a database connection in Express API tests?"
+        },
+        {
+            "id": 38,
+            "question": "How would you implement API versioning in an Express application?"
+        },
+        {
+            "id": 39,
+            "question": "What is the purpose of using async/await instead of callbacks in Express route handlers?"
+        },
+        {
+            "id": 40,
+            "question": "How would you handle circular JSON structures when sending a response?"
+        },
+        {
+            "id": 41,
+            "question": "What is the purpose of the trust proxy setting in Express when deployed behind a load balancer?"
+        },
+        {
+            "id": 42,
+            "question": "How would you implement request timeout handling in Express?"
+        },
+        {
+            "id": 43,
+            "question": "What is the purpose of the res.locals object?"
+        },
+        {
+            "id": 44,
+            "question": "How would you share data between middleware functions in a single request lifecycle?"
+        },
+        {
+            "id": 45,
+            "question": "What is the difference between res.end() and res.send()?"
+        },
+        {
+            "id": 46,
+            "question": "How would you implement a custom response formatter middleware for consistent API responses?"
+        },
+        {
+            "id": 47,
+            "question": "What is the purpose of the app.all() method?"
+        },
+        {
+            "id": 48,
+            "question": "How would you handle large JSON payloads and configure body size limits?"
+        },
+        {
+            "id": 49,
+            "question": "What is the purpose of the etag setting in Express responses?"
+        },
+        {
+            "id": 50,
+            "question": "How would you debug a memory leak in a long-running Express application?"
+        }
+    ],
+    "hard": [
+        {
+            "id": 1,
+            "question": "Explain how Express's middleware chain works internally with respect to the underlying Node.js HTTP server."
+        },
+        {
+            "id": 2,
+            "question": "How would you architect a large-scale Express application to handle tens of thousands of concurrent requests?"
+        },
+        {
+            "id": 3,
+            "question": "Explain how Node.js's single-threaded event loop affects the performance of CPU-intensive operations in an Express application."
+        },
+        {
+            "id": 4,
+            "question": "How would you offload CPU-intensive work from an Express server without blocking the event loop?"
+        },
+        {
+            "id": 5,
+            "question": "Explain how you would implement a horizontally scalable Express application using a cluster of Node.js processes."
+        },
+        {
+            "id": 6,
+            "question": "How would you design a caching layer using Redis to reduce database load for a high-traffic Express API?"
+        },
+        {
+            "id": 7,
+            "question": "Explain how you would implement distributed rate limiting across multiple Express server instances."
+        },
+        {
+            "id": 8,
+            "question": "How would you architect an Express application to support real-time features using WebSockets alongside REST endpoints?"
+        },
+        {
+            "id": 9,
+            "question": "Explain how you would design a robust authentication system supporting access tokens and refresh token rotation in Express."
+        },
+        {
+            "id": 10,
+            "question": "How would you implement idempotency for critical POST endpoints such as payment processing in an Express API?"
+        },
+        {
+            "id": 11,
+            "question": "Explain how you would design a microservices architecture where Express services communicate via both REST and message queues."
+        },
+        {
+            "id": 12,
+            "question": "How would you implement centralized error tracking and structured logging across a distributed set of Express services?"
+        },
+        {
+            "id": 13,
+            "question": "Explain the security considerations for handling file uploads at scale in an Express application, including validation and storage."
+        },
+        {
+            "id": 14,
+            "question": "How would you design a request validation and sanitization pipeline to protect against injection attacks across a large Express codebase?"
+        },
+        {
+            "id": 15,
+            "question": "Explain how you would implement graceful degradation when a downstream dependency of an Express service becomes slow or unavailable."
+        },
+        {
+            "id": 16,
+            "question": "How would you architect an Express application to support multi-tenancy with strict data isolation between tenants?"
+        },
+        {
+            "id": 17,
+            "question": "Explain how you would design a circuit breaker pattern for outbound API calls made from an Express service."
+        },
+        {
+            "id": 18,
+            "question": "How would you implement request tracing across multiple Express microservices for observability purposes?"
+        },
+        {
+            "id": 19,
+            "question": "Explain how you would optimize an Express application's startup and response times under heavy production load."
+        },
+        {
+            "id": 20,
+            "question": "How would you design a zero-downtime deployment strategy for an Express application running behind a load balancer?"
+        },
+        {
+            "id": 21,
+            "question": "Explain how you would implement connection pooling for a database in a high-concurrency Express application."
+        },
+        {
+            "id": 22,
+            "question": "How would you architect an Express API to handle long-running operations without blocking client requests?"
+        },
+        {
+            "id": 23,
+            "question": "Explain how you would design a robust API gateway pattern in front of multiple Express-based microservices."
+        },
+        {
+            "id": 24,
+            "question": "How would you implement a secure webhook receiver in Express that verifies payload signatures?"
+        },
+        {
+            "id": 25,
+            "question": "Explain how you would design a strategy to handle backpressure when an Express service receives requests faster than it can process them."
+        },
+        {
+            "id": 26,
+            "question": "How would you architect an Express application to support GraphQL alongside existing REST endpoints?"
+        },
+        {
+            "id": 27,
+            "question": "Explain how you would implement fine-grained, attribute-based authorization for a complex Express API with many resource types."
+        },
+        {
+            "id": 28,
+            "question": "How would you design a system to detect and mitigate a DDoS attack targeting an Express-based API?"
+        },
+        {
+            "id": 29,
+            "question": "Explain how you would implement a robust retry and dead-letter mechanism for failed background jobs triggered from Express routes."
+        },
+        {
+            "id": 30,
+            "question": "How would you architect an Express application's logging strategy to avoid becoming a performance bottleneck under high load?"
+        },
+        {
+            "id": 31,
+            "question": "Explain the trade-offs between using Express with a traditional server model versus deploying Express handlers in a serverless environment."
+        },
+        {
+            "id": 32,
+            "question": "How would you design a strategy for safely rolling out breaking API changes in an Express service used by multiple client teams?"
+        },
+        {
+            "id": 33,
+            "question": "Explain how you would implement end-to-end request validation using schema-based validation libraries in a large Express codebase."
+        },
+        {
+            "id": 34,
+            "question": "How would you architect session and state management for an Express application deployed across multiple stateless server instances?"
+        },
+        {
+            "id": 35,
+            "question": "Explain how you would design a comprehensive testing strategy covering unit, integration, and contract tests for an Express microservice."
+        },
+        {
+            "id": 36,
+            "question": "How would you implement a robust health check and readiness probe system for an Express service running in a container orchestrator?"
+        },
+        {
+            "id": 37,
+            "question": "Explain how you would profile an Express application to identify and resolve a specific performance bottleneck in production."
+        },
+        {
+            "id": 38,
+            "question": "How would you architect a multi-region deployment of an Express API to minimize latency for globally distributed users?"
+        },
+        {
+            "id": 39,
+            "question": "Explain how you would implement secure secrets management for an Express application across multiple deployment environments."
+        },
+        {
+            "id": 40,
+            "question": "How would you design an Express application to handle schema evolution in its API without breaking existing consumers?"
+        },
+        {
+            "id": 41,
+            "question": "Explain how you would implement a robust audit trail for sensitive operations performed through an Express API."
+        },
+        {
+            "id": 42,
+            "question": "How would you architect an Express-based backend to support both synchronous requests and asynchronous event-driven workflows?"
+        },
+        {
+            "id": 43,
+            "question": "Explain how you would design a strategy to handle race conditions when multiple requests attempt to modify the same resource concurrently in Express."
+        },
+        {
+            "id": 44,
+            "question": "How would you implement a plugin architecture allowing teams to extend a shared Express application without modifying core code?"
+        },
+        {
+            "id": 45,
+            "question": "Explain how you would design an Express application's error response format to be consistent and machine-parseable across a large API surface."
+        },
+        {
+            "id": 46,
+            "question": "How would you architect a solution to gracefully handle Express server restarts without dropping in-flight requests?"
+        },
+        {
+            "id": 47,
+            "question": "Explain how you would implement request deduplication for an Express API that receives retried requests from unreliable clients."
+        },
+        {
+            "id": 48,
+            "question": "How would you design a strategy to enforce consistent input/output contracts across a large team building on a shared Express codebase?"
+        },
+        {
+            "id": 49,
+            "question": "Explain how you would approach a full performance audit of a production Express application experiencing intermittent latency spikes."
+        },
+        {
+            "id": 50,
+            "question": "How would you evaluate and decide between Express and a newer framework like Fastify or NestJS for a new large-scale backend project?"
+        }
+    ]
+}

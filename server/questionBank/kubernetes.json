@@ -1,0 +1,609 @@
+{
+    "technology": "Kubernetes",
+    "easy": [
+        {
+            "id": 1,
+            "question": "What is Kubernetes?"
+        },
+        {
+            "id": 2,
+            "question": "What problem does Kubernetes solve?"
+        },
+        {
+            "id": 3,
+            "question": "What is the difference between Docker and Kubernetes?"
+        },
+        {
+            "id": 4,
+            "question": "What is a Pod in Kubernetes?"
+        },
+        {
+            "id": 5,
+            "question": "What is a Node in Kubernetes?"
+        },
+        {
+            "id": 6,
+            "question": "What is the difference between a Node and a Pod?"
+        },
+        {
+            "id": 7,
+            "question": "What is a Kubernetes cluster?"
+        },
+        {
+            "id": 8,
+            "question": "What is the control plane in Kubernetes?"
+        },
+        {
+            "id": 9,
+            "question": "What is the kubelet?"
+        },
+        {
+            "id": 10,
+            "question": "What is kube-proxy?"
+        },
+        {
+            "id": 11,
+            "question": "What is the API server in Kubernetes?"
+        },
+        {
+            "id": 12,
+            "question": "What is etcd used for in Kubernetes?"
+        },
+        {
+            "id": 13,
+            "question": "What is the scheduler in Kubernetes?"
+        },
+        {
+            "id": 14,
+            "question": "What is a container runtime and how does it relate to Kubernetes?"
+        },
+        {
+            "id": 15,
+            "question": "What is kubectl?"
+        },
+        {
+            "id": 16,
+            "question": "What is the purpose of the kubectl get pods command?"
+        },
+        {
+            "id": 17,
+            "question": "What is a Deployment in Kubernetes?"
+        },
+        {
+            "id": 18,
+            "question": "What is the purpose of a ReplicaSet?"
+        },
+        {
+            "id": 19,
+            "question": "What is the difference between a Deployment and a ReplicaSet?"
+        },
+        {
+            "id": 20,
+            "question": "What is a Service in Kubernetes?"
+        },
+        {
+            "id": 21,
+            "question": "What is the purpose of a Service in exposing Pods?"
+        },
+        {
+            "id": 22,
+            "question": "What is a Namespace in Kubernetes?"
+        },
+        {
+            "id": 23,
+            "question": "What is the purpose of a YAML manifest file in Kubernetes?"
+        },
+        {
+            "id": 24,
+            "question": "What is a label in Kubernetes?"
+        },
+        {
+            "id": 25,
+            "question": "What is a selector in Kubernetes?"
+        },
+        {
+            "id": 26,
+            "question": "What is the purpose of the kubectl apply command?"
+        },
+        {
+            "id": 27,
+            "question": "What is the purpose of the kubectl describe command?"
+        },
+        {
+            "id": 28,
+            "question": "What is the purpose of the kubectl logs command?"
+        },
+        {
+            "id": 29,
+            "question": "What is a ConfigMap?"
+        },
+        {
+            "id": 30,
+            "question": "What is a Secret in Kubernetes?"
+        },
+        {
+            "id": 31,
+            "question": "What is the difference between a ConfigMap and a Secret?"
+        },
+        {
+            "id": 32,
+            "question": "What is a Volume in Kubernetes?"
+        },
+        {
+            "id": 33,
+            "question": "What is the purpose of a PersistentVolume?"
+        },
+        {
+            "id": 34,
+            "question": "What is a PersistentVolumeClaim?"
+        },
+        {
+            "id": 35,
+            "question": "What is a Namespace used for in a multi-team cluster?"
+        },
+        {
+            "id": 36,
+            "question": "What is the default namespace in Kubernetes?"
+        },
+        {
+            "id": 37,
+            "question": "What is a container image pull policy?"
+        },
+        {
+            "id": 38,
+            "question": "What is the purpose of the kubectl scale command?"
+        },
+        {
+            "id": 39,
+            "question": "What is the purpose of the kubectl delete command?"
+        },
+        {
+            "id": 40,
+            "question": "What is a StatefulSet?"
+        },
+        {
+            "id": 41,
+            "question": "What is the difference between a Deployment and a StatefulSet?"
+        },
+        {
+            "id": 42,
+            "question": "What is a DaemonSet?"
+        },
+        {
+            "id": 43,
+            "question": "What is a Job in Kubernetes?"
+        },
+        {
+            "id": 44,
+            "question": "What is a CronJob in Kubernetes?"
+        },
+        {
+            "id": 45,
+            "question": "What is the purpose of readiness probes?"
+        },
+        {
+            "id": 46,
+            "question": "What is the purpose of liveness probes?"
+        },
+        {
+            "id": 47,
+            "question": "What is the difference between a readiness probe and a liveness probe?"
+        },
+        {
+            "id": 48,
+            "question": "What is the purpose of the kubectl port-forward command?"
+        },
+        {
+            "id": 49,
+            "question": "What is Minikube used for?"
+        },
+        {
+            "id": 50,
+            "question": "What is the purpose of a Kubernetes manifest's apiVersion field?"
+        }
+    ],
+    "medium": [
+        {
+            "id": 1,
+            "question": "What is the difference between ClusterIP, NodePort, and LoadBalancer service types?"
+        },
+        {
+            "id": 2,
+            "question": "How does Kubernetes perform service discovery internally?"
+        },
+        {
+            "id": 3,
+            "question": "What is an Ingress and how does it differ from a Service?"
+        },
+        {
+            "id": 4,
+            "question": "How would you configure an Ingress controller to route traffic to multiple services?"
+        },
+        {
+            "id": 5,
+            "question": "What is the purpose of resource requests and limits in a Pod specification?"
+        },
+        {
+            "id": 6,
+            "question": "How does the Kubernetes scheduler decide which node to place a Pod on?"
+        },
+        {
+            "id": 7,
+            "question": "What is a taint and toleration in Kubernetes?"
+        },
+        {
+            "id": 8,
+            "question": "What is node affinity and how does it differ from pod affinity?"
+        },
+        {
+            "id": 9,
+            "question": "How would you perform a rolling update on a Deployment?"
+        },
+        {
+            "id": 10,
+            "question": "What is the purpose of the rollout history and how would you roll back a failed deployment?"
+        },
+        {
+            "id": 11,
+            "question": "What is the Horizontal Pod Autoscaler and how does it work?"
+        },
+        {
+            "id": 12,
+            "question": "What is the difference between the Horizontal Pod Autoscaler and the Vertical Pod Autoscaler?"
+        },
+        {
+            "id": 13,
+            "question": "How would you troubleshoot a Pod stuck in a CrashLoopBackOff state?"
+        },
+        {
+            "id": 14,
+            "question": "How would you troubleshoot a Pod stuck in a Pending state?"
+        },
+        {
+            "id": 15,
+            "question": "What is the purpose of init containers?"
+        },
+        {
+            "id": 16,
+            "question": "What is a sidecar container pattern and when would you use it?"
+        },
+        {
+            "id": 17,
+            "question": "How would you mount a ConfigMap as a volume inside a Pod?"
+        },
+        {
+            "id": 18,
+            "question": "What is the purpose of a StorageClass in dynamic volume provisioning?"
+        },
+        {
+            "id": 19,
+            "question": "What is the difference between a StatefulSet and a Deployment when handling persistent storage?"
+        },
+        {
+            "id": 20,
+            "question": "How would you configure a headless service for a StatefulSet?"
+        },
+        {
+            "id": 21,
+            "question": "What is the purpose of RBAC in Kubernetes?"
+        },
+        {
+            "id": 22,
+            "question": "What is the difference between a Role and a ClusterRole?"
+        },
+        {
+            "id": 23,
+            "question": "What is the difference between a RoleBinding and a ClusterRoleBinding?"
+        },
+        {
+            "id": 24,
+            "question": "What is a ServiceAccount and how is it used by Pods?"
+        },
+        {
+            "id": 25,
+            "question": "How would you securely inject a Secret into a Pod as an environment variable versus a mounted file?"
+        },
+        {
+            "id": 26,
+            "question": "What is a NetworkPolicy and how does it control traffic between Pods?"
+        },
+        {
+            "id": 27,
+            "question": "How would you design a NetworkPolicy to isolate namespaces from each other?"
+        },
+        {
+            "id": 28,
+            "question": "What is the purpose of a Pod Disruption Budget?"
+        },
+        {
+            "id": 29,
+            "question": "How would you configure Kubernetes to drain a node safely for maintenance?"
+        },
+        {
+            "id": 30,
+            "question": "What is the purpose of the terminationGracePeriodSeconds setting?"
+        },
+        {
+            "id": 31,
+            "question": "How would you implement blue-green deployments using Kubernetes Deployments and Services?"
+        },
+        {
+            "id": 32,
+            "question": "How would you implement canary deployments in Kubernetes?"
+        },
+        {
+            "id": 33,
+            "question": "What is Helm and what problem does it solve?"
+        },
+        {
+            "id": 34,
+            "question": "What is the difference between a Helm chart and a raw Kubernetes manifest?"
+        },
+        {
+            "id": 35,
+            "question": "How would you manage environment-specific configuration using Helm values files?"
+        },
+        {
+            "id": 36,
+            "question": "What is the purpose of Kustomize and how does it differ from Helm?"
+        },
+        {
+            "id": 37,
+            "question": "How would you set up centralized logging for Pods running across a cluster?"
+        },
+        {
+            "id": 38,
+            "question": "How would you set up monitoring for a Kubernetes cluster using Prometheus?"
+        },
+        {
+            "id": 39,
+            "question": "What is the purpose of the metrics-server component?"
+        },
+        {
+            "id": 40,
+            "question": "How would you debug network connectivity issues between two Pods in different namespaces?"
+        },
+        {
+            "id": 41,
+            "question": "What is the purpose of a CustomResourceDefinition (CRD)?"
+        },
+        {
+            "id": 42,
+            "question": "What is an Operator in Kubernetes and what problem does it solve?"
+        },
+        {
+            "id": 43,
+            "question": "How would you configure a Pod to use a private container registry?"
+        },
+        {
+            "id": 44,
+            "question": "What is the purpose of an image pull secret?"
+        },
+        {
+            "id": 45,
+            "question": "How would you configure autoscaling for a cluster's underlying nodes?"
+        },
+        {
+            "id": 46,
+            "question": "What is the difference between cluster autoscaling and horizontal pod autoscaling?"
+        },
+        {
+            "id": 47,
+            "question": "How would you set resource quotas at the namespace level to prevent resource exhaustion?"
+        },
+        {
+            "id": 48,
+            "question": "What is the purpose of the kubectl exec command and when would you use it for debugging?"
+        },
+        {
+            "id": 49,
+            "question": "How would you configure a Pod's security context to run as a non-root user?"
+        },
+        {
+            "id": 50,
+            "question": "What is the purpose of a LimitRange in a Kubernetes namespace?"
+        }
+    ],
+    "hard": [
+        {
+            "id": 1,
+            "question": "Explain how the Kubernetes control loop and reconciliation model work internally."
+        },
+        {
+            "id": 2,
+            "question": "How does etcd achieve consensus and consistency for storing cluster state, and what are the implications of etcd failure?"
+        },
+        {
+            "id": 3,
+            "question": "Explain how the Kubernetes scheduler's filtering and scoring phases work when selecting a node for a Pod."
+        },
+        {
+            "id": 4,
+            "question": "How would you design a multi-cluster Kubernetes architecture for high availability across regions?"
+        },
+        {
+            "id": 5,
+            "question": "Explain how you would implement a zero-downtime cluster upgrade strategy for a production Kubernetes environment."
+        },
+        {
+            "id": 6,
+            "question": "How would you architect a service mesh using Istio or Linkerd to manage traffic, security, and observability between microservices?"
+        },
+        {
+            "id": 7,
+            "question": "Explain how CNI plugins implement Pod networking and the trade-offs between different CNI implementations."
+        },
+        {
+            "id": 8,
+            "question": "How would you design a network architecture to enforce strict multi-tenant isolation within a shared Kubernetes cluster?"
+        },
+        {
+            "id": 9,
+            "question": "Explain how you would troubleshoot intermittent DNS resolution failures affecting Pods across a large cluster."
+        },
+        {
+            "id": 10,
+            "question": "How would you architect a CI/CD pipeline that performs GitOps-based deployments to a Kubernetes cluster?"
+        },
+        {
+            "id": 11,
+            "question": "Explain how you would design a disaster recovery strategy for stateful workloads running in Kubernetes."
+        },
+        {
+            "id": 12,
+            "question": "How would you implement a custom Kubernetes Operator to automate the lifecycle management of a complex stateful application?"
+        },
+        {
+            "id": 13,
+            "question": "Explain how you would design a strategy to handle noisy-neighbor problems in a multi-tenant Kubernetes cluster."
+        },
+        {
+            "id": 14,
+            "question": "How would you architect resource quota and priority class strategies to guarantee capacity for critical workloads during resource contention?"
+        },
+        {
+            "id": 15,
+            "question": "Explain how you would implement fine-grained RBAC policies for a large organization with hundreds of teams sharing a cluster."
+        },
+        {
+            "id": 16,
+            "question": "How would you design a secrets management strategy integrating Kubernetes with an external vault system?"
+        },
+        {
+            "id": 17,
+            "question": "Explain how you would architect a Kubernetes cluster to support workloads with strict compliance and data residency requirements."
+        },
+        {
+            "id": 18,
+            "question": "How would you troubleshoot a scenario where the Kubernetes API server becomes unresponsive under high load?"
+        },
+        {
+            "id": 19,
+            "question": "Explain how you would design admission controllers or webhooks to enforce custom policies across the cluster."
+        },
+        {
+            "id": 20,
+            "question": "How would you architect a solution to automatically detect and remediate misconfigured Kubernetes resources cluster-wide?"
+        },
+        {
+            "id": 21,
+            "question": "Explain the trade-offs between running stateful databases inside Kubernetes versus using managed external database services."
+        },
+        {
+            "id": 22,
+            "question": "How would you design a capacity planning strategy for a Kubernetes cluster experiencing unpredictable, bursty workloads?"
+        },
+        {
+            "id": 23,
+            "question": "Explain how you would implement pod-to-pod mutual TLS across a large microservices deployment on Kubernetes."
+        },
+        {
+            "id": 24,
+            "question": "How would you architect observability (metrics, logs, traces) for a cluster running thousands of Pods across multiple namespaces?"
+        },
+        {
+            "id": 25,
+            "question": "Explain how you would design a chaos engineering strategy to test the resilience of workloads running on Kubernetes."
+        },
+        {
+            "id": 26,
+            "question": "How would you troubleshoot a memory or CPU throttling issue caused by incorrectly configured resource limits at scale?"
+        },
+        {
+            "id": 27,
+            "question": "Explain how you would architect a solution to support GPU scheduling for machine learning workloads in Kubernetes."
+        },
+        {
+            "id": 28,
+            "question": "How would you design a strategy for safely performing large-scale rolling upgrades of a CRD-based Operator without disrupting workloads?"
+        },
+        {
+            "id": 29,
+            "question": "Explain how you would implement cluster federation or multi-cluster service discovery for a globally distributed application."
+        },
+        {
+            "id": 30,
+            "question": "How would you architect a solution to minimize the blast radius of a misconfigured Deployment rollout in production?"
+        },
+        {
+            "id": 31,
+            "question": "Explain how you would design an autoscaling strategy combining HPA, VPA, and cluster autoscaler without conflicting behaviors."
+        },
+        {
+            "id": 32,
+            "question": "How would you troubleshoot a scenario where Pods are being evicted unexpectedly due to node pressure?"
+        },
+        {
+            "id": 33,
+            "question": "Explain how you would implement a robust backup and restore strategy for both cluster state and persistent volumes."
+        },
+        {
+            "id": 34,
+            "question": "How would you architect a Kubernetes-based platform to support self-service deployments for hundreds of internal development teams?"
+        },
+        {
+            "id": 35,
+            "question": "Explain how you would design network policies and service mesh authorization together to enforce zero-trust security."
+        },
+        {
+            "id": 36,
+            "question": "How would you troubleshoot a case where a Service is not routing traffic correctly to healthy Pods despite passing readiness probes?"
+        },
+        {
+            "id": 37,
+            "question": "Explain how you would design a cost optimization strategy for a large Kubernetes cluster running mixed workloads."
+        },
+        {
+            "id": 38,
+            "question": "How would you architect a solution to support blue-green deployments at the cluster or namespace level rather than just the Deployment level?"
+        },
+        {
+            "id": 39,
+            "question": "Explain how you would implement a custom scheduler or scheduler extension for specialized workload placement requirements."
+        },
+        {
+            "id": 40,
+            "question": "How would you design a strategy to handle configuration drift across a fleet of Kubernetes clusters managed by multiple teams?"
+        },
+        {
+            "id": 41,
+            "question": "Explain how you would architect a solution for securely running untrusted or third-party workloads within a shared cluster."
+        },
+        {
+            "id": 42,
+            "question": "How would you troubleshoot performance degradation caused by etcd write latency in a large cluster?"
+        },
+        {
+            "id": 43,
+            "question": "Explain how you would design an approach to progressively migrate workloads from a legacy platform to Kubernetes with minimal risk."
+        },
+        {
+            "id": 44,
+            "question": "How would you architect logging pipelines to handle extremely high log volume from thousands of Pods without overwhelming storage costs?"
+        },
+        {
+            "id": 45,
+            "question": "Explain how you would implement pod security standards to enforce security best practices across all workloads in a cluster."
+        },
+        {
+            "id": 46,
+            "question": "How would you design a strategy for testing and validating cluster-wide changes, such as CNI or CSI driver upgrades, before production rollout?"
+        },
+        {
+            "id": 47,
+            "question": "Explain how you would architect a hybrid cloud Kubernetes deployment spanning on-premises and public cloud environments."
+        },
+        {
+            "id": 48,
+            "question": "How would you troubleshoot a scenario where certain Pods intermittently lose connectivity only under high network throughput?"
+        },
+        {
+            "id": 49,
+            "question": "Explain how you would design a comprehensive incident response runbook for a Kubernetes cluster outage affecting production workloads."
+        },
+        {
+            "id": 50,
+            "question": "How would you evaluate and decide between Kubernetes and a simpler orchestration solution for a new, smaller-scale containerized application?"
+        }
+    ]
+}

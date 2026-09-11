@@ -1,0 +1,609 @@
+{
+    "technology": "JavaScript",
+    "easy": [
+        {
+            "id": 1,
+            "question": "What is JavaScript?"
+        },
+        {
+            "id": 2,
+            "question": "What are the different data types in JavaScript?"
+        },
+        {
+            "id": 3,
+            "question": "What is the difference between var, let, and const?"
+        },
+        {
+            "id": 4,
+            "question": "What is the difference between == and === operators?"
+        },
+        {
+            "id": 5,
+            "question": "What is NaN in JavaScript?"
+        },
+        {
+            "id": 6,
+            "question": "What is the typeof operator used for?"
+        },
+        {
+            "id": 7,
+            "question": "What is a variable in JavaScript?"
+        },
+        {
+            "id": 8,
+            "question": "What is the difference between null and undefined?"
+        },
+        {
+            "id": 9,
+            "question": "What are template literals?"
+        },
+        {
+            "id": 10,
+            "question": "What is a function in JavaScript?"
+        },
+        {
+            "id": 11,
+            "question": "What is the difference between a function declaration and a function expression?"
+        },
+        {
+            "id": 12,
+            "question": "What is an array in JavaScript?"
+        },
+        {
+            "id": 13,
+            "question": "What is an object in JavaScript?"
+        },
+        {
+            "id": 14,
+            "question": "What is the purpose of the this keyword?"
+        },
+        {
+            "id": 15,
+            "question": "What is a for loop used for?"
+        },
+        {
+            "id": 16,
+            "question": "What is the difference between for...in and for...of loops?"
+        },
+        {
+            "id": 17,
+            "question": "What is a conditional (ternary) operator?"
+        },
+        {
+            "id": 18,
+            "question": "What are arrow functions?"
+        },
+        {
+            "id": 19,
+            "question": "What is the purpose of the console.log() method?"
+        },
+        {
+            "id": 20,
+            "question": "What is string concatenation?"
+        },
+        {
+            "id": 21,
+            "question": "What is the push() array method used for?"
+        },
+        {
+            "id": 22,
+            "question": "What is the pop() array method used for?"
+        },
+        {
+            "id": 23,
+            "question": "What is the length property of an array?"
+        },
+        {
+            "id": 24,
+            "question": "How do you write a comment in JavaScript?"
+        },
+        {
+            "id": 25,
+            "question": "What are the primitive data types in JavaScript?"
+        },
+        {
+            "id": 26,
+            "question": "What is type coercion?"
+        },
+        {
+            "id": 27,
+            "question": "What is the purpose of the return statement?"
+        },
+        {
+            "id": 28,
+            "question": "What is a JavaScript object literal?"
+        },
+        {
+            "id": 29,
+            "question": "What is the difference between a parameter and an argument?"
+        },
+        {
+            "id": 30,
+            "question": "What is scope in JavaScript?"
+        },
+        {
+            "id": 31,
+            "question": "What is global scope?"
+        },
+        {
+            "id": 32,
+            "question": "What is local scope?"
+        },
+        {
+            "id": 33,
+            "question": "What is the map() array method used for?"
+        },
+        {
+            "id": 34,
+            "question": "What is the filter() array method used for?"
+        },
+        {
+            "id": 35,
+            "question": "What is the forEach() method used for?"
+        },
+        {
+            "id": 36,
+            "question": "What is JSON?"
+        },
+        {
+            "id": 37,
+            "question": "What is the purpose of JSON.stringify()?"
+        },
+        {
+            "id": 38,
+            "question": "What is the purpose of JSON.parse()?"
+        },
+        {
+            "id": 39,
+            "question": "What is an if-else statement?"
+        },
+        {
+            "id": 40,
+            "question": "What is a switch statement?"
+        },
+        {
+            "id": 41,
+            "question": "What is a while loop?"
+        },
+        {
+            "id": 42,
+            "question": "What is a do-while loop?"
+        },
+        {
+            "id": 43,
+            "question": "What is the difference between break and continue?"
+        },
+        {
+            "id": 44,
+            "question": "What is an event in JavaScript?"
+        },
+        {
+            "id": 45,
+            "question": "What is the DOM?"
+        },
+        {
+            "id": 46,
+            "question": "What is the purpose of document.getElementById()?"
+        },
+        {
+            "id": 47,
+            "question": "What is an anonymous function?"
+        },
+        {
+            "id": 48,
+            "question": "What is the purpose of the alert() function?"
+        },
+        {
+            "id": 49,
+            "question": "What is string interpolation?"
+        },
+        {
+            "id": 50,
+            "question": "What is the purpose of the Math object?"
+        }
+    ],
+    "medium": [
+        {
+            "id": 1,
+            "question": "What is the difference between synchronous and asynchronous code?"
+        },
+        {
+            "id": 2,
+            "question": "What is a callback function and why is it used?"
+        },
+        {
+            "id": 3,
+            "question": "What is callback hell and how can it be avoided?"
+        },
+        {
+            "id": 4,
+            "question": "What is a Promise in JavaScript?"
+        },
+        {
+            "id": 5,
+            "question": "What are the different states of a Promise?"
+        },
+        {
+            "id": 6,
+            "question": "What is async/await and how does it simplify asynchronous code?"
+        },
+        {
+            "id": 7,
+            "question": "How do you handle errors in an async/await function?"
+        },
+        {
+            "id": 8,
+            "question": "What is the event loop in JavaScript?"
+        },
+        {
+            "id": 9,
+            "question": "What is the difference between the call stack and the task queue?"
+        },
+        {
+            "id": 10,
+            "question": "What is hoisting in JavaScript?"
+        },
+        {
+            "id": 11,
+            "question": "How does hoisting affect var, let, and const differently?"
+        },
+        {
+            "id": 12,
+            "question": "What is a closure and can you give a practical use case?"
+        },
+        {
+            "id": 13,
+            "question": "What is the purpose of the bind() method?"
+        },
+        {
+            "id": 14,
+            "question": "What is the difference between call() and apply()?"
+        },
+        {
+            "id": 15,
+            "question": "What is destructuring and how is it used in real projects?"
+        },
+        {
+            "id": 16,
+            "question": "What is the spread operator used for?"
+        },
+        {
+            "id": 17,
+            "question": "What is the rest parameter and how does it differ from the spread operator?"
+        },
+        {
+            "id": 18,
+            "question": "How do you make an HTTP request using fetch()?"
+        },
+        {
+            "id": 19,
+            "question": "What is the difference between fetch() and XMLHttpRequest?"
+        },
+        {
+            "id": 20,
+            "question": "How do you handle a failed fetch request?"
+        },
+        {
+            "id": 21,
+            "question": "What is debouncing and when would you use it?"
+        },
+        {
+            "id": 22,
+            "question": "What is throttling and how does it differ from debouncing?"
+        },
+        {
+            "id": 23,
+            "question": "What is event delegation and why is it useful?"
+        },
+        {
+            "id": 24,
+            "question": "What is event bubbling?"
+        },
+        {
+            "id": 25,
+            "question": "What is event capturing?"
+        },
+        {
+            "id": 26,
+            "question": "How do you prevent the default behavior of an event?"
+        },
+        {
+            "id": 27,
+            "question": "What is the purpose of stopPropagation()?"
+        },
+        {
+            "id": 28,
+            "question": "What is local storage and how is it different from session storage?"
+        },
+        {
+            "id": 29,
+            "question": "What is a cookie and how is it different from local storage?"
+        },
+        {
+            "id": 30,
+            "question": "How would you deep clone an object in JavaScript?"
+        },
+        {
+            "id": 31,
+            "question": "What is the difference between a shallow copy and a deep copy?"
+        },
+        {
+            "id": 32,
+            "question": "What are higher-order functions and can you give a practical example?"
+        },
+        {
+            "id": 33,
+            "question": "What is the purpose of the reduce() array method?"
+        },
+        {
+            "id": 34,
+            "question": "How would you remove duplicate values from an array?"
+        },
+        {
+            "id": 35,
+            "question": "What is the difference between Object.freeze() and Object.seal()?"
+        },
+        {
+            "id": 36,
+            "question": "How does the import/export syntax work in ES modules?"
+        },
+        {
+            "id": 37,
+            "question": "What is the difference between CommonJS and ES modules?"
+        },
+        {
+            "id": 38,
+            "question": "What is a memory leak and how can it occur in JavaScript?"
+        },
+        {
+            "id": 39,
+            "question": "What is garbage collection in JavaScript?"
+        },
+        {
+            "id": 40,
+            "question": "How would you optimize a loop that processes a large array?"
+        },
+        {
+            "id": 41,
+            "question": "What is the purpose of the Set data structure?"
+        },
+        {
+            "id": 42,
+            "question": "What is the purpose of the Map data structure?"
+        },
+        {
+            "id": 43,
+            "question": "How do you handle multiple asynchronous operations concurrently?"
+        },
+        {
+            "id": 44,
+            "question": "What is the difference between Promise.all() and Promise.allSettled()?"
+        },
+        {
+            "id": 45,
+            "question": "What is the purpose of the try-catch-finally block?"
+        },
+        {
+            "id": 46,
+            "question": "What are custom errors and how do you create one?"
+        },
+        {
+            "id": 47,
+            "question": "What is strict mode and why would you use it?"
+        },
+        {
+            "id": 48,
+            "question": "What is the difference between mutable and immutable data in JavaScript?"
+        },
+        {
+            "id": 49,
+            "question": "How would you debug a JavaScript application in production?"
+        },
+        {
+            "id": 50,
+            "question": "What is a polyfill and why is it needed?"
+        }
+    ],
+    "hard": [
+        {
+            "id": 1,
+            "question": "Explain the JavaScript event loop in detail, including microtasks and macrotasks."
+        },
+        {
+            "id": 2,
+            "question": "How does the V8 engine optimize JavaScript execution?"
+        },
+        {
+            "id": 3,
+            "question": "Explain prototypal inheritance and how it differs from classical inheritance."
+        },
+        {
+            "id": 4,
+            "question": "How does the JavaScript engine handle memory allocation and garbage collection internally?"
+        },
+        {
+            "id": 5,
+            "question": "What are the differences between generational and mark-and-sweep garbage collection algorithms?"
+        },
+        {
+            "id": 6,
+            "question": "Explain how closures can lead to memory leaks in large applications."
+        },
+        {
+            "id": 7,
+            "question": "How would you design a rate-limiting mechanism using JavaScript?"
+        },
+        {
+            "id": 8,
+            "question": "Explain the differences between the microtask and macrotask queues with respect to setTimeout and Promises."
+        },
+        {
+            "id": 9,
+            "question": "How does JavaScript's single-threaded nature affect application architecture design?"
+        },
+        {
+            "id": 10,
+            "question": "Explain how Web Workers can be used to achieve concurrency in JavaScript."
+        },
+        {
+            "id": 11,
+            "question": "How would you architect a JavaScript application to handle thousands of concurrent asynchronous requests efficiently?"
+        },
+        {
+            "id": 12,
+            "question": "Explain the concept of tail call optimization and its support in JavaScript engines."
+        },
+        {
+            "id": 13,
+            "question": "How would you implement your own version of the Promise class from scratch?"
+        },
+        {
+            "id": 14,
+            "question": "Explain how the this keyword behaves differently in regular functions, arrow functions, and class methods."
+        },
+        {
+            "id": 15,
+            "question": "What are the performance implications of using deeply nested closures?"
+        },
+        {
+            "id": 16,
+            "question": "How would you detect and fix a memory leak in a long-running Node.js or browser application?"
+        },
+        {
+            "id": 17,
+            "question": "Explain how JavaScript's prototype chain impacts property lookup performance."
+        },
+        {
+            "id": 18,
+            "question": "How does the JavaScript engine handle object property access optimization internally?"
+        },
+        {
+            "id": 19,
+            "question": "Explain the differences between structural sharing and deep cloning for state management in large applications."
+        },
+        {
+            "id": 20,
+            "question": "How would you design a caching mechanism for expensive function calls in JavaScript?"
+        },
+        {
+            "id": 21,
+            "question": "Explain how the JavaScript garbage collector handles circular references."
+        },
+        {
+            "id": 22,
+            "question": "What are the trade-offs between using classes versus factory functions for object creation in large-scale applications?"
+        },
+        {
+            "id": 23,
+            "question": "How would you implement a custom event emitter without using any libraries?"
+        },
+        {
+            "id": 24,
+            "question": "Explain how JIT compilation works in modern JavaScript engines."
+        },
+        {
+            "id": 25,
+            "question": "How does hidden class optimization work in V8 and why does it matter for performance?"
+        },
+        {
+            "id": 26,
+            "question": "Explain how you would architect a JavaScript module system for a large-scale enterprise application."
+        },
+        {
+            "id": 27,
+            "question": "What are the security implications of using eval() and how would you avoid them?"
+        },
+        {
+            "id": 28,
+            "question": "Explain how Content Security Policy affects JavaScript execution in web applications."
+        },
+        {
+            "id": 29,
+            "question": "How would you design a JavaScript-based state machine for a complex UI workflow?"
+        },
+        {
+            "id": 30,
+            "question": "Explain the differences between optimistic and pessimistic concurrency control in the context of asynchronous JavaScript operations."
+        },
+        {
+            "id": 31,
+            "question": "How would you implement request deduplication for concurrent API calls in a large application?"
+        },
+        {
+            "id": 32,
+            "question": "Explain how JavaScript engines handle deoptimization and why it can hurt performance."
+        },
+        {
+            "id": 33,
+            "question": "How would you design a plugin architecture for a JavaScript library?"
+        },
+        {
+            "id": 34,
+            "question": "Explain the trade-offs of using Proxy objects for implementing reactivity systems."
+        },
+        {
+            "id": 35,
+            "question": "How does the JavaScript engine handle asynchronous stack traces and how does this affect debugging in production?"
+        },
+        {
+            "id": 36,
+            "question": "Explain how you would implement a robust retry mechanism with exponential backoff for failed asynchronous operations."
+        },
+        {
+            "id": 37,
+            "question": "How would you architect a JavaScript application to gracefully degrade under high memory pressure?"
+        },
+        {
+            "id": 38,
+            "question": "Explain the differences between structural typing and duck typing as they apply to JavaScript."
+        },
+        {
+            "id": 39,
+            "question": "How would you design an efficient observer pattern implementation for a large-scale real-time application?"
+        },
+        {
+            "id": 40,
+            "question": "Explain the performance trade-offs between using Array methods like map/filter/reduce versus traditional for loops in performance-critical code."
+        },
+        {
+            "id": 41,
+            "question": "How would you implement memoization for recursive functions in JavaScript?"
+        },
+        {
+            "id": 42,
+            "question": "Explain how WeakMap and WeakSet help prevent memory leaks compared to Map and Set."
+        },
+        {
+            "id": 43,
+            "question": "How would you design a JavaScript-based dependency injection system?"
+        },
+        {
+            "id": 44,
+            "question": "Explain how you would handle race conditions in asynchronous JavaScript code."
+        },
+        {
+            "id": 45,
+            "question": "How does the JavaScript engine's inline caching mechanism improve performance?"
+        },
+        {
+            "id": 46,
+            "question": "Explain the architectural considerations for building a JavaScript-based micro-frontend system."
+        },
+        {
+            "id": 47,
+            "question": "How would you design a JavaScript task scheduler that prioritizes tasks based on urgency?"
+        },
+        {
+            "id": 48,
+            "question": "Explain how you would implement a custom Promise.race() function from scratch."
+        },
+        {
+            "id": 49,
+            "question": "How would you approach optimizing a JavaScript application with severe performance bottlenecks under production load?"
+        },
+        {
+            "id": 50,
+            "question": "Explain the trade-offs between server-side rendering and client-side rendering from a JavaScript execution perspective."
+        }
+    ]
+}

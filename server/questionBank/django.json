@@ -1,0 +1,609 @@
+{
+    "technology": "Django",
+    "easy": [
+        {
+            "id": 1,
+            "question": "What is Django?"
+        },
+        {
+            "id": 2,
+            "question": "What is the difference between Django and Flask?"
+        },
+        {
+            "id": 3,
+            "question": "What is the MVT architecture in Django?"
+        },
+        {
+            "id": 4,
+            "question": "What is a Django project?"
+        },
+        {
+            "id": 5,
+            "question": "What is a Django app?"
+        },
+        {
+            "id": 6,
+            "question": "What is the difference between a Django project and a Django app?"
+        },
+        {
+            "id": 7,
+            "question": "What is the purpose of the manage.py file?"
+        },
+        {
+            "id": 8,
+            "question": "What is the purpose of the settings.py file?"
+        },
+        {
+            "id": 9,
+            "question": "What is a Django model?"
+        },
+        {
+            "id": 10,
+            "question": "What is the purpose of the models.py file?"
+        },
+        {
+            "id": 11,
+            "question": "What is a Django migration?"
+        },
+        {
+            "id": 12,
+            "question": "What is the purpose of the makemigrations command?"
+        },
+        {
+            "id": 13,
+            "question": "What is the purpose of the migrate command?"
+        },
+        {
+            "id": 14,
+            "question": "What is a view in Django?"
+        },
+        {
+            "id": 15,
+            "question": "What is the difference between a function-based view and a class-based view?"
+        },
+        {
+            "id": 16,
+            "question": "What is a URL pattern in Django?"
+        },
+        {
+            "id": 17,
+            "question": "What is the purpose of the urls.py file?"
+        },
+        {
+            "id": 18,
+            "question": "What is a Django template?"
+        },
+        {
+            "id": 19,
+            "question": "What is the Django template language used for?"
+        },
+        {
+            "id": 20,
+            "question": "What is the purpose of the {% %} and {{ }} syntax in templates?"
+        },
+        {
+            "id": 21,
+            "question": "What is the Django admin interface?"
+        },
+        {
+            "id": 22,
+            "question": "How do you create a superuser in Django?"
+        },
+        {
+            "id": 23,
+            "question": "What is the purpose of the ORM in Django?"
+        },
+        {
+            "id": 24,
+            "question": "What is a QuerySet?"
+        },
+        {
+            "id": 25,
+            "question": "What is the difference between filter() and get() in Django ORM?"
+        },
+        {
+            "id": 26,
+            "question": "What is the purpose of the init.py file?"
+        },
+        {
+            "id": 27,
+            "question": "What is a form in Django?"
+        },
+        {
+            "id": 28,
+            "question": "What is the purpose of the forms.py file?"
+        },
+        {
+            "id": 29,
+            "question": "What is the difference between a Django Form and a ModelForm?"
+        },
+        {
+            "id": 30,
+            "question": "What is the purpose of the CSRF token?"
+        },
+        {
+            "id": 31,
+            "question": "What is the purpose of the INSTALLED_APPS setting?"
+        },
+        {
+            "id": 32,
+            "question": "What is a static file in Django?"
+        },
+        {
+            "id": 33,
+            "question": "What is the purpose of the STATIC_URL setting?"
+        },
+        {
+            "id": 34,
+            "question": "What is a media file in Django?"
+        },
+        {
+            "id": 35,
+            "question": "What is the purpose of the DEBUG setting?"
+        },
+        {
+            "id": 36,
+            "question": "What is a Django template tag?"
+        },
+        {
+            "id": 37,
+            "question": "What is a Django template filter?"
+        },
+        {
+            "id": 38,
+            "question": "What is the purpose of the render() shortcut function?"
+        },
+        {
+            "id": 39,
+            "question": "What is the purpose of the redirect() shortcut function?"
+        },
+        {
+            "id": 40,
+            "question": "What is the difference between GET and POST requests in Django views?"
+        },
+        {
+            "id": 41,
+            "question": "What is a primary key in a Django model?"
+        },
+        {
+            "id": 42,
+            "question": "What is a foreign key in Django models?"
+        },
+        {
+            "id": 43,
+            "question": "What is the purpose of the str method in a model?"
+        },
+        {
+            "id": 44,
+            "question": "What is the Django shell used for?"
+        },
+        {
+            "id": 45,
+            "question": "What is the purpose of the requirements.txt file?"
+        },
+        {
+            "id": 46,
+            "question": "What is a virtual environment and why is it used in Django projects?"
+        },
+        {
+            "id": 47,
+            "question": "What is the purpose of the runserver command?"
+        },
+        {
+            "id": 48,
+            "question": "What is the default database used by Django?"
+        },
+        {
+            "id": 49,
+            "question": "What is the purpose of the DATABASES setting?"
+        },
+        {
+            "id": 50,
+            "question": "What is a Django context in the context of rendering templates?"
+        }
+    ],
+    "medium": [
+        {
+            "id": 1,
+            "question": "What is the difference between ForeignKey, OneToOneField, and ManyToManyField?"
+        },
+        {
+            "id": 2,
+            "question": "How does Django handle database transactions?"
+        },
+        {
+            "id": 3,
+            "question": "What is the purpose of the select_related() method and how does it improve performance?"
+        },
+        {
+            "id": 4,
+            "question": "What is the difference between select_related() and prefetch_related()?"
+        },
+        {
+            "id": 5,
+            "question": "What is the N+1 query problem and how would you avoid it in Django?"
+        },
+        {
+            "id": 6,
+            "question": "What is a Django middleware and how does it work?"
+        },
+        {
+            "id": 7,
+            "question": "How would you create custom middleware in Django?"
+        },
+        {
+            "id": 8,
+            "question": "What is the purpose of Django signals?"
+        },
+        {
+            "id": 9,
+            "question": "What is the difference between pre_save and post_save signals?"
+        },
+        {
+            "id": 10,
+            "question": "What is the purpose of Django's class-based generic views?"
+        },
+        {
+            "id": 11,
+            "question": "What is the difference between ListView, DetailView, and CreateView?"
+        },
+        {
+            "id": 12,
+            "question": "How do you implement user authentication in Django?"
+        },
+        {
+            "id": 13,
+            "question": "What is the purpose of the AUTH_USER_MODEL setting?"
+        },
+        {
+            "id": 14,
+            "question": "How would you extend the default Django User model?"
+        },
+        {
+            "id": 15,
+            "question": "What is the difference between authentication and authorization in Django?"
+        },
+        {
+            "id": 16,
+            "question": "What are Django permissions and how are they used?"
+        },
+        {
+            "id": 17,
+            "question": "What is the purpose of the @login_required decorator?"
+        },
+        {
+            "id": 18,
+            "question": "How would you implement a custom form validation in Django?"
+        },
+        {
+            "id": 19,
+            "question": "What is the purpose of the clean() method in a Django form?"
+        },
+        {
+            "id": 20,
+            "question": "What is Django REST Framework and why is it used?"
+        },
+        {
+            "id": 21,
+            "question": "What is a serializer in Django REST Framework?"
+        },
+        {
+            "id": 22,
+            "question": "What is the difference between a Serializer and a ModelSerializer?"
+        },
+        {
+            "id": 23,
+            "question": "How would you implement token-based authentication in a Django REST API?"
+        },
+        {
+            "id": 24,
+            "question": "What is the purpose of viewsets in Django REST Framework?"
+        },
+        {
+            "id": 25,
+            "question": "What is the difference between APIView and ViewSet in DRF?"
+        },
+        {
+            "id": 26,
+            "question": "How do you handle pagination in a Django REST Framework API?"
+        },
+        {
+            "id": 27,
+            "question": "What is the purpose of Django's caching framework?"
+        },
+        {
+            "id": 28,
+            "question": "How would you implement query-level caching for an expensive database operation?"
+        },
+        {
+            "id": 29,
+            "question": "What is the purpose of Django's session framework?"
+        },
+        {
+            "id": 30,
+            "question": "How does Django handle file uploads and where are they stored by default?"
+        },
+        {
+            "id": 31,
+            "question": "What is the purpose of the Meta class inside a Django model?"
+        },
+        {
+            "id": 32,
+            "question": "How would you implement soft deletes in a Django model?"
+        },
+        {
+            "id": 33,
+            "question": "What is the purpose of custom model managers?"
+        },
+        {
+            "id": 34,
+            "question": "How would you optimize a slow Django view that performs multiple database queries?"
+        },
+        {
+            "id": 35,
+            "question": "What is the purpose of Django's testing framework and how do you write a basic test?"
+        },
+        {
+            "id": 36,
+            "question": "How would you mock external API calls in a Django unit test?"
+        },
+        {
+            "id": 37,
+            "question": "What is the purpose of Django fixtures?"
+        },
+        {
+            "id": 38,
+            "question": "How do you configure environment-specific settings in a Django project?"
+        },
+        {
+            "id": 39,
+            "question": "What is the purpose of the django-environ or python-decouple packages?"
+        },
+        {
+            "id": 40,
+            "question": "How would you deploy a Django application using Gunicorn and Nginx?"
+        },
+        {
+            "id": 41,
+            "question": "What is the purpose of collectstatic in a production deployment?"
+        },
+        {
+            "id": 42,
+            "question": "How would you handle CORS in a Django REST API?"
+        },
+        {
+            "id": 43,
+            "question": "What is the purpose of Django's messages framework?"
+        },
+        {
+            "id": 44,
+            "question": "How would you implement rate limiting for a Django REST API endpoint?"
+        },
+        {
+            "id": 45,
+            "question": "What is the difference between synchronous and asynchronous views in Django?"
+        },
+        {
+            "id": 46,
+            "question": "How would you secure a Django application against SQL injection?"
+        },
+        {
+            "id": 47,
+            "question": "What is the purpose of Django's built-in protection against XSS and clickjacking?"
+        },
+        {
+            "id": 48,
+            "question": "How would you implement search functionality in a Django application?"
+        },
+        {
+            "id": 49,
+            "question": "What is the purpose of database indexing in Django models and how would you add one?"
+        },
+        {
+            "id": 50,
+            "question": "How would you handle background tasks in Django using Celery?"
+        }
+    ],
+    "hard": [
+        {
+            "id": 1,
+            "question": "Explain how Django's ORM translates QuerySets into SQL queries and how lazy evaluation works internally."
+        },
+        {
+            "id": 2,
+            "question": "How would you optimize a Django application handling millions of database rows with complex relational queries?"
+        },
+        {
+            "id": 3,
+            "question": "Explain how you would design a multi-tenant architecture using Django, comparing shared schema versus separate schema approaches."
+        },
+        {
+            "id": 4,
+            "question": "How would you architect a Django application to scale horizontally across multiple servers?"
+        },
+        {
+            "id": 5,
+            "question": "Explain the internal request-response cycle in Django, including how middleware is chained and executed."
+        },
+        {
+            "id": 6,
+            "question": "How would you design a caching strategy using Redis for a high-traffic Django application?"
+        },
+        {
+            "id": 7,
+            "question": "Explain how you would implement database sharding for a Django application with a rapidly growing dataset."
+        },
+        {
+            "id": 8,
+            "question": "How would you architect a Django REST Framework API to handle high-throughput real-time data ingestion?"
+        },
+        {
+            "id": 9,
+            "question": "Explain how Django's connection pooling works and how you would tune it for a high-concurrency production environment."
+        },
+        {
+            "id": 10,
+            "question": "How would you design an event-driven architecture integrating Django with a message broker like Kafka or RabbitMQ?"
+        },
+        {
+            "id": 11,
+            "question": "Explain how you would implement optimistic locking to handle concurrent updates to the same database row in Django."
+        },
+        {
+            "id": 12,
+            "question": "How would you architect a Django application to support asynchronous request handling using ASGI and Django Channels?"
+        },
+        {
+            "id": 13,
+            "question": "Explain how you would design a robust permission system supporting complex, hierarchical role-based access control in Django."
+        },
+        {
+            "id": 14,
+            "question": "How would you troubleshoot and resolve a memory leak in a long-running Django application?"
+        },
+        {
+            "id": 15,
+            "question": "Explain the trade-offs between using Django's built-in ORM versus raw SQL for performance-critical queries."
+        },
+        {
+            "id": 16,
+            "question": "How would you design a data migration strategy for a Django application with zero downtime during schema changes?"
+        },
+        {
+            "id": 17,
+            "question": "Explain how you would implement a robust audit logging system to track all changes to critical models in Django."
+        },
+        {
+            "id": 18,
+            "question": "How would you architect a Django application to support blue-green or canary deployments in production?"
+        },
+        {
+            "id": 19,
+            "question": "Explain how you would secure a Django REST API against common vulnerabilities such as broken authentication and mass assignment."
+        },
+        {
+            "id": 20,
+            "question": "How would you design a search architecture integrating Django with Elasticsearch for full-text search at scale?"
+        },
+        {
+            "id": 21,
+            "question": "Explain how you would implement idempotent API endpoints in Django REST Framework for payment processing systems."
+        },
+        {
+            "id": 22,
+            "question": "How would you architect a Django application to handle file storage and delivery at scale using cloud object storage?"
+        },
+        {
+            "id": 23,
+            "question": "Explain how you would design a rate-limiting and throttling system for a Django API serving millions of requests per day."
+        },
+        {
+            "id": 24,
+            "question": "How would you optimize Django's ORM to avoid excessive memory usage when processing very large QuerySets?"
+        },
+        {
+            "id": 25,
+            "question": "Explain how you would implement a robust background job processing system with retries and dead-letter handling using Celery."
+        },
+        {
+            "id": 26,
+            "question": "How would you architect a Django monolith to be incrementally decomposed into microservices?"
+        },
+        {
+            "id": 27,
+            "question": "Explain how you would design database read replicas integration in Django to distribute read-heavy workloads."
+        },
+        {
+            "id": 28,
+            "question": "How would you implement a robust testing strategy combining unit, integration, and load tests for a large Django application?"
+        },
+        {
+            "id": 29,
+            "question": "Explain how you would design a versioning strategy for a Django REST API that must support multiple client versions simultaneously."
+        },
+        {
+            "id": 30,
+            "question": "How would you architect a Django application to comply with strict data privacy regulations such as GDPR?"
+        },
+        {
+            "id": 31,
+            "question": "Explain how you would implement a custom database router in Django to support multiple databases."
+        },
+        {
+            "id": 32,
+            "question": "How would you design a system to handle race conditions in a Django application processing concurrent financial transactions?"
+        },
+        {
+            "id": 33,
+            "question": "Explain how you would profile and identify bottlenecks in a slow Django application using tools like Django Debug Toolbar and py-spy."
+        },
+        {
+            "id": 34,
+            "question": "How would you architect a Django application to support real-time notifications using WebSockets and Django Channels?"
+        },
+        {
+            "id": 35,
+            "question": "Explain how you would design a robust error tracking and alerting system for a production Django application."
+        },
+        {
+            "id": 36,
+            "question": "How would you implement field-level encryption for sensitive data stored in a Django model?"
+        },
+        {
+            "id": 37,
+            "question": "Explain how you would architect a Django application to handle bulk data imports and exports efficiently without blocking the main application."
+        },
+        {
+            "id": 38,
+            "question": "How would you design a feature flagging system for a Django application to enable gradual feature rollouts?"
+        },
+        {
+            "id": 39,
+            "question": "Explain how you would implement a distributed locking mechanism in Django to prevent duplicate processing across multiple worker instances."
+        },
+        {
+            "id": 40,
+            "question": "How would you architect a Django application's settings and secrets management across multiple environments and deployment pipelines?"
+        },
+        {
+            "id": 41,
+            "question": "Explain how you would design a robust API gateway layer in front of multiple Django microservices."
+        },
+        {
+            "id": 42,
+            "question": "How would you implement query optimization for a Django admin interface managing extremely large datasets?"
+        },
+        {
+            "id": 43,
+            "question": "Explain how you would architect a Django application to support offline-first mobile clients with data synchronization."
+        },
+        {
+            "id": 44,
+            "question": "How would you design a system for safely running long database migrations on a large production table without downtime?"
+        },
+        {
+            "id": 45,
+            "question": "Explain how you would implement a robust webhook delivery system with retries and signature verification in Django."
+        },
+        {
+            "id": 46,
+            "question": "How would you architect logging and monitoring across a distributed system of Django services deployed on Kubernetes?"
+        },
+        {
+            "id": 47,
+            "question": "Explain how you would design a Django application architecture to support A/B testing at scale."
+        },
+        {
+            "id": 48,
+            "question": "How would you implement connection resilience in Django when interacting with an unreliable third-party API?"
+        },
+        {
+            "id": 49,
+            "question": "Explain how you would approach a full performance audit of a production Django application experiencing degraded response times."
+        },
+        {
+            "id": 50,
+            "question": "How would you evaluate and decide between Django and a lightweight framework like FastAPI for a new large-scale project?"
+        }
+    ]
+}

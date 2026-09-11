@@ -1,0 +1,609 @@
+{
+    "technology": "Node.js",
+    "easy": [
+        {
+            "id": 1,
+            "question": "What is Node.js?"
+        },
+        {
+            "id": 2,
+            "question": "Is Node.js a programming language, framework, or runtime environment?"
+        },
+        {
+            "id": 3,
+            "question": "What is the V8 engine and how does Node.js use it?"
+        },
+        {
+            "id": 4,
+            "question": "What is npm?"
+        },
+        {
+            "id": 5,
+            "question": "What is the purpose of the package.json file?"
+        },
+        {
+            "id": 6,
+            "question": "What is the purpose of the node_modules folder?"
+        },
+        {
+            "id": 7,
+            "question": "How do you install a package using npm?"
+        },
+        {
+            "id": 8,
+            "question": "What is the difference between dependencies and devDependencies in package.json?"
+        },
+        {
+            "id": 9,
+            "question": "What is the require() function used for?"
+        },
+        {
+            "id": 10,
+            "question": "What is the module.exports object used for?"
+        },
+        {
+            "id": 11,
+            "question": "What is the difference between require and import in Node.js?"
+        },
+        {
+            "id": 12,
+            "question": "What is a module in Node.js?"
+        },
+        {
+            "id": 13,
+            "question": "What are the built-in modules in Node.js?"
+        },
+        {
+            "id": 14,
+            "question": "What is the purpose of the fs module?"
+        },
+        {
+            "id": 15,
+            "question": "What is the purpose of the path module?"
+        },
+        {
+            "id": 16,
+            "question": "What is the purpose of the http module?"
+        },
+        {
+            "id": 17,
+            "question": "How would you create a basic HTTP server using Node.js?"
+        },
+        {
+            "id": 18,
+            "question": "What is the purpose of the process object?"
+        },
+        {
+            "id": 19,
+            "question": "What is the purpose of process.argv?"
+        },
+        {
+            "id": 20,
+            "question": "What is the purpose of process.env?"
+        },
+        {
+            "id": 21,
+            "question": "What is a callback function in Node.js?"
+        },
+        {
+            "id": 22,
+            "question": "What is the event-driven architecture of Node.js?"
+        },
+        {
+            "id": 23,
+            "question": "What is non-blocking I/O?"
+        },
+        {
+            "id": 24,
+            "question": "What is the difference between synchronous and asynchronous functions in Node.js?"
+        },
+        {
+            "id": 25,
+            "question": "What is the purpose of the setTimeout() function?"
+        },
+        {
+            "id": 26,
+            "question": "What is the purpose of the setInterval() function?"
+        },
+        {
+            "id": 27,
+            "question": "What is npx and how does it differ from npm?"
+        },
+        {
+            "id": 28,
+            "question": "What is the purpose of the package-lock.json file?"
+        },
+        {
+            "id": 29,
+            "question": "How do you create a new npm project?"
+        },
+        {
+            "id": 30,
+            "question": "What is a global package in npm and how do you install one?"
+        },
+        {
+            "id": 31,
+            "question": "What is the purpose of the console.log() function in Node.js?"
+        },
+        {
+            "id": 32,
+            "question": "What is a JavaScript object and how is it used in Node.js?"
+        },
+        {
+            "id": 33,
+            "question": "What is JSON and how is it used in a Node.js application?"
+        },
+        {
+            "id": 34,
+            "question": "What is an environment variable and why is it used in Node.js applications?"
+        },
+        {
+            "id": 35,
+            "question": "What is the purpose of the .env file and the dotenv package?"
+        },
+        {
+            "id": 36,
+            "question": "What is the difference between a local module and a core module?"
+        },
+        {
+            "id": 37,
+            "question": "What is the purpose of the __dirname variable?"
+        },
+        {
+            "id": 38,
+            "question": "What is the purpose of the __filename variable?"
+        },
+        {
+            "id": 39,
+            "question": "What is a single-threaded runtime in the context of Node.js?"
+        },
+        {
+            "id": 40,
+            "question": "What is the purpose of the readFile and writeFile functions in the fs module?"
+        },
+        {
+            "id": 41,
+            "question": "What is the difference between fs.readFile and fs.readFileSync?"
+        },
+        {
+            "id": 42,
+            "question": "What is the purpose of npm scripts in package.json?"
+        },
+        {
+            "id": 43,
+            "question": "What is the purpose of the events module?"
+        },
+        {
+            "id": 44,
+            "question": "What is an EventEmitter in Node.js?"
+        },
+        {
+            "id": 45,
+            "question": "What is the purpose of the os module?"
+        },
+        {
+            "id": 46,
+            "question": "What is REPL in the context of Node.js?"
+        },
+        {
+            "id": 47,
+            "question": "What is the purpose of semantic versioning in package.json dependencies?"
+        },
+        {
+            "id": 48,
+            "question": "What is the difference between a runtime error and a syntax error?"
+        },
+        {
+            "id": 49,
+            "question": "What is the purpose of try-catch blocks in Node.js?"
+        },
+        {
+            "id": 50,
+            "question": "What is the purpose of the util module?"
+        }
+    ],
+    "medium": [
+        {
+            "id": 1,
+            "question": "What is the event loop in Node.js and how does it work?"
+        },
+        {
+            "id": 2,
+            "question": "What are the different phases of the Node.js event loop?"
+        },
+        {
+            "id": 3,
+            "question": "What is the difference between process.nextTick() and setImmediate()?"
+        },
+        {
+            "id": 4,
+            "question": "What is the difference between the microtask queue and the macrotask queue in Node.js?"
+        },
+        {
+            "id": 5,
+            "question": "What is a Promise and how does it improve upon callback-based asynchronous code?"
+        },
+        {
+            "id": 6,
+            "question": "What is async/await and how does it work under the hood with Promises?"
+        },
+        {
+            "id": 7,
+            "question": "What is callback hell and how would you refactor code to avoid it?"
+        },
+        {
+            "id": 8,
+            "question": "What is a Stream in Node.js?"
+        },
+        {
+            "id": 9,
+            "question": "What are the different types of streams in Node.js?"
+        },
+        {
+            "id": 10,
+            "question": "What is the difference between a Readable stream and a Writable stream?"
+        },
+        {
+            "id": 11,
+            "question": "What is the purpose of piping streams together?"
+        },
+        {
+            "id": 12,
+            "question": "What is backpressure in the context of streams?"
+        },
+        {
+            "id": 13,
+            "question": "What is a Buffer in Node.js and why is it needed?"
+        },
+        {
+            "id": 14,
+            "question": "What is the purpose of the child_process module?"
+        },
+        {
+            "id": 15,
+            "question": "What is the difference between spawn, exec, and fork in the child_process module?"
+        },
+        {
+            "id": 16,
+            "question": "What is clustering in Node.js and why is it used?"
+        },
+        {
+            "id": 17,
+            "question": "How does the cluster module allow Node.js to take advantage of multi-core systems?"
+        },
+        {
+            "id": 18,
+            "question": "What are Worker Threads and how do they differ from clustering?"
+        },
+        {
+            "id": 19,
+            "question": "What is middleware in the context of a Node.js web application?"
+        },
+        {
+            "id": 20,
+            "question": "How would you handle errors in an asynchronous Node.js function?"
+        },
+        {
+            "id": 21,
+            "question": "What is the purpose of the domain module and why is it deprecated?"
+        },
+        {
+            "id": 22,
+            "question": "How would you implement centralized error handling in a Node.js application?"
+        },
+        {
+            "id": 23,
+            "question": "What is the purpose of environment-specific configuration in a Node.js application?"
+        },
+        {
+            "id": 24,
+            "question": "How would you connect a Node.js application to a database like MongoDB or PostgreSQL?"
+        },
+        {
+            "id": 25,
+            "question": "What is connection pooling and why is it important for database access in Node.js?"
+        },
+        {
+            "id": 26,
+            "question": "How would you implement JWT-based authentication in a Node.js application?"
+        },
+        {
+            "id": 27,
+            "question": "What is the purpose of the crypto module in Node.js?"
+        },
+        {
+            "id": 28,
+            "question": "How would you securely hash passwords in a Node.js application?"
+        },
+        {
+            "id": 29,
+            "question": "What is the purpose of rate limiting and how would you implement it in a Node.js API?"
+        },
+        {
+            "id": 30,
+            "question": "How would you handle file uploads in a Node.js application?"
+        },
+        {
+            "id": 31,
+            "question": "What is the purpose of the zlib module for handling compressed data?"
+        },
+        {
+            "id": 32,
+            "question": "How would you implement logging in a production Node.js application?"
+        },
+        {
+            "id": 33,
+            "question": "What is the purpose of a process manager like PM2?"
+        },
+        {
+            "id": 34,
+            "question": "How would you implement graceful shutdown handling in a Node.js server?"
+        },
+        {
+            "id": 35,
+            "question": "What is memory leak detection and how would you identify one in a Node.js application?"
+        },
+        {
+            "id": 36,
+            "question": "What is the purpose of the --inspect flag for debugging Node.js applications?"
+        },
+        {
+            "id": 37,
+            "question": "How would you write unit tests for a Node.js module using a framework like Jest or Mocha?"
+        },
+        {
+            "id": 38,
+            "question": "What is the purpose of mocking dependencies in Node.js unit tests?"
+        },
+        {
+            "id": 39,
+            "question": "How would you implement caching in a Node.js application using Redis?"
+        },
+        {
+            "id": 40,
+            "question": "What is the purpose of the http.Agent and connection keep-alive in Node.js HTTP requests?"
+        },
+        {
+            "id": 41,
+            "question": "How would you handle CORS in a Node.js API?"
+        },
+        {
+            "id": 42,
+            "question": "What is the purpose of the vm module in Node.js?"
+        },
+        {
+            "id": 43,
+            "question": "How would you implement a task queue for background job processing in Node.js?"
+        },
+        {
+            "id": 44,
+            "question": "What is the difference between CommonJS modules and ES modules in Node.js?"
+        },
+        {
+            "id": 45,
+            "question": "How would you configure a Node.js project to use ES modules instead of CommonJS?"
+        },
+        {
+            "id": 46,
+            "question": "What is the purpose of environment variable validation at application startup?"
+        },
+        {
+            "id": 47,
+            "question": "How would you implement a health check endpoint for a Node.js service?"
+        },
+        {
+            "id": 48,
+            "question": "What is the purpose of the assert module?"
+        },
+        {
+            "id": 49,
+            "question": "How would you profile a Node.js application to identify a performance bottleneck?"
+        },
+        {
+            "id": 50,
+            "question": "What is the purpose of the --max-old-space-size flag when running a Node.js application?"
+        }
+    ],
+    "hard": [
+        {
+            "id": 1,
+            "question": "Explain how the libuv library enables Node.js's non-blocking I/O model."
+        },
+        {
+            "id": 2,
+            "question": "How does Node.js's thread pool handle CPU-bound and I/O-bound operations differently?"
+        },
+        {
+            "id": 3,
+            "question": "Explain how you would offload CPU-intensive computation from the main event loop without blocking incoming requests."
+        },
+        {
+            "id": 4,
+            "question": "How would you architect a horizontally scalable Node.js application using clustering across multiple CPU cores?"
+        },
+        {
+            "id": 5,
+            "question": "Explain how you would design a Node.js application to handle tens of thousands of concurrent WebSocket connections."
+        },
+        {
+            "id": 6,
+            "question": "How would you diagnose and resolve a memory leak in a long-running Node.js production process using heap snapshots?"
+        },
+        {
+            "id": 7,
+            "question": "Explain how V8's garbage collection affects Node.js application performance and how you would tune for it."
+        },
+        {
+            "id": 8,
+            "question": "How would you architect a Node.js microservices system with resilient inter-service communication and failure handling?"
+        },
+        {
+            "id": 9,
+            "question": "Explain how you would implement a distributed rate limiter across multiple Node.js instances behind a load balancer."
+        },
+        {
+            "id": 10,
+            "question": "How would you design a caching strategy using Redis to reduce database load for a high-traffic Node.js API?"
+        },
+        {
+            "id": 11,
+            "question": "Explain the trade-offs between using Worker Threads and child processes for parallelizing CPU-intensive work in Node.js."
+        },
+        {
+            "id": 12,
+            "question": "How would you architect an event-driven Node.js system using a message broker like Kafka or RabbitMQ?"
+        },
+        {
+            "id": 13,
+            "question": "Explain how you would implement backpressure handling in a Node.js stream pipeline processing very large files."
+        },
+        {
+            "id": 14,
+            "question": "How would you design a zero-downtime deployment strategy for a Node.js application running behind a load balancer?"
+        },
+        {
+            "id": 15,
+            "question": "Explain how you would troubleshoot an event loop that is being blocked intermittently in a production Node.js application."
+        },
+        {
+            "id": 16,
+            "question": "How would you architect a Node.js application to support graceful degradation when a downstream dependency becomes slow or unavailable?"
+        },
+        {
+            "id": 17,
+            "question": "Explain how you would implement a robust circuit breaker pattern for outbound service calls in a Node.js application."
+        },
+        {
+            "id": 18,
+            "question": "How would you design a connection pooling strategy for a high-concurrency Node.js application interacting with a relational database?"
+        },
+        {
+            "id": 19,
+            "question": "Explain how you would implement idempotent request handling for critical operations like payment processing in a Node.js API."
+        },
+        {
+            "id": 20,
+            "question": "How would you architect distributed tracing across multiple Node.js microservices for observability?"
+        },
+        {
+            "id": 21,
+            "question": "Explain how you would design a Node.js application's logging strategy to avoid becoming a performance bottleneck under high load."
+        },
+        {
+            "id": 22,
+            "question": "How would you implement a secure webhook receiver in Node.js that verifies payload signatures at scale?"
+        },
+        {
+            "id": 23,
+            "question": "Explain how you would architect a Node.js application to safely handle unhandled promise rejections and uncaught exceptions in production."
+        },
+        {
+            "id": 24,
+            "question": "How would you design a strategy to gracefully restart Node.js worker processes without dropping in-flight requests?"
+        },
+        {
+            "id": 25,
+            "question": "Explain how you would implement a robust retry mechanism with exponential backoff for a Node.js service calling unreliable external APIs."
+        },
+        {
+            "id": 26,
+            "question": "How would you architect a Node.js application to support server-sent events or WebSockets at scale across multiple server instances?"
+        },
+        {
+            "id": 27,
+            "question": "Explain how you would design a request deduplication mechanism for a Node.js API that receives retried requests from unreliable clients."
+        },
+        {
+            "id": 28,
+            "question": "How would you troubleshoot a Node.js application experiencing high CPU usage without an obvious infinite loop in the code?"
+        },
+        {
+            "id": 29,
+            "question": "Explain how you would architect a plugin system that allows extending a core Node.js application without modifying its source code."
+        },
+        {
+            "id": 30,
+            "question": "How would you design a strategy for safely rolling out breaking API changes in a Node.js service used by multiple client teams?"
+        },
+        {
+            "id": 31,
+            "question": "Explain how you would implement fine-grained authorization for a complex Node.js API with many resource types and roles."
+        },
+        {
+            "id": 32,
+            "question": "How would you architect a Node.js application to process large CSV or file uploads without exhausting memory?"
+        },
+        {
+            "id": 33,
+            "question": "Explain how you would design a comprehensive testing strategy covering unit, integration, and load tests for a Node.js microservice."
+        },
+        {
+            "id": 34,
+            "question": "How would you implement a robust health check and readiness probe system for a Node.js service running in a container orchestrator?"
+        },
+        {
+            "id": 35,
+            "question": "Explain how you would profile and optimize a Node.js application's startup time for a serverless deployment."
+        },
+        {
+            "id": 36,
+            "question": "How would you architect a multi-region Node.js deployment to minimize latency for globally distributed users?"
+        },
+        {
+            "id": 37,
+            "question": "Explain how you would implement secure secrets management for a Node.js application across multiple deployment environments."
+        },
+        {
+            "id": 38,
+            "question": "How would you design a Node.js application to handle schema evolution in its API without breaking existing consumers?"
+        },
+        {
+            "id": 39,
+            "question": "Explain how you would implement a robust audit trail for sensitive operations performed through a Node.js API."
+        },
+        {
+            "id": 40,
+            "question": "How would you architect a Node.js backend to support both synchronous requests and asynchronous event-driven workflows?"
+        },
+        {
+            "id": 41,
+            "question": "Explain how you would design a strategy to handle race conditions when multiple requests attempt to modify the same resource concurrently."
+        },
+        {
+            "id": 42,
+            "question": "How would you implement a distributed lock in Node.js to coordinate work across multiple instances accessing a shared resource?"
+        },
+        {
+            "id": 43,
+            "question": "Explain how you would design a Node.js application's error response format to be consistent and machine-parseable across a large API surface."
+        },
+        {
+            "id": 44,
+            "question": "How would you architect a solution to detect and mitigate a slow memory leak that only manifests after days of continuous operation?"
+        },
+        {
+            "id": 45,
+            "question": "Explain how you would implement efficient garbage collection tuning for a memory-intensive Node.js application."
+        },
+        {
+            "id": 46,
+            "question": "How would you design a strategy for coordinating background job processing across multiple Node.js worker instances using a job queue?"
+        },
+        {
+            "id": 47,
+            "question": "Explain how you would architect a Node.js application to comply with strict data privacy regulations such as GDPR."
+        },
+        {
+            "id": 48,
+            "question": "How would you troubleshoot a scenario where a Node.js application's response times degrade gradually over several hours of uptime?"
+        },
+        {
+            "id": 49,
+            "question": "Explain how you would approach a full performance audit of a production Node.js application experiencing intermittent latency spikes."
+        },
+        {
+            "id": 50,
+            "question": "How would you evaluate and decide between Node.js and another backend runtime for a new large-scale, high-throughput system?"
+        }
+    ]
+}

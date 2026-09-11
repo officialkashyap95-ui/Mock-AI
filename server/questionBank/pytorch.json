@@ -1,0 +1,609 @@
+{
+    "technology": "PyTorch",
+    "easy": [
+        {
+            "id": 1,
+            "question": "What is PyTorch?"
+        },
+        {
+            "id": 2,
+            "question": "How does PyTorch differ from TensorFlow?"
+        },
+        {
+            "id": 3,
+            "question": "What is a Tensor in PyTorch?"
+        },
+        {
+            "id": 4,
+            "question": "How is a Tensor different from a NumPy array?"
+        },
+        {
+            "id": 5,
+            "question": "How do you create a tensor in PyTorch?"
+        },
+        {
+            "id": 6,
+            "question": "What is the purpose of the torch.zeros() and torch.ones() functions?"
+        },
+        {
+            "id": 7,
+            "question": "What is the shape of a tensor and how do you check it?"
+        },
+        {
+            "id": 8,
+            "question": "What is the purpose of the reshape() method on a tensor?"
+        },
+        {
+            "id": 9,
+            "question": "What is the difference between reshape() and view()?"
+        },
+        {
+            "id": 10,
+            "question": "How do you perform element-wise addition of two tensors?"
+        },
+        {
+            "id": 11,
+            "question": "What is broadcasting in PyTorch?"
+        },
+        {
+            "id": 12,
+            "question": "How do you move a tensor to a GPU device?"
+        },
+        {
+            "id": 13,
+            "question": "What is the purpose of the .to(device) method?"
+        },
+        {
+            "id": 14,
+            "question": "What is the requires_grad attribute of a tensor?"
+        },
+        {
+            "id": 15,
+            "question": "What is Autograd in PyTorch?"
+        },
+        {
+            "id": 16,
+            "question": "What is the purpose of the backward() method?"
+        },
+        {
+            "id": 17,
+            "question": "What is the .grad attribute of a tensor?"
+        },
+        {
+            "id": 18,
+            "question": "What is the purpose of torch.nn.Module?"
+        },
+        {
+            "id": 19,
+            "question": "How do you define a simple neural network using nn.Module?"
+        },
+        {
+            "id": 20,
+            "question": "What is the purpose of the forward() method in a custom model class?"
+        },
+        {
+            "id": 21,
+            "question": "What is a linear layer (nn.Linear) used for?"
+        },
+        {
+            "id": 22,
+            "question": "What is an activation function and why is it needed?"
+        },
+        {
+            "id": 23,
+            "question": "What is the ReLU activation function?"
+        },
+        {
+            "id": 24,
+            "question": "What is the Sigmoid activation function used for?"
+        },
+        {
+            "id": 25,
+            "question": "What is a loss function in PyTorch?"
+        },
+        {
+            "id": 26,
+            "question": "What is the purpose of nn.CrossEntropyLoss?"
+        },
+        {
+            "id": 27,
+            "question": "What is an optimizer in PyTorch?"
+        },
+        {
+            "id": 28,
+            "question": "What is the difference between SGD and Adam optimizers?"
+        },
+        {
+            "id": 29,
+            "question": "What is the purpose of the optimizer.zero_grad() call?"
+        },
+        {
+            "id": 30,
+            "question": "What is the purpose of the optimizer.step() call?"
+        },
+        {
+            "id": 31,
+            "question": "What is a basic training loop structure in PyTorch?"
+        },
+        {
+            "id": 32,
+            "question": "What is the purpose of the torch.utils.data.Dataset class?"
+        },
+        {
+            "id": 33,
+            "question": "What is the purpose of the DataLoader class?"
+        },
+        {
+            "id": 34,
+            "question": "What is the batch_size parameter used for in a DataLoader?"
+        },
+        {
+            "id": 35,
+            "question": "What is the purpose of shuffling data in a DataLoader?"
+        },
+        {
+            "id": 36,
+            "question": "What is the difference between model.train() and model.eval()?"
+        },
+        {
+            "id": 37,
+            "question": "What is the purpose of torch.no_grad()?"
+        },
+        {
+            "id": 38,
+            "question": "How do you save a trained PyTorch model?"
+        },
+        {
+            "id": 39,
+            "question": "How do you load a saved PyTorch model?"
+        },
+        {
+            "id": 40,
+            "question": "What is the difference between saving the entire model and saving the state_dict?"
+        },
+        {
+            "id": 41,
+            "question": "What is the purpose of nn.Sequential?"
+        },
+        {
+            "id": 42,
+            "question": "What is a convolutional layer (nn.Conv2d) used for?"
+        },
+        {
+            "id": 43,
+            "question": "What is a pooling layer used for in a convolutional neural network?"
+        },
+        {
+            "id": 44,
+            "question": "What is dropout and why is it used?"
+        },
+        {
+            "id": 45,
+            "question": "What is the purpose of torch.nn.Dropout?"
+        },
+        {
+            "id": 46,
+            "question": "What is an epoch in the context of model training?"
+        },
+        {
+            "id": 47,
+            "question": "What is the difference between a tensor with requires_grad=True and one with requires_grad=False?"
+        },
+        {
+            "id": 48,
+            "question": "What is torchvision and what is it used for?"
+        },
+        {
+            "id": 49,
+            "question": "What is the purpose of transforms in torchvision?"
+        },
+        {
+            "id": 50,
+            "question": "What is the difference between CPU and GPU tensors in terms of computation speed?"
+        }
+    ],
+    "medium": [
+        {
+            "id": 1,
+            "question": "How does PyTorch's Autograd build and use a dynamic computation graph?"
+        },
+        {
+            "id": 2,
+            "question": "Why must you call optimizer.zero_grad() before each backward pass?"
+        },
+        {
+            "id": 3,
+            "question": "What happens if you forget to zero out gradients between training iterations?"
+        },
+        {
+            "id": 4,
+            "question": "What is the difference between nn.Sequential and subclassing nn.Module for defining a model?"
+        },
+        {
+            "id": 5,
+            "question": "How would you implement a custom Dataset class for a non-standard data format?"
+        },
+        {
+            "id": 6,
+            "question": "When would you need a custom collate_fn in a DataLoader, and why?"
+        },
+        {
+            "id": 7,
+            "question": "How would you handle variable-length sequences in a batch using padding and a custom collate function?"
+        },
+        {
+            "id": 8,
+            "question": "What is the purpose of learning rate schedulers, and when would you use one?"
+        },
+        {
+            "id": 9,
+            "question": "What is the difference between StepLR, MultiStepLR, and ReduceLROnPlateau schedulers?"
+        },
+        {
+            "id": 10,
+            "question": "What is gradient clipping and why is it used?"
+        },
+        {
+            "id": 11,
+            "question": "How would you implement early stopping in a PyTorch training loop?"
+        },
+        {
+            "id": 12,
+            "question": "What is batch normalization and how does it stabilize training?"
+        },
+        {
+            "id": 13,
+            "question": "How would you implement batch normalization using nn.BatchNorm1d or nn.BatchNorm2d?"
+        },
+        {
+            "id": 14,
+            "question": "How would you handle an imbalanced dataset in PyTorch?"
+        },
+        {
+            "id": 15,
+            "question": "What is the purpose of the WeightedRandomSampler, and how would you use it?"
+        },
+        {
+            "id": 16,
+            "question": "How would you use class weights in a loss function to address class imbalance?"
+        },
+        {
+            "id": 17,
+            "question": "What is transfer learning and how would you implement it using a pretrained model in PyTorch?"
+        },
+        {
+            "id": 18,
+            "question": "How would you freeze specific layers of a pretrained model during fine-tuning?"
+        },
+        {
+            "id": 19,
+            "question": "What is data augmentation and how would you apply it using torchvision.transforms?"
+        },
+        {
+            "id": 20,
+            "question": "How would you diagnose and address overfitting in a PyTorch model?"
+        },
+        {
+            "id": 21,
+            "question": "What is weight decay (L2 regularization) and how is it applied in an optimizer?"
+        },
+        {
+            "id": 22,
+            "question": "How would you initialize model weights using Xavier or He initialization?"
+        },
+        {
+            "id": 23,
+            "question": "What is the difference between a feedforward neural network and a recurrent neural network in PyTorch?"
+        },
+        {
+            "id": 24,
+            "question": "How would you implement a simple RNN or LSTM layer for a sequence modeling task?"
+        },
+        {
+            "id": 25,
+            "question": "What is the purpose of the hidden state in a recurrent neural network?"
+        },
+        {
+            "id": 26,
+            "question": "How would you debug a model that isn't learning (loss not decreasing)?"
+        },
+        {
+            "id": 27,
+            "question": "What is the vanishing gradient problem and how might you address it?"
+        },
+        {
+            "id": 28,
+            "question": "How would you use forward hooks to inspect intermediate activations in a model?"
+        },
+        {
+            "id": 29,
+            "question": "What is the purpose of torch.autograd.detect_anomaly()?"
+        },
+        {
+            "id": 30,
+            "question": "How would you visualize a model's computation graph?"
+        },
+        {
+            "id": 31,
+            "question": "What is mixed precision training and why would you use it?"
+        },
+        {
+            "id": 32,
+            "question": "How would you implement mixed precision training using torch.cuda.amp?"
+        },
+        {
+            "id": 33,
+            "question": "What is gradient accumulation and when would you use it?"
+        },
+        {
+            "id": 34,
+            "question": "How would you train a model across multiple GPUs on a single machine?"
+        },
+        {
+            "id": 35,
+            "question": "What is the difference between DataParallel and DistributedDataParallel?"
+        },
+        {
+            "id": 36,
+            "question": "How would you evaluate a classification model using metrics beyond accuracy?"
+        },
+        {
+            "id": 37,
+            "question": "What is the purpose of a validation set during training?"
+        },
+        {
+            "id": 38,
+            "question": "How would you implement k-fold cross-validation for a PyTorch model?"
+        },
+        {
+            "id": 39,
+            "question": "What is the purpose of the PyTorch Profiler and how would you use it?"
+        },
+        {
+            "id": 40,
+            "question": "How would you export a PyTorch model to ONNX format?"
+        },
+        {
+            "id": 41,
+            "question": "What is TorchScript and why would you convert a model to it?"
+        },
+        {
+            "id": 42,
+            "question": "What is the difference between torch.jit.trace and torch.jit.script?"
+        },
+        {
+            "id": 43,
+            "question": "How would you handle a 'CUDA out of memory' error during training?"
+        },
+        {
+            "id": 44,
+            "question": "How would you debug a device mismatch error between model and input tensors?"
+        },
+        {
+            "id": 45,
+            "question": "What is the purpose of setting a random seed for reproducibility in PyTorch experiments?"
+        },
+        {
+            "id": 46,
+            "question": "How would you implement a custom loss function in PyTorch?"
+        },
+        {
+            "id": 47,
+            "question": "What is the purpose of num_workers in a DataLoader, and how does it affect performance?"
+        },
+        {
+            "id": 48,
+            "question": "How would you preprocess image data for a computer vision model using torchvision transforms?"
+        },
+        {
+            "id": 49,
+            "question": "What is the purpose of a checkpoint during training, and what should it typically include?"
+        },
+        {
+            "id": 50,
+            "question": "How would you resume training from a saved checkpoint?"
+        }
+    ],
+    "hard": [
+        {
+            "id": 1,
+            "question": "Explain how PyTorch's dynamic computation graph is constructed and torn down on each forward pass."
+        },
+        {
+            "id": 2,
+            "question": "How does Autograd compute gradients internally using the chain rule across a graph of operations?"
+        },
+        {
+            "id": 3,
+            "question": "Explain how you would implement a custom autograd Function with manually defined forward and backward passes."
+        },
+        {
+            "id": 4,
+            "question": "How would you architect a distributed training pipeline using DistributedDataParallel across multiple nodes and GPUs?"
+        },
+        {
+            "id": 5,
+            "question": "Explain how gradient synchronization works internally in DistributedDataParallel."
+        },
+        {
+            "id": 6,
+            "question": "How would you diagnose and resolve a memory leak occurring during training over many epochs?"
+        },
+        {
+            "id": 7,
+            "question": "Explain how you would optimize GPU memory usage for training a very large model that barely fits in available VRAM."
+        },
+        {
+            "id": 8,
+            "question": "How would you implement model parallelism for a model too large to fit on a single GPU?"
+        },
+        {
+            "id": 9,
+            "question": "Explain the trade-offs between data parallelism, model parallelism, and pipeline parallelism for large-scale training."
+        },
+        {
+            "id": 10,
+            "question": "How would you design a custom autograd-compatible layer that involves a non-differentiable operation?"
+        },
+        {
+            "id": 11,
+            "question": "Explain how mixed precision training affects numerical stability and how loss scaling addresses this."
+        },
+        {
+            "id": 12,
+            "question": "How would you architect a production inference pipeline that serves a PyTorch model with low latency at scale?"
+        },
+        {
+            "id": 13,
+            "question": "Explain the trade-offs between TorchScript, ONNX export, and native PyTorch for production deployment."
+        },
+        {
+            "id": 14,
+            "question": "How would you optimize a trained model for deployment on edge devices with limited compute?"
+        },
+        {
+            "id": 15,
+            "question": "Explain how quantization works in PyTorch and how it reduces model size and inference latency."
+        },
+        {
+            "id": 16,
+            "question": "How would you implement quantization-aware training for a model targeting deployment on constrained hardware?"
+        },
+        {
+            "id": 17,
+            "question": "Explain how you would profile a training loop to identify whether the bottleneck is data loading, CPU-GPU transfer, or compute."
+        },
+        {
+            "id": 18,
+            "question": "How would you design a data pipeline that overlaps data loading and preprocessing with GPU computation to avoid idle time?"
+        },
+        {
+            "id": 19,
+            "question": "Explain how you would implement gradient checkpointing to reduce memory usage for very deep networks."
+        },
+        {
+            "id": 20,
+            "question": "How would you architect a hyperparameter tuning system that efficiently searches across learning rate, batch size, and architecture choices?"
+        },
+        {
+            "id": 21,
+            "question": "Explain how you would debug exploding or vanishing gradients in a very deep or recurrent architecture."
+        },
+        {
+            "id": 22,
+            "question": "How would you implement a custom learning rate scheduler with a warmup phase followed by cosine decay?"
+        },
+        {
+            "id": 23,
+            "question": "Explain how you would design a training pipeline that supports resuming from arbitrary checkpoints after a crash, including optimizer and scheduler state."
+        },
+        {
+            "id": 24,
+            "question": "How would you architect a multi-task learning model sharing a backbone across several output heads with different loss weighting?"
+        },
+        {
+            "id": 25,
+            "question": "Explain how you would implement a custom sampler to handle curriculum learning during training."
+        },
+        {
+            "id": 26,
+            "question": "How would you diagnose numerical instability causing NaN losses partway through training?"
+        },
+        {
+            "id": 27,
+            "question": "Explain how you would implement synchronized batch normalization across multiple GPUs in distributed training."
+        },
+        {
+            "id": 28,
+            "question": "How would you architect an experiment tracking and reproducibility system for a team running many PyTorch training runs?"
+        },
+        {
+            "id": 29,
+            "question": "Explain how you would implement a custom attention mechanism from scratch using PyTorch tensor operations."
+        },
+        {
+            "id": 30,
+            "question": "How would you optimize a transformer model's training throughput for very long input sequences?"
+        },
+        {
+            "id": 31,
+            "question": "Explain how you would implement gradient accumulation correctly alongside mixed precision and distributed training."
+        },
+        {
+            "id": 32,
+            "question": "How would you architect a serving system that batches incoming inference requests dynamically to maximize GPU utilization?"
+        },
+        {
+            "id": 33,
+            "question": "Explain how you would design A/B testing infrastructure for comparing two model versions in production."
+        },
+        {
+            "id": 34,
+            "question": "How would you implement continual learning to update a deployed model without catastrophic forgetting?"
+        },
+        {
+            "id": 35,
+            "question": "Explain how you would design a robust data versioning and lineage strategy for a large-scale PyTorch training pipeline."
+        },
+        {
+            "id": 36,
+            "question": "How would you troubleshoot a scenario where training loss decreases but validation performance does not improve?"
+        },
+        {
+            "id": 37,
+            "question": "Explain how you would implement knowledge distillation to compress a large model into a smaller, faster one."
+        },
+        {
+            "id": 38,
+            "question": "How would you architect a fault-tolerant distributed training job that can recover from a single node failure mid-epoch?"
+        },
+        {
+            "id": 39,
+            "question": "Explain how you would design a custom C++ extension for a performance-critical operation not efficiently expressible in pure PyTorch."
+        },
+        {
+            "id": 40,
+            "question": "How would you implement a pipeline for continuous model retraining triggered by data drift detection in production?"
+        },
+        {
+            "id": 41,
+            "question": "Explain how you would architect a feature store integration to serve consistent features for both training and inference."
+        },
+        {
+            "id": 42,
+            "question": "How would you optimize inference latency for a model serving real-time requests under strict SLA requirements?"
+        },
+        {
+            "id": 43,
+            "question": "Explain how you would design a strategy to compare and select among multiple model architectures under a fixed compute budget."
+        },
+        {
+            "id": 44,
+            "question": "How would you implement gradient penalty-based regularization, such as in a WGAN-GP setup, using PyTorch autograd?"
+        },
+        {
+            "id": 45,
+            "question": "Explain how you would architect a scalable pipeline for distributed hyperparameter search using PyTorch and a job scheduler."
+        },
+        {
+            "id": 46,
+            "question": "How would you design a robust checkpointing strategy to minimize wasted compute in the event of preemptible instance termination?"
+        },
+        {
+            "id": 47,
+            "question": "Explain how you would implement a custom DataLoader sampling strategy for extremely large datasets that don't fit in memory."
+        },
+        {
+            "id": 48,
+            "question": "How would you architect a monitoring system to detect model performance degradation in a production PyTorch-based ML system?"
+        },
+        {
+            "id": 49,
+            "question": "Explain how you would approach a full performance audit of a training pipeline experiencing unexpectedly low GPU utilization."
+        },
+        {
+            "id": 50,
+            "question": "How would you evaluate and decide between PyTorch and another deep learning framework for a new large-scale production ML system?"
+        }
+    ]
+}

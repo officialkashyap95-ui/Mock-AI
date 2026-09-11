@@ -1,0 +1,609 @@
+{
+    "technology": "React",
+    "easy": [
+        {
+            "id": 1,
+            "question": "What is React?"
+        },
+        {
+            "id": 2,
+            "question": "What is JSX?"
+        },
+        {
+            "id": 3,
+            "question": "What is a component in React?"
+        },
+        {
+            "id": 4,
+            "question": "What is the difference between a functional component and a class component?"
+        },
+        {
+            "id": 5,
+            "question": "What are props in React?"
+        },
+        {
+            "id": 6,
+            "question": "What is state in React?"
+        },
+        {
+            "id": 7,
+            "question": "What is the difference between props and state?"
+        },
+        {
+            "id": 8,
+            "question": "How do you create a React component?"
+        },
+        {
+            "id": 9,
+            "question": "What is the useState hook used for?"
+        },
+        {
+            "id": 10,
+            "question": "What is the virtual DOM?"
+        },
+        {
+            "id": 11,
+            "question": "How does the virtual DOM improve performance?"
+        },
+        {
+            "id": 12,
+            "question": "What is the purpose of the render() method?"
+        },
+        {
+            "id": 13,
+            "question": "What is the significance of the key prop in lists?"
+        },
+        {
+            "id": 14,
+            "question": "How do you render a list of items in React?"
+        },
+        {
+            "id": 15,
+            "question": "What is conditional rendering in React?"
+        },
+        {
+            "id": 16,
+            "question": "What is an event handler in React?"
+        },
+        {
+            "id": 17,
+            "question": "How do you handle a button click event in React?"
+        },
+        {
+            "id": 18,
+            "question": "What is the purpose of the useEffect hook?"
+        },
+        {
+            "id": 19,
+            "question": "What is a controlled component?"
+        },
+        {
+            "id": 20,
+            "question": "What is an uncontrolled component?"
+        },
+        {
+            "id": 21,
+            "question": "What is the difference between controlled and uncontrolled components?"
+        },
+        {
+            "id": 22,
+            "question": "How do you pass data from a parent component to a child component?"
+        },
+        {
+            "id": 23,
+            "question": "What is the purpose of create-react-app?"
+        },
+        {
+            "id": 24,
+            "question": "What is a fragment in React?"
+        },
+        {
+            "id": 25,
+            "question": "Why would you use React.Fragment instead of a div?"
+        },
+        {
+            "id": 26,
+            "question": "What is the purpose of the onChange event handler in forms?"
+        },
+        {
+            "id": 27,
+            "question": "What are React hooks?"
+        },
+        {
+            "id": 28,
+            "question": "What rules must be followed when using hooks?"
+        },
+        {
+            "id": 29,
+            "question": "What is the purpose of the useRef hook?"
+        },
+        {
+            "id": 30,
+            "question": "What is the difference between an element and a component in React?"
+        },
+        {
+            "id": 31,
+            "question": "What is the purpose of the package.json file in a React project?"
+        },
+        {
+            "id": 32,
+            "question": "What is npm and how is it used with React?"
+        },
+        {
+            "id": 33,
+            "question": "What is the significance of the return statement in a functional component?"
+        },
+        {
+            "id": 34,
+            "question": "What is a single-page application (SPA)?"
+        },
+        {
+            "id": 35,
+            "question": "How is React different from plain JavaScript for building UIs?"
+        },
+        {
+            "id": 36,
+            "question": "What is the purpose of the index.js file in a React project?"
+        },
+        {
+            "id": 37,
+            "question": "What is component composition?"
+        },
+        {
+            "id": 38,
+            "question": "What is the difference between inline styling and CSS classes in React?"
+        },
+        {
+            "id": 39,
+            "question": "What is the purpose of the className attribute in JSX?"
+        },
+        {
+            "id": 40,
+            "question": "How do you display an image in a React component?"
+        },
+        {
+            "id": 41,
+            "question": "What is the purpose of the useContext hook?"
+        },
+        {
+            "id": 42,
+            "question": "What is prop drilling?"
+        },
+        {
+            "id": 43,
+            "question": "What is the default value of state in a functional component?"
+        },
+        {
+            "id": 44,
+            "question": "How do you update state in a functional component?"
+        },
+        {
+            "id": 45,
+            "question": "What happens when state changes in a React component?"
+        },
+        {
+            "id": 46,
+            "question": "What is the significance of returning null from a component?"
+        },
+        {
+            "id": 47,
+            "question": "What is the purpose of the App.js file?"
+        },
+        {
+            "id": 48,
+            "question": "What is a self-closing tag in JSX?"
+        },
+        {
+            "id": 49,
+            "question": "What is the difference between HTML attributes and JSX attributes?"
+        },
+        {
+            "id": 50,
+            "question": "What is the purpose of React Developer Tools?"
+        }
+    ],
+    "medium": [
+        {
+            "id": 1,
+            "question": "What is the difference between useEffect with an empty dependency array and no dependency array?"
+        },
+        {
+            "id": 2,
+            "question": "How do you fetch data from an API in a React component?"
+        },
+        {
+            "id": 3,
+            "question": "What is the cleanup function in useEffect and when is it called?"
+        },
+        {
+            "id": 4,
+            "question": "What is React Router and how is it used for navigation?"
+        },
+        {
+            "id": 5,
+            "question": "How do you implement dynamic routing in React Router?"
+        },
+        {
+            "id": 6,
+            "question": "What is the purpose of the useMemo hook?"
+        },
+        {
+            "id": 7,
+            "question": "What is the purpose of the useCallback hook?"
+        },
+        {
+            "id": 8,
+            "question": "What is the difference between useMemo and useCallback?"
+        },
+        {
+            "id": 9,
+            "question": "How do you manage global state without using a state management library?"
+        },
+        {
+            "id": 10,
+            "question": "What is the Context API and when should you use it?"
+        },
+        {
+            "id": 11,
+            "question": "What are the limitations of the Context API compared to Redux?"
+        },
+        {
+            "id": 12,
+            "question": "How do you handle form validation in React?"
+        },
+        {
+            "id": 13,
+            "question": "What is a custom hook and how would you create one?"
+        },
+        {
+            "id": 14,
+            "question": "How do you optimize a component that re-renders too often?"
+        },
+        {
+            "id": 15,
+            "question": "What is React.memo and when should you use it?"
+        },
+        {
+            "id": 16,
+            "question": "What is the difference between React.memo and useMemo?"
+        },
+        {
+            "id": 17,
+            "question": "How would you implement lazy loading in a React application?"
+        },
+        {
+            "id": 18,
+            "question": "What is code splitting and why is it important in React applications?"
+        },
+        {
+            "id": 19,
+            "question": "What is the purpose of React.lazy and Suspense?"
+        },
+        {
+            "id": 20,
+            "question": "How do you handle errors gracefully in a React application?"
+        },
+        {
+            "id": 21,
+            "question": "What is an error boundary in React?"
+        },
+        {
+            "id": 22,
+            "question": "How would you implement pagination in a React application?"
+        },
+        {
+            "id": 23,
+            "question": "What is the significance of using unique keys instead of array indexes?"
+        },
+        {
+            "id": 24,
+            "question": "How do you handle authentication state across a React application?"
+        },
+        {
+            "id": 25,
+            "question": "How would you protect routes based on authentication status?"
+        },
+        {
+            "id": 26,
+            "question": "What is the purpose of environment variables in a React project?"
+        },
+        {
+            "id": 27,
+            "question": "How do you handle file uploads in a React form?"
+        },
+        {
+            "id": 28,
+            "question": "What is the difference between client-side rendering and server-side rendering in React?"
+        },
+        {
+            "id": 29,
+            "question": "How would you debounce an input field in a search feature?"
+        },
+        {
+            "id": 30,
+            "question": "How do you manage side effects that depend on multiple state variables?"
+        },
+        {
+            "id": 31,
+            "question": "What is the purpose of the useReducer hook?"
+        },
+        {
+            "id": 32,
+            "question": "When would you choose useReducer over useState?"
+        },
+        {
+            "id": 33,
+            "question": "How do you handle nested state updates immutably?"
+        },
+        {
+            "id": 34,
+            "question": "What is the significance of batching state updates in React?"
+        },
+        {
+            "id": 35,
+            "question": "How would you implement infinite scrolling in React?"
+        },
+        {
+            "id": 36,
+            "question": "What is a higher-order component (HOC)?"
+        },
+        {
+            "id": 37,
+            "question": "What is the render props pattern and when is it useful?"
+        },
+        {
+            "id": 38,
+            "question": "How do you test a React component using React Testing Library?"
+        },
+        {
+            "id": 39,
+            "question": "What is the purpose of PropTypes in React?"
+        },
+        {
+            "id": 40,
+            "question": "How would you handle a memory leak caused by setting state on an unmounted component?"
+        },
+        {
+            "id": 41,
+            "question": "What is the difference between useLayoutEffect and useEffect?"
+        },
+        {
+            "id": 42,
+            "question": "How do you optimize images and assets in a React application?"
+        },
+        {
+            "id": 43,
+            "question": "How would you structure folders and files in a large-scale React project?"
+        },
+        {
+            "id": 44,
+            "question": "What is the purpose of a wrapper or layout component?"
+        },
+        {
+            "id": 45,
+            "question": "How do you share logic between components without duplicating code?"
+        },
+        {
+            "id": 46,
+            "question": "What is the difference between a controlled form library and manually managing form state?"
+        },
+        {
+            "id": 47,
+            "question": "How would you implement dark mode toggling in a React application?"
+        },
+        {
+            "id": 48,
+            "question": "What is the significance of the dependency array in useEffect?"
+        },
+        {
+            "id": 49,
+            "question": "How do you avoid prop drilling in a deeply nested component tree?"
+        },
+        {
+            "id": 50,
+            "question": "What is the purpose of React Query or similar data-fetching libraries?"
+        }
+    ],
+    "hard": [
+        {
+            "id": 1,
+            "question": "Explain how React's reconciliation algorithm works internally."
+        },
+        {
+            "id": 2,
+            "question": "What is the Fiber architecture in React and why was it introduced?"
+        },
+        {
+            "id": 3,
+            "question": "Explain the difference between synchronous and concurrent rendering in React."
+        },
+        {
+            "id": 4,
+            "question": "How does React's concurrent mode change the way rendering priorities are handled?"
+        },
+        {
+            "id": 5,
+            "question": "Explain how React batches state updates internally, including in event handlers versus asynchronous callbacks."
+        },
+        {
+            "id": 6,
+            "question": "How does React determine whether to re-render a component during reconciliation?"
+        },
+        {
+            "id": 7,
+            "question": "Explain the diffing algorithm React uses for lists and why keys matter for its efficiency."
+        },
+        {
+            "id": 8,
+            "question": "How would you architect a React application to scale to hundreds of components without performance degradation?"
+        },
+        {
+            "id": 9,
+            "question": "Explain how React Server Components differ from traditional client-rendered components."
+        },
+        {
+            "id": 10,
+            "question": "How would you design a state management architecture for a large enterprise React application?"
+        },
+        {
+            "id": 11,
+            "question": "Explain the trade-offs between Redux, Context API, and other state management solutions at scale."
+        },
+        {
+            "id": 12,
+            "question": "How does React handle hydration in server-side rendered applications?"
+        },
+        {
+            "id": 13,
+            "question": "Explain how you would debug a performance bottleneck in a large React application using the Profiler API."
+        },
+        {
+            "id": 14,
+            "question": "How would you implement a custom renderer using React's reconciler package?"
+        },
+        {
+            "id": 15,
+            "question": "Explain the differences between shallow rendering and deep rendering in the context of component testing strategies."
+        },
+        {
+            "id": 16,
+            "question": "How does React's automatic batching in React 18 differ from batching behavior in earlier versions?"
+        },
+        {
+            "id": 17,
+            "question": "Explain how Suspense works internally for data fetching and code splitting."
+        },
+        {
+            "id": 18,
+            "question": "How would you design a micro-frontend architecture using React?"
+        },
+        {
+            "id": 19,
+            "question": "Explain the security implications of rendering user-generated content in React and how dangerouslySetInnerHTML should be handled."
+        },
+        {
+            "id": 20,
+            "question": "How would you architect a design system with reusable React components for multiple product teams?"
+        },
+        {
+            "id": 21,
+            "question": "Explain how React handles memory management and garbage collection for unmounted component trees."
+        },
+        {
+            "id": 22,
+            "question": "How would you implement a custom hook that safely handles race conditions in data fetching?"
+        },
+        {
+            "id": 23,
+            "question": "Explain the architectural trade-offs between colocating state and lifting state up in a complex application."
+        },
+        {
+            "id": 24,
+            "question": "How does React's useTransition hook help manage UI responsiveness under heavy computation?"
+        },
+        {
+            "id": 25,
+            "question": "Explain how you would optimize a React application with a deeply nested component tree that suffers from unnecessary re-renders."
+        },
+        {
+            "id": 26,
+            "question": "How would you implement server-side rendering with streaming in a React application?"
+        },
+        {
+            "id": 27,
+            "question": "Explain the differences between static site generation, server-side rendering, and client-side rendering in the context of React frameworks."
+        },
+        {
+            "id": 28,
+            "question": "How would you design a caching strategy for data-fetching hooks in a React application handling real-time data?"
+        },
+        {
+            "id": 29,
+            "question": "Explain how React's context propagation can cause unnecessary re-renders and how you would mitigate it."
+        },
+        {
+            "id": 30,
+            "question": "How would you architect a plugin system that allows third-party developers to extend a React-based platform?"
+        },
+        {
+            "id": 31,
+            "question": "Explain how you would implement optimistic UI updates in a React application interacting with a REST API."
+        },
+        {
+            "id": 32,
+            "question": "How does React's scheduler prioritize updates between user interactions and background rendering?"
+        },
+        {
+            "id": 33,
+            "question": "Explain the trade-offs of using class components versus functional components with hooks in large legacy codebases."
+        },
+        {
+            "id": 34,
+            "question": "How would you migrate a large legacy class-based React application to hooks without introducing regressions?"
+        },
+        {
+            "id": 35,
+            "question": "Explain how you would implement accessibility (a11y) best practices at scale across a large React component library."
+        },
+        {
+            "id": 36,
+            "question": "How would you design a real-time collaborative editing feature using React and WebSockets?"
+        },
+        {
+            "id": 37,
+            "question": "Explain how you would prevent layout thrashing in a React application with frequent DOM updates."
+        },
+        {
+            "id": 38,
+            "question": "How would you implement feature flagging in a React application without significant performance overhead?"
+        },
+        {
+            "id": 39,
+            "question": "Explain the architectural considerations for internationalization (i18n) in a large-scale React application."
+        },
+        {
+            "id": 40,
+            "question": "How would you design an error monitoring and reporting system for a production React application?"
+        },
+        {
+            "id": 41,
+            "question": "Explain how you would implement a virtualized list to render thousands of rows efficiently in React."
+        },
+        {
+            "id": 42,
+            "question": "How would you architect authentication and authorization flows across multiple React micro-frontends?"
+        },
+        {
+            "id": 43,
+            "question": "Explain the trade-offs between using GraphQL and REST for data fetching in a large React application."
+        },
+        {
+            "id": 44,
+            "question": "How would you design a testing strategy that balances unit tests, integration tests, and end-to-end tests for a React application?"
+        },
+        {
+            "id": 45,
+            "question": "Explain how you would implement a robust undo/redo feature in a complex React application."
+        },
+        {
+            "id": 46,
+            "question": "How does React's automatic memoization proposal (React Compiler) aim to change how developers optimize performance?"
+        },
+        {
+            "id": 47,
+            "question": "Explain how you would architect a React application to support offline-first functionality."
+        },
+        {
+            "id": 48,
+            "question": "How would you design a component library that supports theming across multiple brands or products?"
+        },
+        {
+            "id": 49,
+            "question": "Explain how you would approach a full performance audit of a production React application experiencing slow load times."
+        },
+        {
+            "id": 50,
+            "question": "How would you evaluate and decide between building a custom framework versus adopting Next.js for a large-scale React project?"
+        }
+    ]
+}

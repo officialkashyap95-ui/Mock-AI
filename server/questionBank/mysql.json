@@ -1,0 +1,609 @@
+{
+    "technology": "MySQL",
+    "easy": [
+        {
+            "id": 1,
+            "question": "What is MySQL?"
+        },
+        {
+            "id": 2,
+            "question": "What is a relational database?"
+        },
+        {
+            "id": 3,
+            "question": "What is a table in MySQL?"
+        },
+        {
+            "id": 4,
+            "question": "What is a row and a column in a table?"
+        },
+        {
+            "id": 5,
+            "question": "What is a primary key?"
+        },
+        {
+            "id": 6,
+            "question": "What is a foreign key?"
+        },
+        {
+            "id": 7,
+            "question": "What is the difference between a primary key and a foreign key?"
+        },
+        {
+            "id": 8,
+            "question": "What is SQL?"
+        },
+        {
+            "id": 9,
+            "question": "What is the difference between SQL and MySQL?"
+        },
+        {
+            "id": 10,
+            "question": "What is the purpose of the SELECT statement?"
+        },
+        {
+            "id": 11,
+            "question": "What is the purpose of the INSERT statement?"
+        },
+        {
+            "id": 12,
+            "question": "What is the purpose of the UPDATE statement?"
+        },
+        {
+            "id": 13,
+            "question": "What is the purpose of the DELETE statement?"
+        },
+        {
+            "id": 14,
+            "question": "What is the purpose of the WHERE clause?"
+        },
+        {
+            "id": 15,
+            "question": "What is the purpose of the CREATE TABLE statement?"
+        },
+        {
+            "id": 16,
+            "question": "What is the purpose of the DROP TABLE statement?"
+        },
+        {
+            "id": 17,
+            "question": "What is the difference between DROP and DELETE?"
+        },
+        {
+            "id": 18,
+            "question": "What is the difference between DROP and TRUNCATE?"
+        },
+        {
+            "id": 19,
+            "question": "What is a data type in MySQL?"
+        },
+        {
+            "id": 20,
+            "question": "What is the difference between CHAR and VARCHAR?"
+        },
+        {
+            "id": 21,
+            "question": "What is the difference between INT and BIGINT?"
+        },
+        {
+            "id": 22,
+            "question": "What is the purpose of the AUTO_INCREMENT attribute?"
+        },
+        {
+            "id": 23,
+            "question": "What is the purpose of the NOT NULL constraint?"
+        },
+        {
+            "id": 24,
+            "question": "What is the purpose of the UNIQUE constraint?"
+        },
+        {
+            "id": 25,
+            "question": "What is the purpose of the DEFAULT constraint?"
+        },
+        {
+            "id": 26,
+            "question": "What is the purpose of the ORDER BY clause?"
+        },
+        {
+            "id": 27,
+            "question": "What is the purpose of the GROUP BY clause?"
+        },
+        {
+            "id": 28,
+            "question": "What is the difference between WHERE and HAVING?"
+        },
+        {
+            "id": 29,
+            "question": "What is the purpose of the LIMIT clause?"
+        },
+        {
+            "id": 30,
+            "question": "What is a JOIN in MySQL?"
+        },
+        {
+            "id": 31,
+            "question": "What is the difference between INNER JOIN and LEFT JOIN?"
+        },
+        {
+            "id": 32,
+            "question": "What is the purpose of the DISTINCT keyword?"
+        },
+        {
+            "id": 33,
+            "question": "What is the purpose of aggregate functions like COUNT, SUM, and AVG?"
+        },
+        {
+            "id": 34,
+            "question": "What is the purpose of the LIKE operator?"
+        },
+        {
+            "id": 35,
+            "question": "What is the purpose of wildcard characters in a LIKE query?"
+        },
+        {
+            "id": 36,
+            "question": "What is a database schema?"
+        },
+        {
+            "id": 37,
+            "question": "What is the purpose of the USE statement?"
+        },
+        {
+            "id": 38,
+            "question": "What is an index in MySQL?"
+        },
+        {
+            "id": 39,
+            "question": "What is the purpose of the ALTER TABLE statement?"
+        },
+        {
+            "id": 40,
+            "question": "What is the purpose of the DESCRIBE command?"
+        },
+        {
+            "id": 41,
+            "question": "What is a NULL value in MySQL?"
+        },
+        {
+            "id": 42,
+            "question": "What is the difference between IS NULL and = NULL?"
+        },
+        {
+            "id": 43,
+            "question": "What is the purpose of the BETWEEN operator?"
+        },
+        {
+            "id": 44,
+            "question": "What is the purpose of the IN operator?"
+        },
+        {
+            "id": 45,
+            "question": "What is a composite key?"
+        },
+        {
+            "id": 46,
+            "question": "What is the difference between a candidate key and a primary key?"
+        },
+        {
+            "id": 47,
+            "question": "What is a view in MySQL?"
+        },
+        {
+            "id": 48,
+            "question": "What is the purpose of comments in SQL queries?"
+        },
+        {
+            "id": 49,
+            "question": "What is the MySQL Workbench?"
+        },
+        {
+            "id": 50,
+            "question": "What is the purpose of the COMMIT statement?"
+        }
+    ],
+    "medium": [
+        {
+            "id": 1,
+            "question": "What is normalization and why is it important in database design?"
+        },
+        {
+            "id": 2,
+            "question": "What are the differences between 1NF, 2NF, and 3NF?"
+        },
+        {
+            "id": 3,
+            "question": "What is denormalization and when would you use it?"
+        },
+        {
+            "id": 4,
+            "question": "What is the difference between INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL OUTER JOIN?"
+        },
+        {
+            "id": 5,
+            "question": "How would you write a query to find duplicate records in a table?"
+        },
+        {
+            "id": 6,
+            "question": "What is a self-join and when would you use one?"
+        },
+        {
+            "id": 7,
+            "question": "What is a subquery and how does it differ from a JOIN?"
+        },
+        {
+            "id": 8,
+            "question": "What is the difference between a correlated subquery and a non-correlated subquery?"
+        },
+        {
+            "id": 9,
+            "question": "What is a transaction in MySQL?"
+        },
+        {
+            "id": 10,
+            "question": "What are the ACID properties and why are they important?"
+        },
+        {
+            "id": 11,
+            "question": "What is the purpose of the ROLLBACK statement?"
+        },
+        {
+            "id": 12,
+            "question": "What is the difference between COMMIT and ROLLBACK?"
+        },
+        {
+            "id": 13,
+            "question": "What is a stored procedure and why would you use one?"
+        },
+        {
+            "id": 14,
+            "question": "What is the difference between a stored procedure and a function in MySQL?"
+        },
+        {
+            "id": 15,
+            "question": "What is a trigger in MySQL?"
+        },
+        {
+            "id": 16,
+            "question": "What is the difference between a BEFORE trigger and an AFTER trigger?"
+        },
+        {
+            "id": 17,
+            "question": "What is the purpose of the EXPLAIN statement?"
+        },
+        {
+            "id": 18,
+            "question": "How would you use EXPLAIN to diagnose a slow query?"
+        },
+        {
+            "id": 19,
+            "question": "What is a composite index and when would you create one?"
+        },
+        {
+            "id": 20,
+            "question": "What is the difference between a clustered index and a non-clustered index?"
+        },
+        {
+            "id": 21,
+            "question": "How does MySQL use the InnoDB storage engine's clustered index for the primary key?"
+        },
+        {
+            "id": 22,
+            "question": "What is the difference between InnoDB and MyISAM storage engines?"
+        },
+        {
+            "id": 23,
+            "question": "What is the purpose of foreign key constraints in maintaining referential integrity?"
+        },
+        {
+            "id": 24,
+            "question": "What is a deadlock in MySQL and how would you resolve one?"
+        },
+        {
+            "id": 25,
+            "question": "What is the difference between optimistic and pessimistic locking in MySQL?"
+        },
+        {
+            "id": 26,
+            "question": "What are the different transaction isolation levels in MySQL?"
+        },
+        {
+            "id": 27,
+            "question": "What is the difference between REPEATABLE READ and READ COMMITTED isolation levels?"
+        },
+        {
+            "id": 28,
+            "question": "What is a phantom read and which isolation level prevents it?"
+        },
+        {
+            "id": 29,
+            "question": "How would you design a schema for a many-to-many relationship using a junction table?"
+        },
+        {
+            "id": 30,
+            "question": "What is the purpose of database views and how do they simplify complex queries?"
+        },
+        {
+            "id": 31,
+            "question": "What is a materialized view and how does it differ from a regular view in MySQL's ecosystem?"
+        },
+        {
+            "id": 32,
+            "question": "How would you implement pagination for a large result set in MySQL?"
+        },
+        {
+            "id": 33,
+            "question": "What is the difference between UNION and UNION ALL?"
+        },
+        {
+            "id": 34,
+            "question": "What is a window function and how does it differ from a GROUP BY aggregation?"
+        },
+        {
+            "id": 35,
+            "question": "How would you use the ROW_NUMBER() window function to rank rows within groups?"
+        },
+        {
+            "id": 36,
+            "question": "What is a Common Table Expression (CTE) and when would you use one?"
+        },
+        {
+            "id": 37,
+            "question": "What is the difference between a CTE and a subquery?"
+        },
+        {
+            "id": 38,
+            "question": "How would you write a recursive CTE to traverse a hierarchical data structure?"
+        },
+        {
+            "id": 39,
+            "question": "What is the purpose of database replication in MySQL?"
+        },
+        {
+            "id": 40,
+            "question": "What is the difference between master-slave and master-master replication?"
+        },
+        {
+            "id": 41,
+            "question": "How would you back up and restore a MySQL database using mysqldump?"
+        },
+        {
+            "id": 42,
+            "question": "What is the purpose of the SQL injection vulnerability and how would you prevent it?"
+        },
+        {
+            "id": 43,
+            "question": "What is the purpose of prepared statements in preventing SQL injection?"
+        },
+        {
+            "id": 44,
+            "question": "How would you optimize a query that is performing a full table scan?"
+        },
+        {
+            "id": 45,
+            "question": "What is the purpose of the query cache and why was it removed in later MySQL versions?"
+        },
+        {
+            "id": 46,
+            "question": "How would you design indexes to optimize a query that filters and sorts on different columns?"
+        },
+        {
+            "id": 47,
+            "question": "What is a covering index and how does it improve query performance?"
+        },
+        {
+            "id": 48,
+            "question": "How would you handle schema migrations in a production MySQL database without downtime?"
+        },
+        {
+            "id": 49,
+            "question": "What is the purpose of database connection pooling in a MySQL-backed application?"
+        },
+        {
+            "id": 50,
+            "question": "How would you debug a MySQL query that is running significantly slower than expected?"
+        }
+    ],
+    "hard": [
+        {
+            "id": 1,
+            "question": "Explain how the InnoDB storage engine implements MVCC (Multi-Version Concurrency Control)."
+        },
+        {
+            "id": 2,
+            "question": "How does InnoDB's B+tree index structure affect read and write performance at scale?"
+        },
+        {
+            "id": 3,
+            "question": "Explain how the InnoDB buffer pool works and how you would tune it for a high-throughput production workload."
+        },
+        {
+            "id": 4,
+            "question": "How would you design a sharding strategy for a MySQL database that has outgrown a single server's capacity?"
+        },
+        {
+            "id": 5,
+            "question": "Explain the trade-offs between vertical partitioning and horizontal partitioning in MySQL."
+        },
+        {
+            "id": 6,
+            "question": "How would you architect a MySQL replication topology to achieve high availability with automatic failover?"
+        },
+        {
+            "id": 7,
+            "question": "Explain how you would diagnose and resolve replication lag in a master-slave MySQL setup under heavy write load."
+        },
+        {
+            "id": 8,
+            "question": "How would you design a disaster recovery strategy for a mission-critical MySQL database with strict RPO and RTO requirements?"
+        },
+        {
+            "id": 9,
+            "question": "Explain how gap locks and next-key locks work in InnoDB and how they affect concurrency."
+        },
+        {
+            "id": 10,
+            "question": "How would you troubleshoot and resolve a persistent deadlock issue occurring under high-concurrency production traffic?"
+        },
+        {
+            "id": 11,
+            "question": "Explain how you would optimize a MySQL schema and query strategy for a workload with billions of rows in a single table."
+        },
+        {
+            "id": 12,
+            "question": "How would you design a zero-downtime schema migration strategy for a very large production table?"
+        },
+        {
+            "id": 13,
+            "question": "Explain how you would use query profiling and the performance_schema to identify a specific performance bottleneck."
+        },
+        {
+            "id": 14,
+            "question": "How would you architect a read-heavy MySQL application to scale using read replicas while managing replication lag consistency issues?"
+        },
+        {
+            "id": 15,
+            "question": "Explain the trade-offs between using MySQL's native partitioning versus application-level sharding for a very large dataset."
+        },
+        {
+            "id": 16,
+            "question": "How would you design a connection pooling and query routing strategy for an application interacting with a sharded MySQL cluster?"
+        },
+        {
+            "id": 17,
+            "question": "Explain how you would implement a robust strategy to prevent and detect data corruption in a large production MySQL database."
+        },
+        {
+            "id": 18,
+            "question": "How would you architect a caching layer in front of MySQL to significantly reduce read latency for a high-traffic application?"
+        },
+        {
+            "id": 19,
+            "question": "Explain how you would design an archival strategy to move historical data out of a large, performance-critical MySQL table."
+        },
+        {
+            "id": 20,
+            "question": "How would you troubleshoot a scenario where index usage suddenly degrades after a MySQL version upgrade?"
+        },
+        {
+            "id": 21,
+            "question": "Explain how you would implement idempotent, exactly-once write semantics for a MySQL-backed financial transaction system."
+        },
+        {
+            "id": 22,
+            "question": "How would you design a strategy to safely perform a major version upgrade of a production MySQL cluster with minimal downtime?"
+        },
+        {
+            "id": 23,
+            "question": "Explain how you would architect a multi-region MySQL deployment to minimize latency while maintaining data consistency."
+        },
+        {
+            "id": 24,
+            "question": "How would you troubleshoot severe lock contention affecting write throughput on a hot row in a high-traffic table?"
+        },
+        {
+            "id": 25,
+            "question": "Explain how you would design a comprehensive monitoring and alerting strategy for a fleet of production MySQL instances."
+        },
+        {
+            "id": 26,
+            "question": "How would you architect a data pipeline to stream changes from MySQL to downstream systems using binary log replication (CDC)?"
+        },
+        {
+            "id": 27,
+            "question": "Explain how you would optimize a complex analytical query involving multiple large joins and aggregations on a transactional MySQL database."
+        },
+        {
+            "id": 28,
+            "question": "How would you design a strategy to handle schema evolution across microservices that each own a portion of a shared MySQL database?"
+        },
+        {
+            "id": 29,
+            "question": "Explain how you would implement field-level encryption for sensitive data in MySQL while preserving the ability to query it efficiently."
+        },
+        {
+            "id": 30,
+            "question": "How would you architect a solution to enforce strict multi-tenant data isolation within a shared MySQL database?"
+        },
+        {
+            "id": 31,
+            "question": "Explain how you would design a backup strategy for a large MySQL database that balances backup speed, storage cost, and restore time."
+        },
+        {
+            "id": 32,
+            "question": "How would you troubleshoot a case where query performance is inconsistent despite identical query plans across executions?"
+        },
+        {
+            "id": 33,
+            "question": "Explain how you would design an index strategy for a table that must efficiently support dozens of different query access patterns."
+        },
+        {
+            "id": 34,
+            "question": "How would you architect a solution to handle a sudden 10x increase in write throughput without degrading database performance?"
+        },
+        {
+            "id": 35,
+            "question": "Explain how you would implement a robust retry and circuit breaker strategy for an application experiencing intermittent MySQL connectivity issues."
+        },
+        {
+            "id": 36,
+            "question": "How would you design a strategy for testing schema and index changes safely before applying them to a production MySQL database?"
+        },
+        {
+            "id": 37,
+            "question": "Explain how you would architect a solution to support near-real-time analytics on top of a transactional MySQL database without impacting production performance."
+        },
+        {
+            "id": 38,
+            "question": "How would you troubleshoot a scenario where a large ALTER TABLE operation is causing significant downtime on a production system?"
+        },
+        {
+            "id": 39,
+            "question": "Explain how you would design a capacity planning strategy for a MySQL database expected to grow tenfold in data volume over the next year."
+        },
+        {
+            "id": 40,
+            "question": "How would you architect a solution to handle eventual consistency challenges when MySQL is used alongside other datastores in a polyglot persistence architecture?"
+        },
+        {
+            "id": 41,
+            "question": "Explain how you would implement row-level security or fine-grained access control in an application backed by MySQL."
+        },
+        {
+            "id": 42,
+            "question": "How would you design a strategy to safely migrate a large production MySQL database to a different storage engine or cloud provider?"
+        },
+        {
+            "id": 43,
+            "question": "Explain how you would optimize InnoDB configuration parameters for a workload with a very high ratio of writes to reads."
+        },
+        {
+            "id": 44,
+            "question": "How would you troubleshoot memory pressure and swapping issues on a MySQL server caused by an oversized buffer pool configuration?"
+        },
+        {
+            "id": 45,
+            "question": "Explain how you would design a strategy to detect and remediate slow-growing data integrity issues caused by application bugs over time."
+        },
+        {
+            "id": 46,
+            "question": "How would you architect a solution to support blue-green deployments for a MySQL schema migration involving breaking changes?"
+        },
+        {
+            "id": 47,
+            "question": "Explain how you would implement comprehensive audit logging for sensitive data changes in a production MySQL database."
+        },
+        {
+            "id": 48,
+            "question": "How would you design a strategy for coordinating schema changes across multiple services that share a single MySQL database?"
+        },
+        {
+            "id": 49,
+            "question": "Explain how you would approach a full performance audit of a production MySQL database experiencing intermittent query latency spikes."
+        },
+        {
+            "id": 50,
+            "question": "How would you evaluate and decide between MySQL and a NoSQL database like MongoDB for a new application with evolving data requirements?"
+        }
+    ]
+}

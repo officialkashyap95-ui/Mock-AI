@@ -1,0 +1,609 @@
+{
+    "technology": "C++",
+    "easy": [
+        {
+            "id": 1,
+            "question": "What is C++?"
+        },
+        {
+            "id": 2,
+            "question": "What is the difference between C and C++?"
+        },
+        {
+            "id": 3,
+            "question": "What is a variable in C++?"
+        },
+        {
+            "id": 4,
+            "question": "What are the basic data types in C++?"
+        },
+        {
+            "id": 5,
+            "question": "What is the difference between int, float, and double?"
+        },
+        {
+            "id": 6,
+            "question": "What is a function in C++?"
+        },
+        {
+            "id": 7,
+            "question": "What is the purpose of the main() function?"
+        },
+        {
+            "id": 8,
+            "question": "What is the difference between declaration and definition of a function?"
+        },
+        {
+            "id": 9,
+            "question": "What is an array in C++?"
+        },
+        {
+            "id": 10,
+            "question": "What is a pointer in C++?"
+        },
+        {
+            "id": 11,
+            "question": "What is the difference between a pointer and a reference?"
+        },
+        {
+            "id": 12,
+            "question": "What is the purpose of the & operator?"
+        },
+        {
+            "id": 13,
+            "question": "What is the purpose of the * operator in the context of pointers?"
+        },
+        {
+            "id": 14,
+            "question": "What is a class in C++?"
+        },
+        {
+            "id": 15,
+            "question": "What is an object in C++?"
+        },
+        {
+            "id": 16,
+            "question": "What is the difference between a class and a struct?"
+        },
+        {
+            "id": 17,
+            "question": "What is a constructor?"
+        },
+        {
+            "id": 18,
+            "question": "What is a destructor?"
+        },
+        {
+            "id": 19,
+            "question": "What is the purpose of the this pointer?"
+        },
+        {
+            "id": 20,
+            "question": "What is encapsulation in C++?"
+        },
+        {
+            "id": 21,
+            "question": "What is inheritance in C++?"
+        },
+        {
+            "id": 22,
+            "question": "What is polymorphism in C++?"
+        },
+        {
+            "id": 23,
+            "question": "What is abstraction in C++?"
+        },
+        {
+            "id": 24,
+            "question": "What is function overloading?"
+        },
+        {
+            "id": 25,
+            "question": "What is operator overloading?"
+        },
+        {
+            "id": 26,
+            "question": "What is the difference between public, private, and protected access specifiers?"
+        },
+        {
+            "id": 27,
+            "question": "What is a header file in C++?"
+        },
+        {
+            "id": 28,
+            "question": "What is the purpose of the #include directive?"
+        },
+        {
+            "id": 29,
+            "question": "What is the purpose of the using namespace std statement?"
+        },
+        {
+            "id": 30,
+            "question": "What is the difference between cin and cout?"
+        },
+        {
+            "id": 31,
+            "question": "What is a loop in C++?"
+        },
+        {
+            "id": 32,
+            "question": "What is the difference between a for loop and a while loop?"
+        },
+        {
+            "id": 33,
+            "question": "What is a do-while loop?"
+        },
+        {
+            "id": 34,
+            "question": "What is the difference between break and continue?"
+        },
+        {
+            "id": 35,
+            "question": "What is the purpose of the switch statement?"
+        },
+        {
+            "id": 36,
+            "question": "What is a string in C++?"
+        },
+        {
+            "id": 37,
+            "question": "What is the difference between a C-style string and the std::string class?"
+        },
+        {
+            "id": 38,
+            "question": "What is a vector in C++?"
+        },
+        {
+            "id": 39,
+            "question": "What is the Standard Template Library (STL)?"
+        },
+        {
+            "id": 40,
+            "question": "What is the difference between an array and a vector?"
+        },
+        {
+            "id": 41,
+            "question": "What is a structure (struct) in C++?"
+        },
+        {
+            "id": 42,
+            "question": "What is the purpose of the const keyword?"
+        },
+        {
+            "id": 43,
+            "question": "What is a static variable in C++?"
+        },
+        {
+            "id": 44,
+            "question": "What is the scope resolution operator (::) used for?"
+        },
+        {
+            "id": 45,
+            "question": "What is the difference between global and local variables?"
+        },
+        {
+            "id": 46,
+            "question": "What is recursion?"
+        },
+        {
+            "id": 47,
+            "question": "What is the purpose of default arguments in a function?"
+        },
+        {
+            "id": 48,
+            "question": "What is the difference between call by value and call by reference?"
+        },
+        {
+            "id": 49,
+            "question": "What is a namespace in C++?"
+        },
+        {
+            "id": 50,
+            "question": "What is the purpose of comments in C++ code?"
+        }
+    ],
+    "medium": [
+        {
+            "id": 1,
+            "question": "What is the difference between compile-time polymorphism and runtime polymorphism?"
+        },
+        {
+            "id": 2,
+            "question": "What is a virtual function and how does it enable runtime polymorphism?"
+        },
+        {
+            "id": 3,
+            "question": "What is a pure virtual function and what is an abstract class?"
+        },
+        {
+            "id": 4,
+            "question": "What is the difference between method overloading and method overriding?"
+        },
+        {
+            "id": 5,
+            "question": "What is the diamond problem in multiple inheritance and how does C++ resolve it?"
+        },
+        {
+            "id": 6,
+            "question": "What is a virtual base class?"
+        },
+        {
+            "id": 7,
+            "question": "What is the difference between shallow copy and deep copy?"
+        },
+        {
+            "id": 8,
+            "question": "What is a copy constructor and when is it invoked?"
+        },
+        {
+            "id": 9,
+            "question": "What is the Rule of Three in C++?"
+        },
+        {
+            "id": 10,
+            "question": "What is the Rule of Five and how does it relate to move semantics?"
+        },
+        {
+            "id": 11,
+            "question": "What is move semantics in C++11?"
+        },
+        {
+            "id": 12,
+            "question": "What is the difference between an lvalue and an rvalue?"
+        },
+        {
+            "id": 13,
+            "question": "What is an rvalue reference and how is it used?"
+        },
+        {
+            "id": 14,
+            "question": "What is the purpose of std::move?"
+        },
+        {
+            "id": 15,
+            "question": "What is a smart pointer and why is it preferred over raw pointers?"
+        },
+        {
+            "id": 16,
+            "question": "What is the difference between unique_ptr, shared_ptr, and weak_ptr?"
+        },
+        {
+            "id": 17,
+            "question": "What is a memory leak and how can smart pointers help prevent it?"
+        },
+        {
+            "id": 18,
+            "question": "What is the difference between new/delete and malloc/free?"
+        },
+        {
+            "id": 19,
+            "question": "What is a dangling pointer?"
+        },
+        {
+            "id": 20,
+            "question": "What is the purpose of the explicit keyword in a constructor?"
+        },
+        {
+            "id": 21,
+            "question": "What is operator overloading and what are its restrictions in C++?"
+        },
+        {
+            "id": 22,
+            "question": "What is a template in C++ and how does it enable generic programming?"
+        },
+        {
+            "id": 23,
+            "question": "What is the difference between a function template and a class template?"
+        },
+        {
+            "id": 24,
+            "question": "What is template specialization?"
+        },
+        {
+            "id": 25,
+            "question": "What is the purpose of the STL map container?"
+        },
+        {
+            "id": 26,
+            "question": "What is the difference between std::map and std::unordered_map?"
+        },
+        {
+            "id": 27,
+            "question": "What is an iterator in C++ and how is it used with STL containers?"
+        },
+        {
+            "id": 28,
+            "question": "What is the difference between std::vector and std::list in terms of performance?"
+        },
+        {
+            "id": 29,
+            "question": "What is exception handling in C++?"
+        },
+        {
+            "id": 30,
+            "question": "What is the purpose of try, catch, and throw?"
+        },
+        {
+            "id": 31,
+            "question": "What is the difference between exceptions and error codes for handling failures?"
+        },
+        {
+            "id": 32,
+            "question": "What is RAII (Resource Acquisition Is Initialization) and why is it important?"
+        },
+        {
+            "id": 33,
+            "question": "What is the purpose of the noexcept specifier?"
+        },
+        {
+            "id": 34,
+            "question": "What is a lambda expression in C++11 and how is it used?"
+        },
+        {
+            "id": 35,
+            "question": "What is the purpose of the capture list in a lambda function?"
+        },
+        {
+            "id": 36,
+            "question": "What is the difference between passing by value, by reference, and by pointer in function parameters?"
+        },
+        {
+            "id": 37,
+            "question": "What is the difference between a static member and an instance member of a class?"
+        },
+        {
+            "id": 38,
+            "question": "What is a friend function and when would you use one?"
+        },
+        {
+            "id": 39,
+            "question": "What is name mangling in C++?"
+        },
+        {
+            "id": 40,
+            "question": "What is the difference between stack memory and heap memory allocation?"
+        },
+        {
+            "id": 41,
+            "question": "What is a segmentation fault and what commonly causes it?"
+        },
+        {
+            "id": 42,
+            "question": "What is undefined behavior and can you give an example in C++?"
+        },
+        {
+            "id": 43,
+            "question": "What is the purpose of the mutable keyword?"
+        },
+        {
+            "id": 44,
+            "question": "What is the difference between a shallow class hierarchy and a deep class hierarchy in terms of design trade-offs?"
+        },
+        {
+            "id": 45,
+            "question": "How would you implement a custom copy assignment operator safely?"
+        },
+        {
+            "id": 46,
+            "question": "What is the purpose of the volatile keyword?"
+        },
+        {
+            "id": 47,
+            "question": "How would you avoid memory leaks in a program that dynamically allocates many objects?"
+        },
+        {
+            "id": 48,
+            "question": "What is the difference between compile-time and link-time errors?"
+        },
+        {
+            "id": 49,
+            "question": "How would you debug a segmentation fault in a large C++ codebase?"
+        },
+        {
+            "id": 50,
+            "question": "What is the purpose of the auto keyword introduced in C++11?"
+        }
+    ],
+    "hard": [
+        {
+            "id": 1,
+            "question": "Explain how virtual function dispatch works internally using the vtable mechanism."
+        },
+        {
+            "id": 2,
+            "question": "How does the compiler implement multiple inheritance with virtual base classes at the memory layout level?"
+        },
+        {
+            "id": 3,
+            "question": "Explain how move semantics improve performance and how the compiler decides between copy and move construction."
+        },
+        {
+            "id": 4,
+            "question": "What are the internal differences between std::shared_ptr's control block and how reference counting is implemented thread-safely?"
+        },
+        {
+            "id": 5,
+            "question": "Explain how template metaprogramming works and provide a use case where it improves performance."
+        },
+        {
+            "id": 6,
+            "question": "What is SFINAE and how is it used in template design?"
+        },
+        {
+            "id": 7,
+            "question": "Explain how perfect forwarding works using universal references and std::forward."
+        },
+        {
+            "id": 8,
+            "question": "How does the C++ memory model define behavior for concurrent access to shared variables?"
+        },
+        {
+            "id": 9,
+            "question": "Explain the differences between std::mutex, std::atomic, and lock-free programming techniques."
+        },
+        {
+            "id": 10,
+            "question": "How would you design a thread-safe singleton pattern in C++11 and later?"
+        },
+        {
+            "id": 11,
+            "question": "Explain how false sharing occurs in multithreaded C++ programs and how you would mitigate it."
+        },
+        {
+            "id": 12,
+            "question": "How would you implement a custom memory allocator for a performance-critical application?"
+        },
+        {
+            "id": 13,
+            "question": "Explain the differences between placement new and standard new, and when placement new is useful."
+        },
+        {
+            "id": 14,
+            "question": "How does the C++ compiler perform return value optimization (RVO) and copy elision?"
+        },
+        {
+            "id": 15,
+            "question": "Explain how you would design a lock-free queue for a high-throughput multithreaded system."
+        },
+        {
+            "id": 16,
+            "question": "What are the performance implications of virtual function calls compared to direct function calls in performance-critical code?"
+        },
+        {
+            "id": 17,
+            "question": "Explain how you would optimize cache locality in a C++ application that processes large datasets."
+        },
+        {
+            "id": 18,
+            "question": "How does the C++ compiler handle name mangling differently across compilers, and why does this matter for ABI compatibility?"
+        },
+        {
+            "id": 19,
+            "question": "Explain the trade-offs between using CRTP (Curiously Recurring Template Pattern) versus virtual functions for static polymorphism."
+        },
+        {
+            "id": 20,
+            "question": "How would you design a memory pool allocator to reduce fragmentation in a long-running server application?"
+        },
+        {
+            "id": 21,
+            "question": "Explain how exception handling affects performance and binary size in C++ applications."
+        },
+        {
+            "id": 22,
+            "question": "How would you implement exception-safe code using the strong exception guarantee?"
+        },
+        {
+            "id": 23,
+            "question": "Explain how you would design a plugin architecture in C++ using dynamic library loading."
+        },
+        {
+            "id": 24,
+            "question": "How does std::variant differ from a traditional union in terms of type safety and use cases?"
+        },
+        {
+            "id": 25,
+            "question": "Explain how coroutines introduced in C++20 change asynchronous programming patterns."
+        },
+        {
+            "id": 26,
+            "question": "How would you architect a high-performance networking library using asynchronous I/O in C++?"
+        },
+        {
+            "id": 27,
+            "question": "Explain how you would detect and resolve data races in a large multithreaded C++ codebase."
+        },
+        {
+            "id": 28,
+            "question": "What are the trade-offs between using condition variables versus busy-waiting for thread synchronization?"
+        },
+        {
+            "id": 29,
+            "question": "Explain how you would design a custom container class that satisfies the requirements of STL algorithms."
+        },
+        {
+            "id": 30,
+            "question": "How would you implement a thread pool from scratch in modern C++?"
+        },
+        {
+            "id": 31,
+            "question": "Explain the differences between static linking and dynamic linking and their trade-offs in large systems."
+        },
+        {
+            "id": 32,
+            "question": "How would you profile and optimize a C++ application with severe performance bottlenecks?"
+        },
+        {
+            "id": 33,
+            "question": "Explain how you would design an object pool pattern to reduce allocation overhead for frequently created objects."
+        },
+        {
+            "id": 34,
+            "question": "How does constexpr differ from const, and how has its role expanded in modern C++ standards?"
+        },
+        {
+            "id": 35,
+            "question": "Explain how you would implement a custom smart pointer with reference counting from scratch."
+        },
+        {
+            "id": 36,
+            "question": "How would you design a system to handle ABI compatibility across multiple versions of a shared library?"
+        },
+        {
+            "id": 37,
+            "question": "Explain the trade-offs between using inheritance and composition for designing large, maintainable class hierarchies."
+        },
+        {
+            "id": 38,
+            "question": "How would you optimize a C++ application to minimize cache misses in a matrix multiplication routine?"
+        },
+        {
+            "id": 39,
+            "question": "Explain how you would design a garbage-collection-like mechanism in C++ without a built-in garbage collector."
+        },
+        {
+            "id": 40,
+            "question": "How would you implement a custom allocator-aware STL container for a real-time system with strict latency requirements?"
+        },
+        {
+            "id": 41,
+            "question": "Explain how you would design a type-safe event system using templates and variadic arguments."
+        },
+        {
+            "id": 42,
+            "question": "How would you handle undefined behavior risks when working with low-level bit manipulation and type punning?"
+        },
+        {
+            "id": 43,
+            "question": "Explain how you would design a high-performance logging system that minimizes contention in a multithreaded application."
+        },
+        {
+            "id": 44,
+            "question": "How would you implement a custom hash map with open addressing and analyze its performance trade-offs versus chaining?"
+        },
+        {
+            "id": 45,
+            "question": "Explain how you would design a C++ application architecture to support hot-reloading of modules at runtime."
+        },
+        {
+            "id": 46,
+            "question": "How would you approach migrating a legacy C++98 codebase to modern C++20 without introducing regressions?"
+        },
+        {
+            "id": 47,
+            "question": "Explain how you would implement a wait-free data structure and the challenges involved compared to lock-free structures."
+        },
+        {
+            "id": 48,
+            "question": "How would you design a memory-safe API layer in C++ for use by less experienced developers on a large team?"
+        },
+        {
+            "id": 49,
+            "question": "Explain how you would optimize a real-time system in C++ to guarantee deterministic latency under load."
+        },
+        {
+            "id": 50,
+            "question": "How would you evaluate and decide when to use C++ over higher-level languages for a new performance-critical system component?"
+        }
+    ]
+}
