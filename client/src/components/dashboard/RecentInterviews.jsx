@@ -1,9 +1,8 @@
 import {
-  Activity,
   ArrowUpRight,
-  Check,
   History,
   Loader2,
+  MessageSquareText,
   RefreshCw,
 } from "lucide-react";
 
@@ -23,6 +22,29 @@ function formatDate(value) {
   });
 }
 
+const DIFFICULTY_STYLES = {
+  easy: "text-[#5fe3ff] bg-[#5fe3ff]/[0.12]",
+  medium: "text-[#9a8cff] bg-[#9a8cff]/[0.11]",
+  hard: "text-[#4d8dff] bg-[#4d8dff]/[0.12]",
+};
+
+const STATUS_STYLES = {
+  completed: "text-[#5de5ad]",
+  pending: "text-amber-300",
+  "in progress": "text-amber-300",
+  exited: "text-[#7188a4]",
+  cancelled: "text-[#7188a4]",
+  canceled: "text-[#7188a4]",
+  failed: "text-red-300",
+};
+
+function statusClass(status) {
+  return (
+    STATUS_STYLES[String(status || "").toLowerCase()] ||
+    "text-amber-300"
+  );
+}
+
 function RecentInterviews({
   interviews = [],
   loading = false,
@@ -35,91 +57,68 @@ function RecentInterviews({
   return (
     <section
       className="
-        overflow-hidden
-        rounded-[18px]
+        rounded-[9px]
         border
-        border-[#1b3851]
-        bg-[#061525]
-        shadow-[0_20px_60px_rgba(0,0,0,.14)]
+        border-[#1a2b44]
+        bg-[#0b1424]
+        p-[22px]
       "
     >
-
       {/* HEADER */}
 
-      <div
-        className="
-          flex
-          items-start
-          justify-between
-          border-b
-          border-[#19334a]
-          px-6
-          py-6
-          sm:px-7
-        "
-      >
-
+      <div className="flex items-start justify-between">
         <div>
-
-          <p
+          <span
             className="
-              font-mono
               text-[9px]
+              font-bold
               uppercase
-              tracking-[0.28em]
-              text-cyan-300
+              tracking-[0.14em]
+              text-[#66809f]
             "
           >
-            Practice Log
-          </p>
+            Your Activity
+          </span>
 
-          <h2
+          <h3
             className="
-              mt-2
-              text-[clamp(22px,2.2vw,30px)]
+              mt-1.5
+              text-[15px]
               font-semibold
-              tracking-[-0.05em]
-              text-[#dbe8f4]
+              tracking-[-0.02em]
+              text-[#dceaff]
             "
           >
-            Recent Interviews
-          </h2>
-
-          <p className="mt-2 text-[11px] text-slate-600">
-            Your latest AI interview sessions.
-          </p>
-
+            Recent interviews
+          </h3>
         </div>
 
-        <div className="flex items-center gap-2">
-
+        <div className="flex items-center gap-1">
           {onRefresh && (
             <button
               type="button"
               onClick={onRefresh}
               disabled={loading}
-              title="Refresh"
+              title="Refresh interviews"
+              aria-label="Refresh interviews"
               className="
                 grid
-                h-8
-                w-8
+                h-7
+                w-7
                 place-items-center
-                rounded-lg
-                border
-                border-[#19334a]
-                text-slate-600
-                transition
-                hover:border-cyan-400/20
-                hover:text-cyan-300
+                rounded-md
+                text-[#5f7692]
+                transition-colors
+                hover:bg-white/[0.05]
+                hover:text-[#dceaff]
+                disabled:cursor-not-allowed
+                disabled:opacity-40
               "
             >
               <RefreshCw
-                size={14}
-                className={
-                  loading
-                    ? "animate-spin"
-                    : ""
-                }
+                size={13}
+                strokeWidth={1.8}
+                className={loading ? "animate-spin" : ""}
               />
             </button>
           )}
@@ -129,24 +128,22 @@ function RecentInterviews({
             className="
               hidden
               items-center
-              gap-1
-              font-mono
-              text-[9px]
-              font-semibold
-              uppercase
-              tracking-[0.08em]
-              text-cyan-300
-              transition
-              hover:text-cyan-200
+              gap-[5px]
+              rounded-md
+              px-2
+              py-1
+              text-[10px]
+              text-[#5fe3ff]
+              transition-colors
+              hover:bg-white/[0.05]
               sm:flex
             "
           >
-            View All
-            <ArrowUpRight size={13} />
+            View all
+
+            <ArrowUpRight size={13} strokeWidth={1.8} />
           </button>
-
         </div>
-
       </div>
 
       {/* LOADING */}
@@ -155,321 +152,197 @@ function RecentInterviews({
         <div
           className="
             flex
-            min-h-[340px]
+            min-h-[280px]
             items-center
             justify-center
             text-xs
-            text-slate-600
+            text-[#7189a5]
           "
         >
-
           <Loader2
             size={17}
-            className="mr-2 animate-spin text-cyan-300"
+            strokeWidth={1.8}
+            className="mr-2 animate-spin text-[#5fe3ff]"
           />
-
           Loading interviews...
-
         </div>
       ) : list.length === 0 ? (
-
-        /* EMPTY */
+        /* EMPTY STATE */
 
         <div
           className="
             flex
-            min-h-[340px]
+            min-h-[280px]
             flex-col
             items-center
             justify-center
-            px-6
+            px-4
             text-center
           "
         >
-
           <div
             className="
               grid
-              h-14
-              w-14
+              h-12
+              w-12
               place-items-center
-              rounded-2xl
+              rounded-xl
               border
-              border-[#19334a]
-              bg-[#081a2d]
-              text-cyan-300
+              border-[#1a2b44]
+              bg-[#0e192b]
+              text-[#5f7692]
             "
           >
-            <History size={22} />
+            <History size={21} strokeWidth={1.7} />
           </div>
 
-          <h3 className="mt-5 text-sm font-semibold text-slate-300">
+          <h3 className="mt-4 text-sm font-semibold text-slate-300">
             No interviews yet
           </h3>
 
-          <p
-            className="
-              mt-2
-              max-w-[240px]
-              text-[10px]
-              leading-5
-              text-slate-600
-            "
-          >
+          <p className="mt-2 max-w-[240px] text-[11px] leading-5 text-[#5c7693]">
             Start your first AI interview to begin building
             your performance history.
           </p>
-
         </div>
-
       ) : (
-
         /* LIST */
 
-        <div className="px-5">
-
+        <div className="mt-[19px] flex flex-col">
           {list.map((interview, index) => {
-
-            const status =
-              String(
-                interview?.status || "Pending"
-              );
-
-            const completed =
-              status.toLowerCase() ===
-              "completed";
+            const status = String(
+              interview?.status || "Pending"
+            );
 
             const score =
               typeof interview?.score === "number"
                 ? interview.score
                 : null;
 
+            const difficultyKey = String(
+              interview?.difficulty || "medium"
+            ).toLowerCase();
+
+            const difficultyClass =
+              DIFFICULTY_STYLES[difficultyKey] ||
+              DIFFICULTY_STYLES.medium;
+
             return (
-              <div
+              <article
                 key={
                   interview?._id ||
                   interview?.id ||
                   index
                 }
                 className="
-                  group
                   flex
                   items-center
-                  gap-3
-                  border-b
-                  border-[#19334a]
-                  py-5
-                  transition
-                  last:border-b-0
-                  hover:bg-cyan-300/[0.015]
+                  gap-[11px]
+                  border-t
+                  border-[#1a2b44]
+                  py-[13px]
+                  first:border-t-0
                 "
               >
-
-                {/* STATUS */}
+                {/* SYMBOL */}
 
                 <div
-                  className={`
+                  className="
                     grid
-                    h-9
-                    w-9
+                    h-[30px]
+                    w-[30px]
                     shrink-0
                     place-items-center
-                    rounded-full
+                    rounded-md
                     border
-
-                    ${
-                      completed
-                        ? `
-                          border-emerald-400/20
-                          bg-emerald-400/[0.07]
-                          text-emerald-300
-                        `
-                        : `
-                          border-amber-400/20
-                          bg-amber-400/[0.07]
-                          text-amber-300
-                        `
-                    }
-                  `}
+                    border-[#214466]
+                    bg-[#102239]
+                    text-[#77bde1]
+                  "
                 >
-                  {completed ? (
-                    <Check size={15} />
-                  ) : (
-                    <Activity size={15} />
-                  )}
+                  <MessageSquareText size={14} strokeWidth={1.8} />
                 </div>
 
-                {/* CONTENT */}
+                {/* INFO */}
 
                 <div className="min-w-0 flex-1">
-
-                  <strong
-                    className="
-                      block
-                      truncate
-                      text-[13px]
-                      font-semibold
-                      text-slate-200
-                    "
-                  >
-                    {interview?.role ||
-                      "Mock Interview"}
+                  <strong className="block truncate text-[10px] font-semibold text-[#c8d9eb]">
+                    {interview?.role || "Mock Interview"}
                   </strong>
 
-                  <div className="mt-1.5 flex flex-wrap items-center gap-2">
-
-                    <span
-                      className="
-                        font-mono
-                        text-[9px]
-                        uppercase
-                        tracking-[0.06em]
-                        text-cyan-300
-                      "
-                    >
-                      {interview?.technology ||
-                        "General"}
-                    </span>
-
-                    <span className="text-slate-700">
+                  <span className="mt-1 block truncate text-[9px] text-[#7188a4]">
+                    {interview?.technology || "General"}
+                    <span className="mx-1.5 text-[#334c6b]">
                       •
                     </span>
-
-                    <small
-                      className="
-                        font-mono
-                        text-[9px]
-                        tracking-[0.03em]
-                        text-slate-600
-                      "
-                    >
-                      {interview?.difficulty ||
-                        "Medium"}
-                    </small>
-
-                    <span className="text-slate-700">
-                      •
-                    </span>
-
-                    <small
-                      className={`
-                        font-mono
-                        text-[9px]
-                        ${
-                          completed
-                            ? "text-emerald-300"
-                            : "text-amber-300"
-                        }
-                      `}
-                    >
+                    <span className={statusClass(status)}>
                       {status}
-                    </small>
+                    </span>
+                  </span>
 
-                  </div>
-
-                  <small className="mt-2 block text-[9px] text-slate-700">
-                    {formatDate(
-                      interview?.createdAt
-                    )}
+                  <small className="mt-1 block truncate text-[8px] text-[#506a88]">
+                    {formatDate(interview?.createdAt)}
                   </small>
-
                 </div>
 
-                {/* SCORE */}
+                {/* META */}
 
-                <div className="shrink-0 text-right">
+                <div className="flex shrink-0 items-center gap-[13px]">
+                  <span
+                    className={`
+                      hidden
+                      rounded
+                      px-[7px]
+                      py-1
+                      text-[8px]
+                      sm:inline-block
+                      ${difficultyClass}
+                    `}
+                  >
+                    {interview?.difficulty || "Medium"}
+                  </span>
 
-                  {score !== null ? (
-                    <>
-                      <div className="flex items-baseline justify-end gap-1">
-
-                        <strong
-                          className="
-                            text-[22px]
-                            font-semibold
-                            tracking-[-0.06em]
-                            text-slate-100
-                          "
-                        >
-                          {score}
-                        </strong>
-
-                        <small className="font-mono text-[9px] text-slate-600">
-                          /100
-                        </small>
-
-                      </div>
-
+                  <div className="flex items-center gap-1.5">
+                    {score !== null ? (
                       <div
-                        className="
-                          mt-2
-                          h-[3px]
-                          w-12
-                          overflow-hidden
-                          rounded-full
-                          bg-[#18364d]
-                        "
+                        className="relative grid h-[27px] w-[27px] place-items-center rounded-full"
+                        style={{
+                          background: `conic-gradient(#5fe3ff ${Math.max(
+                            0,
+                            Math.min(100, score)
+                          ) * 3.6}deg, #1a2d45 0deg)`,
+                        }}
                       >
-                        <span
-                          className={`
-                            block
-                            h-full
-                            rounded-full
-                            ${
-                              completed
-                                ? "bg-cyan-300"
-                                : "bg-amber-300"
-                            }
-                          `}
-                          style={{
-                            width: `${Math.max(
-                              0,
-                              Math.min(
-                                100,
-                                score
-                              )
-                            )}%`,
-                          }}
-                        />
+                        <div className="absolute inset-[3px] rounded-full bg-[#0b1424]" />
+
+                        <span className="relative z-10 text-[8px] text-[#d9f8ff]">
+                          {score}
+                        </span>
                       </div>
-                    </>
-                  ) : (
-                    <strong className="text-xl font-semibold text-amber-300">
-                      —
-                    </strong>
-                  )}
+                    ) : (
+                      <span className="text-lg font-semibold text-[#5c7693]">
+                        —
+                      </span>
+                    )}
 
+                    <small className="hidden text-[8px] text-[#5c7693] sm:inline">
+                      score
+                    </small>
+                  </div>
                 </div>
-
-              </div>
+              </article>
             );
           })}
-
         </div>
       )}
 
       {/* FOOTER */}
 
       {!loading && list.length > 0 && (
-        <div
-          className="
-            border-t
-            border-dashed
-            border-[#19334a]
-            px-5
-            py-3
-            text-center
-            font-mono
-            text-[8px]
-            uppercase
-            tracking-[0.25em]
-            text-slate-700
-          "
-        >
+        <div className="mt-2 border-t border-[#1a2b44] pt-3 text-center text-[9px] text-[#5c7693]">
           Practice history synced
         </div>
       )}
-
     </section>
   );
 }

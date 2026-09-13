@@ -1,3 +1,38 @@
+import { ArrowUpRight } from "lucide-react";
+
+const TONES = {
+  cyan: {
+    iconText: "text-[#5fe3ff]",
+    iconBg: "bg-[#5fe3ff]/[0.12]",
+    line: "bg-[#5fe3ff]",
+    trend: "text-[#5fe3ff]",
+  },
+  blue: {
+    iconText: "text-[#4d8dff]",
+    iconBg: "bg-[#4d8dff]/[0.12]",
+    line: "bg-[#4d8dff]",
+    trend: "text-[#4d8dff]",
+  },
+  indigo: {
+    iconText: "text-[#9a8cff]",
+    iconBg: "bg-[#9a8cff]/[0.12]",
+    line: "bg-[#9a8cff]",
+    trend: "text-[#9a8cff]",
+  },
+  purple: {
+    iconText: "text-[#9a8cff]",
+    iconBg: "bg-[#9a8cff]/[0.12]",
+    line: "bg-[#9a8cff]",
+    trend: "text-[#9a8cff]",
+  },
+  green: {
+    iconText: "text-[#5de5ad]",
+    iconBg: "bg-[#5de5ad]/[0.12]",
+    line: "bg-[#5de5ad]",
+    trend: "text-[#5de5ad]",
+  },
+};
+
 function StatsCard({
   title,
   value,
@@ -6,166 +41,121 @@ function StatsCard({
   icon,
   tone = "cyan",
 }) {
-  const tones = {
-    cyan: {
-      icon:
-        "border-cyan-400/15 bg-cyan-400/[0.06] text-cyan-300",
-      hover:
-        "hover:border-cyan-300/25 hover:shadow-[0_12px_35px_rgba(34,211,238,.05)]",
-    },
-
-    blue: {
-      icon:
-        "border-blue-400/15 bg-blue-400/[0.06] text-blue-300",
-      hover:
-        "hover:border-blue-400/25 hover:shadow-[0_12px_35px_rgba(59,130,246,.05)]",
-    },
-
-    indigo: {
-      icon:
-        "border-indigo-400/15 bg-indigo-400/[0.06] text-indigo-300",
-      hover:
-        "hover:border-indigo-400/25 hover:shadow-[0_12px_35px_rgba(99,102,241,.05)]",
-    },
-
-    green: {
-      icon:
-        "border-emerald-400/15 bg-emerald-400/[0.06] text-emerald-300",
-      hover:
-        "hover:border-emerald-400/25 hover:shadow-[0_12px_35px_rgba(16,185,129,.05)]",
-    },
-  };
-
-  const current = tones[tone] || tones.cyan;
+  const current = TONES[tone] || TONES.cyan;
 
   return (
     <article
-      className={`
+      className="
         group
         relative
-        min-h-[160px]
         overflow-hidden
-        rounded-[14px]
+        rounded-xl
         border
-        border-[#18364e]
-        bg-[#061525]
-        p-5
-        transition-all
+        border-[#1a2b44]
+        bg-[#0b1424]
+        p-[17px]
+        pb-[15px]
+        transition-colors
         duration-200
-        hover:-translate-y-0.5
-        hover:bg-[#07192a]
-        ${current.hover}
-      `}
+        hover:border-[#24466b]
+      "
     >
-
-      {/* BACKGROUND GLOW */}
+      {/* HEADING ROW */}
 
       <div
         className="
-          pointer-events-none
-          absolute
-          -right-12
-          -top-12
-          h-28
-          w-28
-          rounded-full
-          bg-cyan-400/[0.025]
-          blur-2xl
+          flex
+          items-center
+          gap-2
+          text-[#758aa6]
         "
-      />
-
-      <div className="relative">
-
-        {/* TOP */}
-
-        <div className="flex items-start justify-between">
-
-          <div
-            className={`
-              grid
-              h-9
-              w-9
-              place-items-center
-              rounded-lg
-              border
-              ${current.icon}
-            `}
-          >
-            {icon}
-          </div>
-
-          {trend && (
-            <span
-              className="
-                max-w-[100px]
-                truncate
-                text-right
-                font-mono
-                text-[8px]
-                uppercase
-                tracking-[0.08em]
-                text-emerald-300
-              "
-            >
-              {trend}
-            </span>
-          )}
-
-        </div>
-
-        {/* TITLE */}
-
-        <p
-          className="
-            mt-5
-            font-mono
-            text-[9px]
-            uppercase
-            tracking-[0.22em]
-            text-cyan-300
-          "
-        >
-          {title}
-        </p>
-
-        {/* VALUE */}
-
-        <div className="mt-2 flex items-baseline gap-2">
-
-          <strong
-            className="
-              text-3xl
-              font-semibold
-              tracking-[-0.06em]
-              text-white
-            "
-          >
-            {value}
-          </strong>
-
-          {detail && (
-            <span className="text-[10px] text-slate-600">
-              {detail}
-            </span>
-          )}
-
-        </div>
-
-        {/* LINE */}
-
+      >
         <div
-          className="
-            mt-4
-            h-px
-            bg-gradient-to-r
-            from-cyan-400/15
-            via-cyan-400/5
-            to-transparent
-          "
-        />
+          className={`
+            grid
+            h-6
+            w-6
+            shrink-0
+            place-items-center
+            rounded-md
+            ${current.iconBg}
+            ${current.iconText}
+          `}
+        >
+          {icon}
+        </div>
 
+        <span className="text-[10px]">
+          {title}
+        </span>
+
+        <ArrowUpRight
+          size={13}
+          strokeWidth={1.8}
+          className="ml-auto shrink-0 text-[#5a7692]"
+        />
       </div>
 
+      {/* VALUE */}
+
+      <strong
+        className="
+          mt-[11px]
+          block
+          text-[23px]
+          font-semibold
+          leading-none
+          tracking-[-0.04em]
+          text-[#e4f0ff]
+        "
+      >
+        {value}
+      </strong>
+
+      {/* DETAIL + TREND */}
+
+      <div
+        className="
+          mt-2
+          flex
+          items-center
+          justify-between
+          gap-2
+        "
+      >
+        {detail && (
+          <span className="truncate text-[9px] text-[#617b98]">
+            {detail}
+          </span>
+        )}
+
+        {trend && (
+          <span
+            className={`
+              shrink-0
+              truncate
+              text-[9px]
+              font-medium
+              ${current.trend}
+            `}
+          >
+            {trend}
+          </span>
+        )}
+      </div>
+
+      {/* BOTTOM ACCENT LINE */}
+
+      <span
+        className={`
+          absolute
+          inset-x-0
+          bottom-0
+          h-[2px]
+          opacity-75
+          ${current.line}
+        `}
+      />
     </article>
   );
 }

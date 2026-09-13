@@ -3,12 +3,16 @@ import { useNavigate } from "react-router-dom";
 
 import {
   AlertCircle,
-  ArrowRight,
+  ArrowUpRight,
   ChevronDown,
+  Code2,
+  Gauge,
   Loader2,
+  MessageSquareText,
   Minus,
   Plus,
-  Sparkles,
+  Users,
+  Zap,
 } from "lucide-react";
 
 import api from "../../api/axios";
@@ -60,57 +64,62 @@ function SelectField({
   value,
   options,
   onChange,
+  icon: Icon,
 }) {
   return (
-    <label className="block">
-
-      <span
-        className="
-          mb-2
-          block
-          font-mono
-          text-[9px]
-          font-medium
-          uppercase
-          tracking-[0.16em]
-          text-slate-500
-        "
-      >
+    <label className="flex flex-col gap-[7px]">
+      <span className="text-[10px] text-[#7189a5]">
         {label}
       </span>
 
-      <div className="relative">
+      <div
+        className="
+          relative
+          flex
+          h-[38px]
+          items-center
+          gap-2
+          rounded-[6px]
+          border
+          border-[#1c3553]
+          bg-[#0a1525]
+          px-2.5
+          transition-colors
+          hover:border-[#35678f]
+          focus-within:border-cyan-400/50
+          focus-within:ring-2
+          focus-within:ring-cyan-400/10
+        "
+      >
+        {Icon && (
+          <Icon
+            size={14}
+            strokeWidth={1.8}
+            className="shrink-0 text-[#5c8bb3]"
+          />
+        )}
 
         <select
           value={value}
-          onChange={(event) =>
-            onChange(event.target.value)
-          }
+          onChange={(event) => onChange(event.target.value)}
           className="
-            h-[48px]
-            w-full
+            h-full
+            flex-1
             appearance-none
-            rounded-[9px]
-            border
-            border-[#1b3851]
-            bg-[#081b2e]
-            px-4
-            pr-10
-            text-[13px]
-            text-[#e4f0fb]
+            border-0
+            bg-transparent
+            pr-5
+            text-[10px]
+            font-medium
+            text-[#bad0e7]
             outline-none
-            transition
-            hover:border-cyan-400/25
-            focus:border-cyan-400/60
-            focus:ring-4
-            focus:ring-cyan-400/10
           "
         >
           {options.map((option) => (
             <option
               key={option}
               value={option}
-              className="bg-[#081b2e] text-white"
+              className="bg-[#0a1525] text-[#bad0e7]"
             >
               {option}
             </option>
@@ -118,19 +127,11 @@ function SelectField({
         </select>
 
         <ChevronDown
-          size={15}
-          className="
-            pointer-events-none
-            absolute
-            right-3.5
-            top-1/2
-            -translate-y-1/2
-            text-slate-500
-          "
+          size={12}
+          strokeWidth={1.8}
+          className="pointer-events-none absolute right-2.5 text-[#526b88]"
         />
-
       </div>
-
     </label>
   );
 }
@@ -223,6 +224,7 @@ function InterviewForm({ onCreated }) {
       if (err?.response?.status === 401) {
         localStorage.removeItem("token");
         localStorage.removeItem("user");
+
         navigate("/login");
         return;
       }
@@ -250,20 +252,16 @@ function InterviewForm({ onCreated }) {
   };
 
   return (
-    <form
-      onSubmit={createInterview}
-      className="relative"
-    >
+    <form onSubmit={createInterview}>
+      {/* CONFIGURATION */}
 
-      {/* FORM */}
-
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-
+      <div className="grid grid-cols-1 gap-x-3 gap-y-[15px] md:grid-cols-2">
         <SelectField
           label="Job Role"
           value={role}
           options={ROLES}
           onChange={setRole}
+          icon={Users}
         />
 
         <SelectField
@@ -271,6 +269,7 @@ function InterviewForm({ onCreated }) {
           value={technology}
           options={TECHNOLOGIES}
           onChange={setTechnology}
+          icon={Code2}
         />
 
         <SelectField
@@ -278,6 +277,7 @@ function InterviewForm({ onCreated }) {
           value={difficulty}
           options={DIFFICULTIES}
           onChange={setDifficulty}
+          icon={Gauge}
         />
 
         <SelectField
@@ -285,132 +285,129 @@ function InterviewForm({ onCreated }) {
           value={type}
           options={TYPES}
           onChange={setType}
+          icon={MessageSquareText}
         />
-
       </div>
 
-      {/* QUESTIONS */}
+      {/* NUMBER OF QUESTIONS */}
 
-      <div className="mt-6">
+      <div className="mt-[18px] flex flex-col gap-4 border-t border-[#1a2b44] pt-[15px] sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <div className="flex items-center justify-between">
+            <span className="text-[10px] text-[#7189a5]">
+              Number of questions
+            </span>
 
-        <div className="mb-2 flex items-center justify-between">
+            <span className="text-[9px] text-[#5c7693]">
+              5–30
+            </span>
+          </div>
 
-          <label
+          <div
             className="
-              font-mono
-              text-[9px]
-              font-medium
-              uppercase
-              tracking-[0.16em]
-              text-slate-500
+              mt-[9px]
+              flex
+              h-[38px]
+              overflow-hidden
+              rounded-[5px]
+              border
+              border-[#203a59]
+              bg-[#091524]
             "
           >
-            Number of Questions
-          </label>
+            <button
+              type="button"
+              onClick={decreaseQuestions}
+              disabled={loading || questions <= 5}
+              aria-label="Decrease number of questions"
+              className="
+                grid
+                w-10
+                shrink-0
+                place-items-center
+                border-r
+                border-[#203a59]
+                text-[#7890ab]
+                transition-colors
+                hover:bg-white/[0.03]
+                hover:text-[#dceaff]
+                disabled:cursor-not-allowed
+                disabled:opacity-30
+              "
+            >
+              <Minus size={14} strokeWidth={1.8} />
+            </button>
 
-          <span className="font-mono text-[9px] text-slate-600">
-            5 — 30
+            <input
+              type="number"
+              min="5"
+              max="30"
+              value={questions}
+              disabled={loading}
+              onChange={(event) => {
+                const value = Number(event.target.value);
+
+                if (Number.isNaN(value)) {
+                  setQuestions(5);
+                  return;
+                }
+
+                setQuestions(
+                  Math.min(30, Math.max(5, value))
+                );
+              }}
+              aria-label="Number of questions"
+              className="
+                h-full
+                min-w-0
+                flex-1
+                border-0
+                bg-transparent
+                text-center
+                text-[11px]
+                font-semibold
+                text-[#bceeff]
+                outline-none
+              "
+            />
+
+            <button
+              type="button"
+              onClick={increaseQuestions}
+              disabled={loading || questions >= 30}
+              aria-label="Increase number of questions"
+              className="
+                grid
+                w-10
+                shrink-0
+                place-items-center
+                border-l
+                border-[#203a59]
+                text-[#7890ab]
+                transition-colors
+                hover:bg-white/[0.03]
+                hover:text-[#dceaff]
+                disabled:cursor-not-allowed
+                disabled:opacity-30
+              "
+            >
+              <Plus size={14} strokeWidth={1.8} />
+            </button>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-2 text-[9px] leading-[1.5] text-[#657e9b]">
+          <Zap size={14} strokeWidth={1.8} className="shrink-0 text-[#5fe3ff]" />
+
+          <span>
+            Estimated duration
+            <br />
+            <strong className="text-[10px] text-[#adbed2]">
+              {Math.max(5, Math.round(questions * 2.5))}–
+              {Math.round(questions * 3)} minutes
+            </strong>
           </span>
-
         </div>
-
-        <div
-          className="
-            flex
-            h-[48px]
-            overflow-hidden
-            rounded-[9px]
-            border
-            border-[#1b3851]
-            bg-[#081b2e]
-          "
-        >
-
-          <button
-            type="button"
-            onClick={decreaseQuestions}
-            disabled={loading || questions <= 5}
-            className="
-              grid
-              h-full
-              w-12
-              shrink-0
-              place-items-center
-              border-r
-              border-[#1b3851]
-              text-slate-500
-              transition
-              hover:bg-white/[0.025]
-              hover:text-cyan-300
-              disabled:cursor-not-allowed
-              disabled:opacity-30
-            "
-          >
-            <Minus size={15} />
-          </button>
-
-          <input
-            type="number"
-            min="5"
-            max="30"
-            value={questions}
-            disabled={loading}
-            onChange={(event) => {
-              const value = Number(
-                event.target.value
-              );
-
-              if (Number.isNaN(value)) {
-                setQuestions(5);
-                return;
-              }
-
-              setQuestions(
-                Math.min(
-                  30,
-                  Math.max(5, value)
-                )
-              );
-            }}
-            className="
-              h-full
-              min-w-0
-              flex-1
-              border-0
-              bg-transparent
-              text-center
-              text-sm
-              font-semibold
-              text-white
-              outline-none
-            "
-          />
-
-          <button
-            type="button"
-            onClick={increaseQuestions}
-            disabled={loading || questions >= 30}
-            className="
-              grid
-              h-full
-              w-12
-              shrink-0
-              place-items-center
-              border-l
-              border-[#1b3851]
-              text-slate-500
-              transition
-              hover:bg-white/[0.025]
-              hover:text-cyan-300
-              disabled:cursor-not-allowed
-              disabled:opacity-30
-            "
-          >
-            <Plus size={15} />
-          </button>
-
-        </div>
-
       </div>
 
       {/* ERROR */}
@@ -418,27 +415,27 @@ function InterviewForm({ onCreated }) {
       {error && (
         <div
           className="
-            mt-5
+            mt-[18px]
             flex
             items-start
             gap-3
-            rounded-xl
+            rounded-lg
             border
             border-red-400/15
             bg-red-400/[0.04]
-            p-3.5
+            px-3.5
+            py-3
           "
         >
-
           <AlertCircle
             size={16}
+            strokeWidth={1.8}
             className="mt-0.5 shrink-0 text-red-300"
           />
 
           <p className="text-xs leading-5 text-red-200/80">
             {error}
           </p>
-
         </div>
       )}
 
@@ -446,51 +443,35 @@ function InterviewForm({ onCreated }) {
 
       <div
         className="
-          mt-6
-          rounded-xl
+          mt-[18px]
+          flex
+          items-center
+          gap-3
+          rounded-lg
           border
-          border-[#17344c]
-          bg-[#081a2d]/60
-          px-4
-          py-3.5
+          border-[#1a2b44]
+          bg-[#0a1525]
+          px-3.5
+          py-3
         "
       >
+        <div className="min-w-0 flex-1">
+          <p className="text-[9px] uppercase tracking-[0.12em] text-[#5c7693]">
+            Session configuration
+          </p>
 
-        <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-
-          <div className="flex items-center gap-2">
-
-            <Sparkles
-              size={13}
-              className="text-cyan-300"
-            />
-
-            <span className="font-mono text-[9px] uppercase tracking-[0.12em] text-slate-500">
-              {role}
-            </span>
-
-          </div>
-
-          <span className="text-slate-700">•</span>
-
-          <span className="font-mono text-[9px] uppercase tracking-[0.12em] text-slate-500">
+          <p className="mt-1 truncate text-[11px] text-[#8aa1bd]">
+            {role}
+            <span className="mx-1.5 text-[#334c6b]">•</span>
             {technology}
-          </span>
-
-          <span className="text-slate-700">•</span>
-
-          <span className="font-mono text-[9px] uppercase tracking-[0.12em] text-slate-500">
+            <span className="mx-1.5 text-[#334c6b]">•</span>
             {difficulty}
-          </span>
-
-          <span className="text-slate-700">•</span>
-
-          <span className="font-mono text-[9px] uppercase tracking-[0.12em] text-slate-500">
+            <span className="mx-1.5 text-[#334c6b]">•</span>
+            {type}
+            <span className="mx-1.5 text-[#334c6b]">•</span>
             {questions} questions
-          </span>
-
+          </p>
         </div>
-
       </div>
 
       {/* SUBMIT */}
@@ -499,82 +480,44 @@ function InterviewForm({ onCreated }) {
         type="submit"
         disabled={loading}
         className={`
-          group
-          mt-6
+          mt-[18px]
           flex
-          min-h-[52px]
+          min-h-[44px]
           w-full
           items-center
           justify-center
-          gap-3
-          rounded-xl
-          px-5
-          text-sm
-          font-semibold
+          gap-2.5
+          rounded-[6px]
+          border
+          text-[11px]
+          font-bold
           transition-all
           duration-200
 
           ${
             loading
-              ? `
-                cursor-wait
-                bg-slate-700
-                text-slate-400
-              `
-              : `
-                bg-gradient-to-r
-                from-cyan-300
-                to-blue-500
-                text-[#03101d]
-                shadow-[0_10px_30px_rgba(34,211,238,.12)]
-                hover:-translate-y-0.5
-                hover:shadow-[0_15px_40px_rgba(34,211,238,.22)]
-              `
+              ? "cursor-wait border-[#1a2b44] bg-[#102238] text-[#5c7693]"
+              : "border-[#276f8d] bg-[#1d82a3]/[0.15] text-[#bceeff] hover:border-[#5fe3ff] hover:bg-[#5fe3ff] hover:text-[#071521]"
           }
         `}
       >
-
         {loading ? (
           <>
-            <Loader2
-              size={17}
-              className="animate-spin"
-            />
-
-            Generating AI Interview...
+            <Loader2 size={16} strokeWidth={1.8} className="animate-spin" />
+            Generating interview...
           </>
         ) : (
           <>
-            <Sparkles size={17} />
-
-            Start Interview
-
-            <ArrowRight
-              size={17}
-              className="
-                transition-transform
-                group-hover:translate-x-1
-              "
-            />
+            <Plus size={15} strokeWidth={2} />
+            Start an interview
+            <ArrowUpRight size={14} strokeWidth={1.8} />
           </>
         )}
-
       </button>
 
-      <p
-        className="
-          mt-3
-          text-center
-          font-mono
-          text-[8px]
-          uppercase
-          tracking-[0.16em]
-          text-slate-700
-        "
-      >
-        Your session will be generated from the selected configuration
+      <p className="mt-3 text-center text-[10px] leading-4 text-[#5c7693]">
+        AI-generated questions based on your selected configuration.
       </p>
-
     </form>
   );
 }

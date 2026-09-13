@@ -1,18 +1,25 @@
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
+  Activity,
   BarChart3,
+  BrainCircuit,
+  CalendarDays,
+  Check,
+  ChevronDown,
   Clock3,
   FileClock,
   Flame,
+  Gauge,
+  History,
   LayoutDashboard,
-  Plus,
+  Mic2,
+  Play,
+  RefreshCw,
   Settings,
+  ShieldCheck,
   Sparkles,
   Target,
-  Menu,
-  X,
-  RefreshCw,
 } from "lucide-react";
 
 import api from "../api/axios";
@@ -22,6 +29,26 @@ import Sidebar from "../components/dashboard/Sidebar";
 import StatsCard from "../components/dashboard/StatsCard";
 import InterviewForm from "../components/dashboard/InterviewForm";
 import RecentInterviews from "../components/dashboard/RecentInterviews";
+import "../styles/Dashboard.css";
+
+const SYSTEM_CHECKS = [
+  {
+    label: "Question generation",
+    icon: BrainCircuit,
+  },
+  {
+    label: "Voice analysis",
+    icon: Mic2,
+  },
+  {
+    label: "Answer evaluation",
+    icon: Gauge,
+  },
+  {
+    label: "Performance tracking",
+    icon: Activity,
+  },
+];
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -31,6 +58,10 @@ function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
 
+  /*
+   * USER
+   */
+
   const user = useMemo(() => {
     try {
       return JSON.parse(localStorage.getItem("user") || "null");
@@ -38,6 +69,10 @@ function Dashboard() {
       return null;
     }
   }, []);
+
+  /*
+   * LOAD INTERVIEWS
+   */
 
   const loadInterviews = async ({ showLoader = true } = {}) => {
     const token = localStorage.getItem("token");
@@ -70,6 +105,8 @@ function Dashboard() {
       if (error?.response?.status === 401) {
         localStorage.removeItem("token");
         localStorage.removeItem("user");
+        localStorage.removeItem("mockai-user");
+
         navigate("/login");
       }
     } finally {
@@ -78,36 +115,56 @@ function Dashboard() {
     }
   };
 
+  /*
+   * INITIAL LOAD
+   */
+
   useEffect(() => {
     loadInterviews();
   }, []);
 
+  /*
+   * COMPLETED INTERVIEWS
+   */
+
   const completedInterviews = useMemo(() => {
     return interviews.filter(
       (item) =>
-        String(item?.status || "").toLowerCase() === "completed"
+        String(item?.status || "").toLowerCase() === "completed",
     );
   }, [interviews]);
 
+  /*
+   * AVERAGE SCORE
+   */
+
   const averageScore = useMemo(() => {
     const scored = completedInterviews.filter(
-      (item) => typeof item?.score === "number"
+      (item) => typeof item?.score === "number",
     );
 
-    if (!scored.length) return 0;
+    if (!scored.length) {
+      return 0;
+    }
 
     const total = scored.reduce(
       (sum, item) => sum + item.score,
-      0
+      0,
     );
 
     return Math.round(total / scored.length);
   }, [completedInterviews]);
 
-  const currentStreak = useMemo(() => {
-    if (!interviews.length) return 0;
+  /*
+   * CURRENT STREAK
+   */
 
-    const ONE_DAY = 24 * 60 * 60 * 1000;
+  const currentStreak = useMemo(() => {
+    if (!interviews.length) {
+      return 0;
+    }
+
+    const oneDay = 24 * 60 * 60 * 1000;
 
     const dates = interviews
       .filter((item) => item?.createdAt)
@@ -117,35 +174,37 @@ function Dashboard() {
         return new Date(
           date.getFullYear(),
           date.getMonth(),
-          date.getDate()
+          date.getDate(),
         ).getTime();
       })
       .filter(
         (value, index, array) =>
-          array.indexOf(value) === index
+          array.indexOf(value) === index,
       )
       .sort((a, b) => b - a);
 
-    if (!dates.length) return 0;
+    if (!dates.length) {
+      return 0;
+    }
 
     const today = new Date();
 
     let currentDate = new Date(
       today.getFullYear(),
       today.getMonth(),
-      today.getDate()
+      today.getDate(),
     ).getTime();
 
     let streak = 0;
 
     for (const date of dates) {
       const difference = Math.round(
-        (currentDate - date) / ONE_DAY
+        (currentDate - date) / oneDay,
       );
 
       if (difference === 0) {
-        streak++;
-        currentDate -= ONE_DAY;
+        streak += 1;
+        currentDate -= oneDay;
       } else {
         break;
       }
@@ -153,6 +212,10 @@ function Dashboard() {
 
     return streak;
   }, [interviews]);
+
+  /*
+   * PRACTICE TIME
+   */
 
   const practiceTime = useMemo(() => {
     let totalMinutes = 0;
@@ -165,13 +228,14 @@ function Dashboard() {
         item?.exitedAt ||
         item?.endedAt;
 
-      if (!startValue || !endValue) return;
+      if (!startValue || !endValue) {
+        return;
+      }
 
       const start = new Date(startValue);
       const end = new Date(endValue);
 
-      const minutes =
-        (end - start) / (1000 * 60);
+      const minutes = (end - start) / (1000 * 60);
 
       if (minutes > 0) {
         totalMinutes += minutes;
@@ -184,6 +248,22 @@ function Dashboard() {
 
     return `${(totalMinutes / 60).toFixed(1)}h`;
   }, [interviews]);
+
+  /*
+   * TODAY'S DATE
+   */
+
+  const todayLabel = useMemo(() => {
+    return new Date().toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    });
+  }, []);
+
+  /*
+   * NAVIGATION
+   */
 
   const navigation = [
     {
@@ -213,21 +293,29 @@ function Dashboard() {
     navigate(path);
   };
 
+  /*
+   * LOGOUT
+   */
+
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
     localStorage.removeItem("mockai-user");
 
     setInterviews([]);
-
     navigate("/login");
   };
 
-  const scrollToInterview = () => {
-    const element =
-      document.getElementById("create-interview");
+  /*
+   * SCROLL TO CREATE INTERVIEW
+   */
 
-    if (!element) return;
+  const scrollToInterview = () => {
+    const element = document.getElementById("create-interview");
+
+    if (!element) {
+      return;
+    }
 
     element.scrollIntoView({
       behavior: "smooth",
@@ -235,53 +323,20 @@ function Dashboard() {
     });
   };
 
+  /*
+   * UI
+   */
+
   return (
-    <div className="min-h-screen bg-[#020b18] text-[#eaf4ff]">
-
-      {/* MOBILE SIDEBAR OVERLAY */}
-
-      {sidebarOpen && (
-        <button
-          type="button"
-          aria-label="Close sidebar"
-          onClick={() => setSidebarOpen(false)}
-          className="
-            fixed
-            inset-0
-            z-[55]
-            bg-black/70
-            backdrop-blur-sm
-            lg:hidden
-          "
-        />
-      )}
-
-      {/* MOBILE MENU BUTTON */}
-
-      <button
-        type="button"
-        onClick={() => setSidebarOpen(true)}
-        aria-label="Open sidebar"
-        className="
-          fixed
-          left-4
-          top-4
-          z-[70]
-          grid
-          h-10
-          w-10
-          place-items-center
-          rounded-xl
-          border
-          border-cyan-400/20
-          bg-[#061525]
-          text-cyan-300
-          shadow-lg
-          lg:hidden
-        "
-      >
-        <Menu size={19} />
-      </button>
+    <div className="dashboard-page min-h-screen min-w-0 overflow-x-hidden bg-[#060c18] text-[#e8f1ff]">
+      <style>{`
+        @keyframes mockaiSignal {
+          to {
+            transform: scaleY(.55);
+            opacity: .35;
+          }
+        }
+      `}</style>
 
       {/* NAVBAR */}
 
@@ -299,323 +354,27 @@ function Dashboard() {
         onSignOut={handleLogout}
         navigation={navigation}
         onNavigate={handleNavigation}
+        user={user}
       />
 
-      {/* MAIN */}
+      {/* MAIN CONTENT */}
 
-      <main
-        className="
-          min-h-screen
-          pt-[76px]
-          lg:ml-[250px]
-        "
-      >
+      <main className="min-h-screen min-w-0 overflow-x-hidden pt-[74px] md:ml-[250px]">
+        <div className="mx-auto w-full min-w-0 max-w-[1440px] px-4 py-[35px] sm:px-6 lg:px-[38px] lg:py-[35px]">
+          {/* PAGE INTRO */}
 
-        <div
-          className="
-            mx-auto
-            w-full
-            max-w-[1440px]
-            px-4
-            py-6
-            sm:px-6
-            sm:py-8
-            lg:px-8
-            lg:py-9
-            xl:px-10
-          "
-        >
+          <div className="mb-[22px] flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+            <div>
+              <span className="text-[9px] font-bold uppercase tracking-[0.14em] text-[#66809f]">
+                Overview
+              </span>
 
-          {/* HERO */}
-
-          <section
-            className="
-              relative
-              mb-8
-              min-h-[300px]
-              overflow-hidden
-              rounded-[18px]
-              border
-              border-cyan-400/15
-              bg-[#061525]
-              shadow-[0_25px_70px_rgba(0,0,0,.18)]
-            "
-          >
-
-            {/* GRID */}
-
-            <div
-              className="
-                pointer-events-none
-                absolute
-                inset-0
-                opacity-50
-                [background-image:linear-gradient(rgba(85,217,245,.045)_1px,transparent_1px),linear-gradient(90deg,rgba(85,217,245,.045)_1px,transparent_1px)]
-                [background-size:52px_52px]
-              "
-            />
-
-            {/* GRADIENT */}
-
-            <div
-              className="
-                pointer-events-none
-                absolute
-                inset-0
-                bg-[linear-gradient(110deg,#071a2d_0%,rgba(8,34,58,.9)_52%,rgba(7,31,54,.65)_100%)]
-              "
-            />
-
-            {/* GLOW */}
-
-            <div
-              className="
-                pointer-events-none
-                absolute
-                -right-32
-                -top-32
-                h-[420px]
-                w-[420px]
-                rounded-full
-                bg-cyan-400/10
-                blur-3xl
-              "
-            />
-
-            <div
-              className="
-                pointer-events-none
-                absolute
-                -bottom-48
-                left-[35%]
-                h-[400px]
-                w-[400px]
-                rounded-full
-                bg-blue-500/10
-                blur-3xl
-              "
-            />
-
-            <div
-              className="
-                relative
-                flex
-                min-h-[300px]
-                flex-col
-                justify-center
-                gap-8
-                px-6
-                py-10
-                sm:px-9
-                lg:flex-row
-                lg:items-center
-                lg:justify-between
-                lg:px-12
-                lg:py-12
-              "
-            >
-
-              <div className="max-w-[780px]">
-
-                <div
-                  className="
-                    flex
-                    items-center
-                    gap-2
-                    font-mono
-                    text-[9px]
-                    uppercase
-                    tracking-[0.28em]
-                    text-cyan-300
-                  "
-                >
-                  <span className="h-1.5 w-1.5 rounded-full bg-cyan-300 shadow-[0_0_10px_#55d9f5]" />
-
-                  AI-Powered Interview Practice
-                </div>
-
-                <h1
-                  className="
-                    mt-4
-                    text-[clamp(36px,4.4vw,62px)]
-                    font-semibold
-                    leading-[1.02]
-                    tracking-[-0.055em]
-                    text-white
-                  "
-                >
-                  Welcome back,{" "}
-                  <span className="text-slate-300">
-                    {user?.name || "Candidate"}
-                  </span>
-                  .
-                  <br />
-
-                  <span
-                    className="
-                      bg-gradient-to-r
-                      from-cyan-300
-                      via-cyan-200
-                      to-blue-500
-                      bg-clip-text
-                      text-transparent
-                    "
-                  >
-                    Ready for your next interview?
-                  </span>
-                </h1>
-
-                <p
-                  className="
-                    mt-5
-                    max-w-2xl
-                    text-sm
-                    leading-7
-                    text-slate-400
-                    sm:text-[15px]
-                  "
-                >
-                  Practice realistic technical and HR interviews,
-                  receive detailed AI-powered feedback, and
-                  continuously improve your performance.
-                </p>
-
-                <div className="mt-6 flex items-center gap-3">
-
-                  <span
-                    className="
-                      rounded-full
-                      border
-                      border-emerald-400/15
-                      bg-emerald-400/[0.05]
-                      px-3
-                      py-1.5
-                      font-mono
-                      text-[9px]
-                      uppercase
-                      tracking-[0.13em]
-                      text-emerald-300
-                    "
-                  >
-                    AI Interviewer Ready
-                  </span>
-
-                  <span className="text-[10px] text-slate-600">
-                    {completedInterviews.length} completed
-                  </span>
-
-                </div>
-
-              </div>
-
-              {/* HERO CTA */}
-
-              <button
-                type="button"
-                onClick={scrollToInterview}
-                className="
-                  group
-                  flex
-                  min-w-[220px]
-                  shrink-0
-                  items-center
-                  gap-3
-                  rounded-2xl
-                  border
-                  border-cyan-200/20
-                  bg-gradient-to-r
-                  from-cyan-300
-                  to-blue-500
-                  px-5
-                  py-4
-                  text-left
-                  text-[#03101d]
-                  shadow-[0_15px_45px_rgba(34,211,238,.2)]
-                  transition-all
-                  duration-200
-                  hover:-translate-y-1
-                  hover:shadow-[0_20px_55px_rgba(34,211,238,.3)]
-                  active:scale-[.98]
-                "
-              >
-
-                <span
-                  className="
-                    grid
-                    h-10
-                    w-10
-                    shrink-0
-                    place-items-center
-                    rounded-xl
-                    bg-[#061525]/10
-                  "
-                >
-                  <Plus size={20} />
-                </span>
-
-                <span className="flex-1">
-
-                  <small
-                    className="
-                      block
-                      font-mono
-                      text-[8px]
-                      uppercase
-                      tracking-[0.18em]
-                      opacity-60
-                    "
-                  >
-                    Create Session
-                  </small>
-
-                  <strong className="mt-1 block text-sm">
-                    Start New Interview
-                  </strong>
-
-                </span>
-
-                <span
-                  className="
-                    text-xl
-                    transition-transform
-                    group-hover:translate-x-1
-                  "
-                >
-                  →
-                </span>
-
-              </button>
-
+              <h2 className="mt-[7px] text-2xl font-semibold tracking-[-0.04em] text-[#e9f3ff] sm:text-[24px]">
+                Your command center
+              </h2>
             </div>
 
-          </section>
-
-          {/* PERFORMANCE */}
-
-          <section className="mb-8">
-
-            <div className="mb-5 flex items-end justify-between">
-
-              <div>
-
-                <p
-                  className="
-                    font-mono
-                    text-[9px]
-                    uppercase
-                    tracking-[0.28em]
-                    text-cyan-300
-                  "
-                >
-                  Performance Overview
-                </p>
-
-                <p className="mt-2 text-xs text-slate-500 sm:text-sm">
-                  Your interview practice telemetry at a glance.
-                </p>
-
-              </div>
-
+            <div className="flex flex-wrap items-center gap-2">
               <button
                 type="button"
                 onClick={() =>
@@ -623,275 +382,502 @@ function Dashboard() {
                 }
                 disabled={refreshing}
                 className="
-                  hidden
+                  inline-flex
                   items-center
                   gap-2
-                  rounded-full
+                  rounded-md
                   border
-                  border-slate-800
-                  bg-slate-900/40
+                  border-[#1a2b44]
+                  bg-[#0a1525]
                   px-3
-                  py-1.5
-                  text-[9px]
-                  text-slate-500
-                  transition
-                  hover:border-cyan-400/20
-                  hover:text-cyan-300
-                  sm:flex
+                  py-[9px]
+                  text-[10px]
+                  text-[#8aa1bd]
+                  transition-colors
+                  hover:border-[#24466b]
+                  hover:text-slate-100
+                  disabled:cursor-not-allowed
+                  disabled:opacity-50
                 "
               >
                 <RefreshCw
-                  size={12}
-                  className={
-                    refreshing
-                      ? "animate-spin"
-                      : ""
-                  }
+                  size={14}
+                  strokeWidth={1.8}
+                  className={refreshing ? "animate-spin" : ""}
                 />
 
-                Updated just now
+                <span className="hidden sm:inline">
+                  Refresh
+                </span>
               </button>
 
+              <div
+                className="
+                  flex
+                  items-center
+                  gap-[9px]
+                  rounded-md
+                  border
+                  border-[#1a2b44]
+                  bg-[#0a1525]
+                  px-3
+                  py-[9px]
+                  text-[10px]
+                  text-[#8aa1bd]
+                "
+              >
+                <CalendarDays size={14} strokeWidth={1.8} />
+
+                <span className="hidden sm:inline">
+                  {todayLabel}
+                </span>
+
+                <ChevronDown
+                  size={12}
+                  strokeWidth={1.8}
+                  className="text-[#57708d]"
+                />
+              </div>
             </div>
+          </div>
+
+          {/* HERO PANEL */}
+
+          <section
+            className="
+              relative
+              flex
+              min-h-[252px]
+              min-w-0
+              flex-col
+              items-start
+              justify-between
+              gap-8
+              overflow-hidden
+              rounded-xl
+              border
+              border-[#1a3e62]
+              bg-[#0b192c]
+              px-6
+              py-[30px]
+              shadow-[0_0_34px_rgba(25,101,153,0.08)]
+              sm:px-[42px]
+              sm:py-[37px]
+              lg:flex-row
+              lg:items-center
+            "
+          >
+            {/* GRID BACKDROP */}
 
             <div
-              className="
-                grid
-                grid-cols-1
-                gap-4
-                sm:grid-cols-2
-                xl:grid-cols-4
-              "
-            >
+              className="pointer-events-none absolute inset-0 opacity-[0.27]"
+              style={{
+                backgroundImage:
+                  "linear-gradient(rgba(83,174,221,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(83,174,221,.14) 1px,transparent 1px)",
+                backgroundSize: "32px 32px",
+                WebkitMaskImage:
+                  "linear-gradient(90deg,black 0%,transparent 85%)",
+                maskImage:
+                  "linear-gradient(90deg,black 0%,transparent 85%)",
+              }}
+            />
 
-              <StatsCard
-                title="Interviews"
-                value={String(interviews.length).padStart(2, "0")}
-                detail="total sessions"
-                trend={
-                  interviews.length
-                    ? `+${interviews.length} total`
-                    : "Start practicing"
-                }
-                icon={<LayoutDashboard size={18} />}
-                tone="cyan"
-              />
+            <div
+              className="pointer-events-none absolute right-[7%] top-[-130px] h-[300px] w-[430px] rounded-full opacity-90"
+              style={{
+                background: "rgba(39,174,220,.09)",
+                filter: "blur(70px)",
+              }}
+            />
 
-              <StatsCard
-                title="Average Score"
-                value={`${averageScore}%`}
-                detail="across completed"
-                trend={
-                  averageScore
-                    ? "Performance"
-                    : "No scores yet"
-                }
-                icon={<Target size={18} />}
-                tone="blue"
-              />
+            {/* HERO CONTENT */}
 
-              <StatsCard
-                title="Current Streak"
-                value={currentStreak}
-                detail="days active"
-                trend={
-                  currentStreak
-                    ? "Keep going"
-                    : "Start today"
-                }
-                icon={<Flame size={18} />}
-                tone="indigo"
-              />
+            <div className="relative z-[1] min-w-0 max-w-[650px]">
+              <div className="flex items-center gap-[7px] text-[9px] font-bold tracking-[0.16em] text-[#5fe3ff]">
+                <Sparkles size={13} strokeWidth={1.8} />
+                AI INTERVIEW PLATFORM
+              </div>
 
-              <StatsCard
-                title="Practice Time"
-                value={practiceTime}
-                detail="total practice"
-                trend="Live"
-                icon={<Clock3 size={18} />}
-                tone="green"
-              />
+              <h1 className="mt-[15px] text-[27px] font-semibold leading-[1.11] tracking-[-0.05em] text-[#f0f6ff] sm:text-[39px]">
+                Welcome back,{" "}
+                <span className="text-[#5fe3ff]">
+                  {user?.name || "Candidate"}.
+                </span>
+                <br />
+                Ready for your next interview?
+              </h1>
 
+              <p className="mt-[11px] max-w-[590px] text-xs leading-[1.7] text-[#7f99b7]">
+                Practice interviews, review your performance, and
+                build confidence — one AI-powered session at a time.
+              </p>
+
+              <div className="mt-[25px] flex flex-wrap gap-[10px]">
+                <button
+                  type="button"
+                  onClick={scrollToInterview}
+                  className="
+                    inline-flex
+                    items-center
+                    justify-center
+                    gap-[9px]
+                    rounded-md
+                    border
+                    border-[#78e9ff]
+                    bg-[#5fe3ff]
+                    px-[17px]
+                    py-3
+                    text-[11px]
+                    font-bold
+                    text-[#05101c]
+                    shadow-[0_0_22px_rgba(95,227,255,0.18)]
+                    transition-all
+                    duration-200
+                    hover:-translate-y-px
+                    hover:bg-[#9aefff]
+                  "
+                >
+                  <Play size={14} strokeWidth={1.8} />
+                  Start New Interview
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => navigate("/history")}
+                  className="
+                    inline-flex
+                    items-center
+                    justify-center
+                    gap-[9px]
+                    rounded-md
+                    border
+                    border-[#294662]
+                    bg-[#0a192b]/70
+                    px-[17px]
+                    py-3
+                    text-[11px]
+                    font-bold
+                    text-[#a9c0d8]
+                    transition-colors
+                    hover:border-[#4c769b]
+                    hover:text-[#e1effe]
+                  "
+                >
+                  <History size={14} strokeWidth={1.8} />
+                  View History
+                </button>
+              </div>
             </div>
 
+            {/* LIVE SIGNAL */}
+
+            <div className="relative z-[1] hidden min-w-[140px] pb-1 lg:block">
+              <span className="text-[8px] tracking-[0.16em] text-[#597794]">
+                LIVE SYSTEM
+              </span>
+
+              <div className="my-2 flex h-8 items-center gap-1">
+                {[
+                  { height: 12, delay: "0s" },
+                  { height: 26, delay: ".1s" },
+                  { height: 17, delay: ".3s" },
+                  { height: 30, delay: ".2s" },
+                  { height: 14, delay: ".5s" },
+                  { height: 25, delay: ".15s" },
+                  { height: 18, delay: ".4s" },
+                  { height: 29, delay: ".25s" },
+                ].map((bar, index) => (
+                  <span
+                    key={index}
+                    className="w-[5px] rounded-[4px] bg-[#5fe3ff] opacity-75"
+                    style={{
+                      height: `${bar.height}px`,
+                      animation:
+                        "mockaiSignal 1.2s ease-in-out infinite alternate",
+                      animationDelay: bar.delay,
+                    }}
+                  />
+                ))}
+              </div>
+
+              <div className="text-[19px] font-semibold tracking-[-0.03em] text-[#dceeff]">
+                99.8%
+                <small className="ml-1 text-[10px] font-normal text-[#5d7895]">
+                  uptime
+                </small>
+              </div>
+            </div>
           </section>
 
-          {/* WORKSPACE */}
+          {/* METRICS GRID */}
+
+          <section className="my-4 grid min-w-0 grid-cols-1 gap-[13px] sm:grid-cols-2 xl:grid-cols-4">
+            <StatsCard
+              title="Interviews Completed"
+              value={String(interviews.length)}
+              detail={
+                interviews.length
+                  ? "practice activity"
+                  : "start practicing"
+              }
+              trend={`${completedInterviews.length} completed`}
+              icon={
+                <LayoutDashboard
+                  size={13}
+                  strokeWidth={1.8}
+                />
+              }
+              tone="blue"
+            />
+
+            <StatsCard
+              title="Average Score"
+              value={`${averageScore}%`}
+              detail="completed interviews"
+              trend={
+                averageScore
+                  ? "current average"
+                  : "no scores yet"
+              }
+              icon={<Target size={13} strokeWidth={1.8} />}
+              tone="cyan"
+            />
+
+            <StatsCard
+              title="Current Streak"
+              value={`${currentStreak} days`}
+              detail="consecutive days"
+              trend={
+                currentStreak
+                  ? "keep it going"
+                  : "practice today"
+              }
+              icon={<Flame size={13} strokeWidth={1.8} />}
+              tone="purple"
+            />
+
+            <StatsCard
+              title="Practice Time"
+              value={practiceTime}
+              detail="total session time"
+              trend="all sessions"
+              icon={<Clock3 size={13} strokeWidth={1.8} />}
+              tone="green"
+            />
+          </section>
+
+          {/* WORKSPACE GRID */}
 
           <section
             id="create-interview"
             className="
               grid
+              min-w-0
               grid-cols-1
-              gap-6
-              xl:grid-cols-[minmax(0,1.55fr)_minmax(360px,.85fr)]
+              gap-4
+              xl:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)]
             "
           >
-
             {/* INTERVIEW CONFIGURATION */}
 
             <div
               className="
-                overflow-hidden
-                rounded-[18px]
+                min-w-0
+                rounded-[9px]
                 border
-                border-[#1b3851]
-                bg-[#061525]
-                shadow-[0_20px_60px_rgba(0,0,0,.16)]
+                border-[#1a2b44]
+                bg-[#0b1424]
+                p-[22px]
               "
             >
-
-              <div
-                className="
-                  border-b
-                  border-[#19334a]
-                  px-6
-                  py-6
-                  sm:px-8
-                "
-              >
-
-                <div className="flex items-start gap-4">
-
-                  <div
-                    className="
-                      grid
-                      h-11
-                      w-11
-                      shrink-0
-                      place-items-center
-                      rounded-xl
-                      border
-                      border-cyan-400/20
-                      bg-cyan-400/[0.06]
-                      text-cyan-300
-                    "
-                  >
-                    <Sparkles size={20} />
-                  </div>
-
-                  <div className="min-w-0">
-
-                    <p
-                      className="
-                        font-mono
-                        text-[9px]
-                        uppercase
-                        tracking-[0.28em]
-                        text-cyan-300
-                      "
-                    >
-                      Interview Configuration
-                    </p>
-
-                    <h2
-                      className="
-                        mt-2
-                        text-[clamp(22px,2.2vw,31px)]
-                        font-semibold
-                        tracking-[-0.05em]
-                        text-[#dbe8f4]
-                      "
-                    >
-                      Create New Interview
-                    </h2>
-
-                    <p
-                      className="
-                        mt-2
-                        text-xs
-                        leading-5
-                        text-slate-500
-                        sm:text-[13px]
-                      "
-                    >
-                      Configure your next AI-powered practice
-                      session.
-                    </p>
-
-                  </div>
-
-                  <span
-                    className="
-                      ml-auto
-                      hidden
-                      whitespace-nowrap
-                      font-mono
-                      text-[8px]
-                      uppercase
-                      tracking-[0.1em]
-                      text-emerald-300
-                      sm:block
-                    "
-                  >
-                    ● AI INTERVIEWER READY
+              <div className="flex items-start justify-between gap-4">
+                <div className="min-w-0">
+                  <span className="text-[9px] font-bold uppercase tracking-[0.14em] text-[#66809f]">
+                    Build Your Session
                   </span>
 
+                  <h3 className="mt-1.5 text-[15px] font-semibold tracking-[-0.02em] text-[#dceaff]">
+                    Interview configuration
+                  </h3>
                 </div>
 
+                <span className="shrink-0 pt-1 font-mono text-[9px] text-[#4d6886]">
+                  CONFIG_01
+                </span>
               </div>
 
-              <div className="p-5 sm:p-8">
-
+              <div className="mt-[18px] min-w-0">
                 <InterviewForm
                   onCreated={() =>
                     loadInterviews({ showLoader: false })
                   }
                 />
-
               </div>
-
             </div>
 
-            {/* PRACTICE LOG */}
+            {/* RECENT INTERVIEWS */}
 
-            <RecentInterviews
-              interviews={interviews}
-              loading={loading}
-              onRefresh={() =>
-                loadInterviews({ showLoader: false })
-              }
-            />
-
+            <div className="min-w-0">
+              <RecentInterviews
+                interviews={interviews}
+                loading={loading}
+                onRefresh={() =>
+                  loadInterviews({ showLoader: false })
+                }
+              />
+            </div>
           </section>
 
-          {/* FOOTER */}
+          {/* SYSTEM MONITOR */}
 
-          <footer
+          <section
             className="
-              mt-8
+              mt-4
+              flex
+              min-w-0
+              flex-col
+              items-start
+              gap-[25px]
+              rounded-[9px]
+              border
+              border-[#1a2b44]
+              bg-[#091421]
+              px-[22px]
+              py-[19px]
+              lg:flex-row
+              lg:items-center
+              lg:justify-between
+            "
+          >
+            <div className="flex min-w-0 items-center gap-[13px]">
+              <div
+                className="
+                  grid
+                  h-[38px]
+                  w-[38px]
+                  shrink-0
+                  place-items-center
+                  rounded-lg
+                  border
+                  border-[#285a73]
+                  bg-[#399fbf]/[0.12]
+                  text-[#5fe3ff]
+                "
+              >
+                <BrainCircuit size={20} strokeWidth={1.8} />
+              </div>
+
+              <div className="min-w-0">
+                <span className="text-[9px] font-bold uppercase tracking-[0.14em] text-[#66809f]">
+                  System Monitor
+                </span>
+
+                <h3 className="mt-1.5 flex flex-wrap items-center gap-[9px] text-[15px] font-semibold tracking-[-0.02em] text-[#dceaff]">
+                  AI Interview Engine
+
+                  <span
+                    className="
+                      inline-flex
+                      items-center
+                      gap-[5px]
+                      rounded
+                      border
+                      border-[#5de5ad]/25
+                      bg-[#5de5ad]/[0.08]
+                      px-1.5
+                      py-1
+                      text-[8px]
+                      font-medium
+                      text-[#5de5ad]
+                    "
+                  >
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#5de5ad]" />
+                    Ready
+                  </span>
+                </h3>
+
+                <p className="mt-1.5 text-[10px] leading-relaxed text-[#657e9b]">
+                  Your practice environment is calibrated and
+                  ready for your next session —{" "}
+                  {completedInterviews.length} interviews completed
+                  so far.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid w-full min-w-0 grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-2 lg:w-auto lg:grid-cols-4">
+              {SYSTEM_CHECKS.map((check) => {
+                const Icon = check.icon;
+
+                return (
+                  <div
+                    key={check.label}
+                    className="
+                      flex
+                      min-w-0
+                      items-center
+                      gap-1.5
+                      text-[9px]
+                      text-[#7188a3]
+                    "
+                  >
+                    <Icon
+                      size={13}
+                      strokeWidth={1.8}
+                      className="shrink-0 text-[#6894b2]"
+                    />
+
+                    <span className="truncate">
+                      {check.label}
+                    </span>
+
+                    <Check
+                      size={12}
+                      strokeWidth={1.8}
+                      className="shrink-0 text-[#5de3ad]"
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+
+          {/* FOOTER STATUS */}
+
+          <section
+            className="
+              mt-6
               flex
               flex-col
-              gap-2
+              gap-3
               border-t
-              border-[#10283d]
+              border-[#1a2b44]
               pt-5
-              text-[9px]
-              text-slate-700
               sm:flex-row
               sm:items-center
               sm:justify-between
             "
           >
+            <div className="flex items-center gap-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#5de5ad]" />
 
-            <span className="font-mono uppercase tracking-[0.18em]">
-              mockAI candidate workspace
-            </span>
+              <span className="text-[11px] text-[#5c7693]">
+                AI interviewer operational
+              </span>
+            </div>
 
-            <span className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-4 text-[10px] text-[#4d6886]">
+              <span>
+                {completedInterviews.length} completed
+              </span>
 
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+              <span className="h-3 w-px bg-[#1a2b44]" />
 
-              System operational
-
-            </span>
-
-          </footer>
-
+              <span>MockAI workspace</span>
+            </div>
+          </section>
         </div>
-
       </main>
-
     </div>
   );
 }

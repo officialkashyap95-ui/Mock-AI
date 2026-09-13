@@ -1,15 +1,44 @@
 import {
   BarChart3,
+  ChevronDown,
   FileClock,
   LayoutDashboard,
   LogOut,
   Settings,
-  Sparkles,
+  ShieldCheck,
   Target,
   X,
 } from "lucide-react";
-
 import { useLocation } from "react-router-dom";
+
+function BrandMark() {
+  return (
+    <div className="flex items-center gap-2.5 text-[#f0f7ff]">
+      <span
+        className="
+          relative
+          grid
+          h-[23px]
+          w-[23px]
+          shrink-0
+          rotate-[28deg]
+          place-items-center
+          rounded-full
+          border-[1.5px]
+          border-[#5fe3ff]
+        "
+      >
+        <span className="absolute -top-[2px] left-[5px] h-1 w-1 rounded-full bg-[#5fe3ff]" />
+        <span className="absolute bottom-[1px] right-[1px] h-[3px] w-[3px] rounded-full bg-[#5fe3ff]" />
+        <span className="h-[5px] w-[5px] rounded-full bg-[#5fe3ff]" />
+      </span>
+
+      <span className="text-[20px] font-bold leading-none tracking-[-0.03em]">
+        mock<span className="text-[#5fe3ff]">ai</span>
+      </span>
+    </div>
+  );
+}
 
 function Sidebar({
   open = false,
@@ -17,496 +46,367 @@ function Sidebar({
   onSignOut = () => {},
   navigation = [],
   onNavigate = () => {},
+  user = null,
 }) {
   const location = useLocation();
 
+  const defaultNavigation = [
+    {
+      name: "Dashboard",
+      icon: LayoutDashboard,
+      path: "/dashboard",
+    },
+    {
+      name: "Interview History",
+      icon: FileClock,
+      path: "/history",
+    },
+    {
+      name: "Analytics",
+      icon: BarChart3,
+      path: "/analytics",
+    },
+    {
+      name: "Settings",
+      icon: Settings,
+      path: "/settings",
+    },
+  ];
+
+  const items = navigation.length
+    ? navigation
+    : defaultNavigation;
+
+  const name = user?.name || "Candidate";
+
+  const initials =
+    name
+      .split(" ")
+      .filter(Boolean)
+      .map((part) => part.charAt(0))
+      .join("")
+      .slice(0, 2)
+      .toUpperCase() || "U";
+
+  const handleNavigate = (path) => {
+    onNavigate(path);
+    onClose();
+  };
+
+  const isActive = (path) => {
+    if (path === "/dashboard") {
+      return location.pathname === "/dashboard";
+    }
+
+    return (
+      location.pathname === path ||
+      location.pathname.startsWith(`${path}/`)
+    );
+  };
+
   return (
     <>
-      {/* =====================================================
-          MOBILE OVERLAY
-      ===================================================== */}
+      {/* Mobile overlay */}
 
       {open && (
         <button
           type="button"
-          aria-label="Close sidebar"
+          aria-label="Close navigation menu"
           onClick={onClose}
           className="
             fixed
             inset-0
-            z-[55]
-            bg-black/70
-            backdrop-blur-sm
-            lg:hidden
+            z-40
+            bg-black/65
+            md:hidden
           "
         />
       )}
 
-      {/* =====================================================
-          SIDEBAR
-      ===================================================== */}
+      {/* Sidebar */}
 
       <aside
         className={`
           fixed
           left-0
-          top-[76px]
-          z-[60]
+          top-[74px]
+          z-50
           flex
-          h-[calc(100vh-76px)]
+          h-[calc(100vh-74px)]
           w-[250px]
-          shrink-0
           flex-col
-          overflow-hidden
           border-r
-          border-[#183149]
-          bg-[#061525]
-
+          border-[#1a2b44]
+          bg-[#08111f]
           transition-transform
           duration-300
           ease-out
-
           ${
             open
               ? "translate-x-0"
-              : "-translate-x-full lg:translate-x-0"
+              : "-translate-x-full md:translate-x-0"
           }
         `}
       >
-        {/* =====================================================
-            SIDEBAR INNER
-        ===================================================== */}
+        {/* Sidebar header */}
 
-        <div className="flex min-h-0 flex-1 flex-col">
+        <div
+          className="
+            flex
+            h-[64px]
+            shrink-0
+            items-center
+            justify-between
+            border-b
+            border-[#1a2b44]/70
+            px-6
+          "
+        >
+          <BrandMark />
 
-          {/* =================================================
-              BRAND
-          ================================================= */}
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close navigation"
+            className="
+              grid
+              h-8
+              w-8
+              place-items-center
+              rounded-lg
+              text-[#7c94b1]
+              transition-colors
+              hover:bg-white/[0.05]
+              hover:text-slate-200
+              md:hidden
+            "
+          >
+            <X size={17} strokeWidth={1.8} />
+          </button>
+        </div>
 
-          <div className="border-b border-[#10283d] px-5 py-6">
+        {/* Scrollable sidebar content */}
 
-            <div className="flex items-center gap-3">
+        <div className="flex min-h-0 flex-1 flex-col overflow-y-auto">
+          {/* Workspace card */}
 
-              {/* Logo */}
+          <div
+            className="
+              mx-4
+              mt-5
+              flex
+              items-center
+              gap-2.5
+              rounded-lg
+              border
+              border-[#1a2b44]
+              bg-[#12243a]/70
+              p-2.5
+            "
+          >
+            <span
+              className="
+                grid
+                h-9
+                w-9
+                shrink-0
+                place-items-center
+                rounded-lg
+                bg-[#5fe3ff]
+                text-sm
+                font-bold
+                text-[#07101e]
+              "
+            >
+              {initials}
+            </span>
 
-              <div
-                className="
-                  flex
-                  h-10
-                  w-10
-                  shrink-0
-                  items-center
-                  justify-center
-                  rounded-xl
-                  border
-                  border-cyan-300/20
-                  bg-gradient-to-br
-                  from-cyan-300
-                  to-blue-500
-                  text-[#03101d]
-                  shadow-[0_0_25px_rgba(34,211,238,.18)]
-                "
-              >
-                <Sparkles
-                  size={18}
-                  strokeWidth={2}
-                />
-              </div>
+            <div className="min-w-0 flex-1">
+              <p className="truncate text-[11px] font-medium text-[#d8e6f8]">
+                {name}
+              </p>
 
-              {/* Brand */}
-
-              <div className="min-w-0">
-
-                <div className="text-[17px] font-semibold tracking-[-0.03em] text-white">
-                  mock<span className="text-cyan-300">AI</span>
-                </div>
-
-                <div
-                  className="
-                    mt-0.5
-                    font-mono
-                    text-[8px]
-                    uppercase
-                    tracking-[0.22em]
-                    text-slate-500
-                  "
-                >
-                  Candidate Workspace
-                </div>
-
-              </div>
-
-              {/* Mobile close */}
-
-              <button
-                type="button"
-                onClick={onClose}
-                aria-label="Close sidebar"
-                className="
-                  ml-auto
-                  grid
-                  h-8
-                  w-8
-                  place-items-center
-                  rounded-lg
-                  text-slate-500
-                  transition
-                  hover:bg-white/[0.04]
-                  hover:text-white
-                  lg:hidden
-                "
-              >
-                <X size={17} />
-              </button>
-
+              <p className="mt-1 text-[10px] text-[#7588a5]">
+                Personal workspace
+              </p>
             </div>
 
+            <ChevronDown
+              size={14}
+              strokeWidth={1.8}
+              className="shrink-0 text-[#68809e]"
+            />
           </div>
 
-          {/* =================================================
-              WORKSPACE NAVIGATION
-          ================================================= */}
+          {/* Navigation */}
 
-          <div className="px-4 pt-7">
-
-            <div
+          <nav className="mt-7 px-3">
+            <p
               className="
                 mb-3
-                px-2
-                font-mono
+                px-3
                 text-[9px]
-                font-medium
+                font-bold
                 uppercase
-                tracking-[0.28em]
-                text-cyan-300
+                tracking-[0.16em]
+                text-[#536d8b]
               "
             >
               Workspace
-            </div>
+            </p>
 
-            <nav className="space-y-1">
-
-              {navigation.map((item) => {
-
+            <div className="space-y-1">
+              {items.map((item) => {
                 const Icon = item.icon;
-
-                const active =
-                  location.pathname === item.path;
+                const active = isActive(item.path);
 
                 return (
                   <button
                     key={item.path}
                     type="button"
-                    onClick={() => {
-                      onNavigate(item.path);
-                      onClose();
-                    }}
+                    onClick={() => handleNavigate(item.path)}
                     className={`
                       group
-                      relative
                       flex
                       w-full
                       items-center
                       gap-3
-                      rounded-xl
+                      rounded-lg
+                      border
                       px-3
                       py-3
                       text-left
-                      transition-all
-                      duration-200
-
+                      transition-colors
                       ${
                         active
-                          ? `
-                            border
-                            border-cyan-300/10
-                            bg-cyan-300/[0.08]
-                            text-cyan-200
-                            shadow-[inset_0_0_25px_rgba(34,211,238,.025)]
-                          `
-                          : `
-                            border
-                            border-transparent
-                            text-slate-500
-                            hover:border-cyan-300/[0.05]
-                            hover:bg-white/[0.025]
-                            hover:text-slate-200
-                          `
+                          ? "border-[#24516a] bg-[#123047] text-[#e8faff]"
+                          : "border-transparent text-[#7d96b2] hover:border-[#1a2b44] hover:bg-[#0e2033] hover:text-[#dcecff]"
                       }
                     `}
                   >
+                    <Icon
+                      size={17}
+                      strokeWidth={active ? 2 : 1.7}
+                      className={
+                        active
+                          ? "text-[#5fe3ff]"
+                          : "text-[#68829e] group-hover:text-[#9bb9d4]"
+                      }
+                    />
 
-                    {/* Active indicator */}
-
-                    {active && (
-                      <span
-                        className="
-                          absolute
-                          left-0
-                          top-2
-                          h-[calc(100%-16px)]
-                          w-[2px]
-                          rounded-full
-                          bg-cyan-300
-                          shadow-[0_0_12px_rgba(34,211,238,.8)]
-                        "
-                      />
-                    )}
-
-                    {/* Icon */}
-
-                    <span
-                      className={`
-                        grid
-                        h-8
-                        w-8
-                        shrink-0
-                        place-items-center
-                        rounded-lg
-                        transition
-                        ${
-                          active
-                            ? "bg-cyan-300/10 text-cyan-300"
-                            : "text-slate-500 group-hover:text-cyan-300"
-                        }
-                      `}
-                    >
-                      <Icon
-                        size={17}
-                        strokeWidth={1.8}
-                      />
-                    </span>
-
-                    {/* Label */}
-
-                    <span
-                      className={`
-                        text-[13px]
-                        ${
-                          active
-                            ? "font-medium"
-                            : "font-normal"
-                        }
-                      `}
-                    >
+                    <span className="text-[12px] font-medium">
                       {item.name}
                     </span>
 
+                    {active && (
+                      <span className="ml-auto h-1.5 w-1.5 rounded-full bg-[#5fe3ff]" />
+                    )}
                   </button>
                 );
               })}
+            </div>
+          </nav>
 
-            </nav>
+          {/* System status */}
 
-          </div>
-
-          {/* =================================================
-              FLEXIBLE SPACE
-          ================================================= */}
-
-          <div className="flex-1" />
-
-          {/* =================================================
-              AI STATUS
-          ================================================= */}
-
-          <div className="px-4">
-
+          <div className="mt-8 px-4">
             <div
               className="
-                rounded-xl
+                rounded-lg
                 border
-                border-cyan-300/10
-                bg-cyan-300/[0.035]
-                p-4
+                border-[#1a2b44]
+                bg-[#0b1a2b]
+                p-3
               "
             >
-
               <div className="flex items-center gap-2">
-
-                <span className="relative flex h-2 w-2">
-
-                  <span
-                    className="
-                      absolute
-                      inline-flex
-                      h-full
-                      w-full
-                      animate-ping
-                      rounded-full
-                      bg-cyan-300
-                      opacity-60
-                    "
-                  />
-
-                  <span
-                    className="
-                      relative
-                      inline-flex
-                      h-2
-                      w-2
-                      rounded-full
-                      bg-cyan-300
-                    "
-                  />
-
-                </span>
-
-                <span
-                  className="
-                    font-mono
-                    text-[9px]
-                    uppercase
-                    tracking-[0.13em]
-                    text-cyan-300
-                  "
-                >
-                  AI Interviewer Online
-                </span>
-
-              </div>
-
-              <p className="mt-2 text-[10px] leading-5 text-slate-600">
-                Ready for your next practice session.
-              </p>
-
-            </div>
-
-          </div>
-
-          {/* =================================================
-              DAILY GOAL
-          ================================================= */}
-
-          <div className="px-4 pt-3">
-
-            <div
-              className="
-                rounded-xl
-                border
-                border-[#183149]
-                bg-[#081827]
-                p-4
-              "
-            >
-
-              <div className="mb-3 flex items-center justify-between">
-
-                <span
-                  className="
-                    font-mono
-                    text-[9px]
-                    uppercase
-                    tracking-[0.22em]
-                    text-slate-500
-                  "
-                >
-                  Daily Goal
-                </span>
-
-                <Target
+                <ShieldCheck
                   size={15}
-                  className="text-cyan-300"
-                />
-
-              </div>
-
-              <div className="flex items-end justify-between">
-
-                <div>
-
-                  <span className="text-xl font-semibold tracking-tight text-white">
-                    2
-                  </span>
-
-                  <span className="ml-1 text-[10px] text-slate-600">
-                    / 3 interviews
-                  </span>
-
-                </div>
-
-                <span className="font-mono text-[10px] text-cyan-300">
-                  67%
-                </span>
-
-              </div>
-
-              <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-[#12263a]">
-
-                <div
-                  className="
-                    h-full
-                    w-[67%]
-                    rounded-full
-                    bg-gradient-to-r
-                    from-cyan-300
-                    to-blue-500
-                    shadow-[0_0_10px_rgba(34,211,238,.2)]
-                  "
-                />
-
-              </div>
-
-            </div>
-
-          </div>
-
-          {/* =================================================
-              SIGN OUT
-          ================================================= */}
-
-          <div className="p-4">
-
-            <button
-              type="button"
-              onClick={onSignOut}
-              className="
-                group
-                flex
-                w-full
-                items-center
-                gap-3
-                rounded-xl
-                px-3
-                py-3
-                text-left
-                text-slate-500
-                transition
-                hover:bg-red-400/[0.04]
-                hover:text-red-300
-              "
-            >
-
-              <span
-                className="
-                  grid
-                  h-8
-                  w-8
-                  place-items-center
-                  rounded-lg
-                  border
-                  border-transparent
-                  transition
-                  group-hover:border-red-400/10
-                  group-hover:bg-red-400/[0.05]
-                "
-              >
-                <LogOut
-                  size={16}
+                  className="text-emerald-300"
                   strokeWidth={1.8}
                 />
-              </span>
 
-              <span className="text-[12px]">
-                Sign out
-              </span>
+                <span className="text-[10px] font-semibold text-[#c8d9ea]">
+                  AI Interview Engine
+                </span>
+              </div>
 
-            </button>
+              <div className="mt-2 flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
 
+                <span className="text-[10px] text-emerald-300">
+                  System operational
+                </span>
+              </div>
+
+              <p className="mt-2 text-[10px] leading-relaxed text-[#647e9c]">
+                Your interview environment is ready for your next practice
+                session.
+              </p>
+            </div>
           </div>
 
+          {/* Daily goal */}
+
+          <div className="mt-4 px-4">
+            <div className="rounded-lg border border-[#1a2b44] bg-[#0b1a2b] p-3">
+              <div className="flex items-center gap-2">
+                <Target
+                  size={15}
+                  strokeWidth={1.8}
+                  className="text-[#6fa9c9]"
+                />
+
+                <span className="text-[10px] font-semibold text-[#c8d9ea]">
+                  Daily goal
+                </span>
+              </div>
+
+              <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-[#1a2b44]">
+                <div className="h-full w-[45%] rounded-full bg-[#4bc9e9]" />
+              </div>
+
+              <div className="mt-2 flex items-center justify-between">
+                <span className="text-[10px] text-[#647e9c]">
+                  Practice progress
+                </span>
+
+                <span className="text-[10px] font-medium text-[#a9c6dc]">
+                  45%
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
 
+        {/* Sidebar footer */}
+
+        <div className="shrink-0 border-t border-[#1a2b44] p-3">
+          <button
+            type="button"
+            onClick={onSignOut}
+            className="
+              flex
+              w-full
+              items-center
+              gap-3
+              rounded-lg
+              px-3
+              py-3
+              text-left
+              text-[#7d96b2]
+              transition-colors
+              hover:bg-rose-400/[0.06]
+              hover:text-rose-300
+            "
+          >
+            <LogOut size={17} strokeWidth={1.8} />
+
+            <span className="text-[12px] font-medium">
+              Sign out
+            </span>
+          </button>
+        </div>
       </aside>
     </>
   );

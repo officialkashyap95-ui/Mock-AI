@@ -1,15 +1,14 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   Bell,
   ChevronDown,
   LogOut,
   Menu,
-  Sparkles,
-  User,
 } from "lucide-react";
 
 function Navbar({ user, onMenu, onSignOut }) {
   const [profileOpen, setProfileOpen] = useState(false);
+  const profileRef = useRef(null);
 
   const name = user?.name || "Candidate";
 
@@ -22,100 +21,103 @@ function Navbar({ user, onMenu, onSignOut }) {
       .slice(0, 2)
       .toUpperCase() || "U";
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        profileRef.current &&
+        !profileRef.current.contains(event.target)
+      ) {
+        setProfileOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setProfileOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
+  const handleSignOut = () => {
+    setProfileOpen(false);
+    onSignOut?.();
+  };
+
   return (
     <header
       className="
         fixed
-        left-0
-        right-0
+        inset-x-0
         top-0
-        z-50
-        h-[76px]
+        z-40
+        h-[74px]
         border-b
-        border-cyan-400/10
-        bg-[#020b18]/95
-        backdrop-blur-xl
-        lg:left-[250px]
+        border-[#1a2b44]
+        bg-[#070f1c]/95
+        backdrop-blur
+        md:left-[250px]
       "
     >
+      <div className="flex h-full min-w-0 items-center justify-between px-4 sm:px-6 lg:px-8">
+        {/* Left side */}
 
-      <div className="flex h-full items-center justify-between px-4 sm:px-6 lg:px-8">
-
-        {/* LEFT */}
-
-        <div className="flex items-center gap-3">
-
+        <div className="flex min-w-0 items-center gap-3">
           <button
             type="button"
             onClick={onMenu}
-            aria-label="Open menu"
+            aria-label="Open navigation menu"
             className="
               grid
               h-9
               w-9
+              shrink-0
               place-items-center
               rounded-lg
-              border
-              border-[#19334a]
-              bg-[#061525]
-              text-slate-400
-              transition
-              hover:border-cyan-400/20
-              hover:text-cyan-300
-              lg:hidden
+              text-[#7c94b1]
+              transition-colors
+              hover:bg-white/[0.05]
+              hover:text-slate-200
+              md:hidden
             "
           >
-            <Menu size={18} />
+            <Menu size={18} strokeWidth={1.8} />
           </button>
 
-          <div
-            className="
-              grid
-              h-9
-              w-9
-              place-items-center
-              rounded-lg
-              border
-              border-cyan-400/15
-              bg-cyan-400/[0.05]
-              text-cyan-300
-            "
-          >
-            <Sparkles size={17} />
+          <div className="flex min-w-0 items-center gap-2 text-[11px]">
+            <span className="hidden text-[#5f7795] sm:inline">
+              Workspace
+            </span>
+
+            <span className="hidden text-[#334c6b] sm:inline">
+              /
+            </span>
+
+            <strong className="truncate font-medium text-[#b6cbe4]">
+              Dashboard
+            </strong>
           </div>
-
-          <div>
-
-            <p className="text-sm font-semibold text-white">
-              mock <span className="text-cyan-400">AI</span>
-            </p>
-
-            <p
-              className="
-                hidden
-                font-mono
-                text-[8px]
-                uppercase
-                tracking-[0.2em]
-                text-slate-600
-                sm:block
-              "
-            >
-              AI Interview Workspace
-            </p>
-
-          </div>
-
         </div>
 
-        {/* RIGHT */}
+        {/* Right side */}
 
-        <div className="flex items-center gap-3 sm:gap-5">
-
-          {/* NOTIFICATION */}
-
+        <div className="flex shrink-0 items-center gap-3">
           <button
             type="button"
+            aria-label="Notifications"
             className="
               relative
               grid
@@ -123,140 +125,93 @@ function Navbar({ user, onMenu, onSignOut }) {
               w-9
               place-items-center
               rounded-lg
-              text-slate-500
-              transition
-              hover:bg-white/[0.025]
-              hover:text-cyan-300
+              text-[#7c94b1]
+              transition-colors
+              hover:bg-white/[0.05]
+              hover:text-slate-200
             "
           >
+            <Bell size={17} strokeWidth={1.8} />
 
-            <Bell size={17} />
-
-            <span
-              className="
-                absolute
-                right-2
-                top-2
-                h-1.5
-                w-1.5
-                rounded-full
-                bg-cyan-300
-                shadow-[0_0_7px_rgba(34,211,238,.8)]
-              "
-            />
-
+            <span className="absolute right-2 top-2 h-1.5 w-1.5 rounded-full bg-[#5fe3ff]" />
           </button>
 
-          <div className="hidden h-8 w-px bg-[#19334a] sm:block" />
-
-          {/* PROFILE */}
-
-          <div className="relative">
-
+          <div ref={profileRef} className="relative">
             <button
               type="button"
-              onClick={() =>
-                setProfileOpen((value) => !value)
-              }
+              onClick={() => setProfileOpen((current) => !current)}
+              aria-expanded={profileOpen}
               className="
                 flex
                 items-center
                 gap-2
-                rounded-xl
-                px-1.5
+                rounded-lg
+                border
+                border-transparent
+                px-2
                 py-1.5
-                transition
-                hover:bg-white/[0.025]
+                transition-colors
+                hover:border-[#1a2b44]
+                hover:bg-white/[0.04]
               "
             >
-
-              <div
+              <span
                 className="
                   grid
-                  h-9
-                  w-9
+                  h-8
+                  w-8
+                  shrink-0
                   place-items-center
-                  rounded-full
-                  border
-                  border-cyan-400/30
-                  bg-cyan-400/[0.07]
+                  rounded-lg
+                  bg-[#17364b]
+                  text-[11px]
+                  font-semibold
+                  text-[#a9edff]
                 "
               >
-                <span className="text-xs font-semibold text-cyan-300">
-                  {initials}
-                </span>
-              </div>
+                {initials}
+              </span>
 
-              <div className="hidden text-left sm:block">
-
-                <p className="text-xs font-medium text-slate-200">
-                  {name}
-                </p>
-
-                <p
-                  className="
-                    font-mono
-                    text-[8px]
-                    uppercase
-                    tracking-[0.18em]
-                    text-cyan-400
-                  "
-                >
-                  Candidate
-                </p>
-
-              </div>
+              <span className="hidden max-w-[130px] truncate text-[11px] text-[#c8d9ea] sm:block">
+                {name}
+              </span>
 
               <ChevronDown
                 size={14}
-                className={`
-                  hidden
-                  text-slate-600
-                  transition-transform
-                  sm:block
-                  ${profileOpen ? "rotate-180" : ""}
-                `}
+                strokeWidth={1.8}
+                className="text-[#68809e]"
               />
-
             </button>
-
-            {/* DROPDOWN */}
 
             {profileOpen && (
               <div
                 className="
                   absolute
                   right-0
-                  top-12
-                  w-52
-                  overflow-hidden
+                  top-[calc(100%+10px)]
+                  z-50
+                  w-56
                   rounded-xl
                   border
-                  border-[#1b3851]
-                  bg-[#061525]
-                  p-1.5
-                  shadow-[0_20px_50px_rgba(0,0,0,.4)]
+                  border-[#1a2b44]
+                  bg-[#0b1a2b]
+                  p-2
+                  shadow-2xl
                 "
               >
-
-                <div className="border-b border-[#19334a] px-3 py-2.5">
-
-                  <p className="text-xs font-medium text-white">
+                <div className="border-b border-[#1a2b44] px-3 py-3">
+                  <p className="truncate text-[12px] font-medium text-[#dceaff]">
                     {name}
                   </p>
 
-                  <p className="mt-1 text-[10px] text-slate-600">
-                    Candidate account
+                  <p className="mt-1 text-[10px] text-[#7188a3]">
+                    Personal workspace
                   </p>
-
                 </div>
 
                 <button
                   type="button"
-                  onClick={() => {
-                    setProfileOpen(false);
-                    onSignOut?.();
-                  }}
+                  onClick={handleSignOut}
                   className="
                     mt-1
                     flex
@@ -267,52 +222,21 @@ function Navbar({ user, onMenu, onSignOut }) {
                     px-3
                     py-2.5
                     text-left
-                    text-xs
-                    text-slate-500
-                    transition
-                    hover:bg-red-500/[0.05]
-                    hover:text-red-300
+                    text-[11px]
+                    text-[#a5b9cd]
+                    transition-colors
+                    hover:bg-rose-400/[0.06]
+                    hover:text-rose-300
                   "
                 >
-                  <LogOut size={15} />
+                  <LogOut size={15} strokeWidth={1.8} />
                   Sign out
                 </button>
-
               </div>
             )}
-
           </div>
-
-          {/* DESKTOP LOGOUT */}
-
-          <button
-            type="button"
-            onClick={onSignOut}
-            title="Sign out"
-            className="
-              hidden
-              h-9
-              w-9
-              place-items-center
-              rounded-lg
-              border
-              border-red-400/15
-              bg-red-500/[0.04]
-              text-red-400/70
-              transition
-              hover:border-red-400/30
-              hover:bg-red-500/[0.08]
-              hover:text-red-300
-              lg:grid
-            "
-          >
-            <LogOut size={16} />
-          </button>
-
         </div>
-
       </div>
-
     </header>
   );
 }
